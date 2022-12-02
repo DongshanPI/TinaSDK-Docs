@@ -1,0 +1,308 @@
+# Project information
+site_name: DongshanPI Board Documentation Center.
+site_url: https://github.com/DongshanPI/TinaSDK-Docs.git
+site_author: 100askTeam
+site_description: >-
+  DongShanPI boards Docs Start Page.
+copyright: Copyright &copy; 2008 - 2022 100ask Team
+edit_uri: edit/master/docs/
+repo_url: https://github.com/DongshanPI/TinaSDK-Docs/
+repo_name: DongshanPI/Dongshanpi-Docs
+
+# Configuration
+theme:
+  name: material
+  custom_dir: overrides
+  # Static files
+  static_templates:
+    - 404.html
+  # Don't include MkDocs' JavaScript
+  include_search_page: true
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: zh
+  features:
+    - content.code.annotate
+    # - content.tabs.link
+    - header.autohide
+    # - navigation.expand
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    # - toc.follow
+    # - toc.integrate
+  palette:
+    - scheme: default
+      primary: teal
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: favicon.png
+  icon:
+    logo: dsp-logo
+
+# Plugins
+plugins:
+  - search
+  - markmap:
+      base_path: docs
+      encoding: utf-8
+      file_extension: .mm.md
+      d3_version: 6.7.0
+      lib_version: 0.14.1
+      view_version: 0.14.0 
+#  - offline  
+  - minify:
+      minify_html: true
+#  - social:
+#      cards_color:
+#        fill: "#0FF1CE" 
+#        text: "#FFFFFF"
+  - search:
+      jieba_dict: dict.txt 
+extra:
+  analytics:
+    provider: google
+    property: G-LZX4K52CZ1
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >- # 
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target=_blank>feedback form</a>.      
+  homepage: https://tina.100ask.net
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: 中文
+      link: /zh/
+      lang: zh
+
+      
+#  disqus: dongshanpi-com
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - tables  
+  - toc:
+      slugify: !!python/name:pymdownx.slugs.uslugify  
+  - toc:
+      permalink: true
+  - toc:
+      title: On this page
+  - toc:
+      permalink_title: Anchor link to this section for reference
+  - toc:
+      toc_depth: 3      
+  - pymdownx.arithmatex:
+      generic: true        
+  - pymdownx.arithmatex:
+      generic: true
+
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tilde  
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji 
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true   
+  - pymdownx.snippets      
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - def_list      
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+
+  
+# Page tree
+nav:
+  - 根页面:
+    - 网站简介: 'index.md'
+    - DongshanPI-D1s: 'index.md'
+    - 柚木PI-蜥蜴: 'index.md'
+    - 柚木PI-变色龙: 'index.md'
+    - DongshanPI-哪吒STU: 'index.md'
+    - DongshanPI-壹号: 'index.md'
+    - DongshanPI-柒号: 'index.md'
+  - DongshanPI-D1s:
+    - 主板简介: 'DongshanPI-D1s/01-BoardIntroduction.md'          
+    - 配套资源: 'DongshanPI-D1s/02-SupportingResources.md'
+    - 快速启动:
+      - 连接开发板: 'DongshanPI-D1s/03-QuickStart.md'
+      - 更新系统: 'DongshanPI-D1s/03-1_FlashSystem.md'
+      - 常见问题: 'DongshanPI-D1s/03-SomeQustion.md'    
+    - 配置开发环境: 'DongshanPI-D1s/06-ConfigHostEnv.md'
+    - 最小系统快速上手:
+      - 运行helloword应用:  'DongshanPI-D1s/05-1_RunHelloword.md'
+      - 运行helloword驱动:  'DongshanPI-D1s/05-2_RunHellowordDriver.md'
+    - Tina-SDK系统开发:   
+      - 构建Tina系统: 'DongshanPI-D1s/07-TinaSDK_DevelopmentGuide.md'
+      - 编译开发bootloader: 'DongshanPI-D1s/08-TinaSDK_BuildBootloader.md'
+      - 编译开发kernel: 'DongshanPI-D1s/09-TinaSDK_BuildLinuxKernel.md'
+      - 编译开发Rootfs: 'DongshanPI-D1s/10-TinaSDK_BuildRootfs.md'
+      - 支持wifi蓝牙: 'DongshanPI-D1s/12-1_TinaSDK_SupportWifiBluetooth.md'
+      - 支持MIPI摄像头: 'DongshanPI-D1s/13-1_TinaSDK_SupportMIPICamera.md'      
+      - 支持MIPI显示屏: 'DongshanPI-D1s/14-1_TinaSDK_SupportMIPIDisplay.md'     
+  - 柚木PI-蜥蜴:
+    - 主板简介: 'YuzukiHD-Lizard/01-BoardIntroduction.md'          
+    - 配套资源: 'YuzukiHD-Lizard/02-SupportingResources.md'
+    - 快速启动:
+      - 连接开发板: 'YuzukiHD-Lizard/03-QuickStart.md'
+      - 更新系统: 'YuzukiHD-Lizard/03-1_FlashSystem.md'
+      - 常见问题: 'YuzukiHD-Lizard/03-SomeQustion.md'    
+    - 配置开发环境: 'YuzukiHD-Lizard/06-ConfigHostEnv.md'
+    - 最小系统快速上手:
+      - 运行helloword应用:  'YuzukiHD-Lizard/05-1_RunHelloword.md'
+      - 运行helloword驱动:  'YuzukiHD-Lizard/05-2_RunHellowordDriver.md'
+    - Tina-SDK系统开发:   
+      - 构建Tina系统: 'YuzukiHD-Lizard/07-TinaSDK_DevelopmentGuide.md'
+      - 编译开发bootloader: 'YuzukiHD-Lizard/08-TinaSDK_BuildBootloader.md'
+      - 编译开发kernel: 'YuzukiHD-Lizard/09-TinaSDK_BuildLinuxKernel.md'
+      - 编译开发Rootfs: 'YuzukiHD-Lizard/10-TinaSDK_BuildRootfs.md'
+      - 支持wifi蓝牙: 'YuzukiHD-Lizard/12-1_TinaSDK_SupportWifiBluetooth.md'
+      - 支持MIPI摄像头: 'YuzukiHD-Lizard/13-1_TinaSDK_SupportMIPICamera.md'      
+      - 支持MIPI显示屏: 'YuzukiHD-Lizard/14-1_TinaSDK_SupportMIPIDisplay.md'      
+  - 柚木PI-变色龙:
+    - 主板简介: 'YuzukiHD-Chameleon/01-BoardIntroduction.md'
+    - 配套资源: 'YuzukiHD-Chameleon/02-SupportingResources.md'
+    - 快速启动: 'YuzukiHD-Chameleon/03-QuickStart.md'
+    - 配置开发环境: 'YuzukiHD-Chameleon/06-ConfigHostEnv.md'
+    - 最小系统快速上手:
+      - 运行helloword应用:  'YuzukiHD-Chameleon/05-1_RunHelloword.md'
+      - 运行helloword驱动:  'YuzukiHD-Chameleon/05-2_RunHellowordDriver.md'
+    - Buildroot-SDK系统开发:      
+      - 编译构建最小系统: 'YuzukiHD-Chameleon/07-Buildroot-SDK_DevelopmentGuide.md'
+      - 编译开发bootloader: 'YuzukiHD-Chameleon/08-BuildBootloader.md'
+      - 编译开发kernel: 'YuzukiHD-Chameleon/09-BuildLinuxKernel.md'
+      - 编译开发Rootfs: 'YuzukiHD-Chameleon/10-BuildRootfs.md'
+      - 支持wifi蓝牙组件: 'YuzukiHD-Chameleon/10-1_BuildrootSupportWifiBluetooth.md'
+    - Tina-SDK系统开发:      
+      - 编译构建最小系统: 'YuzukiHD-Chameleon/11-Tina-SDK_DevelopmentGuide.md'      
+  - DongshanPI-哪吒STU:
+    - 主板简介: 'DongshanNezhaSTU/01-BoardIntroduction.md'
+    - 配套资源: 'DongshanNezhaSTU/02-SupportingResources.md'
+    - 快速启动: 'DongshanNezhaSTU/03-QuickStart.md'
+    - 配置开发环境: 'DongshanNezhaSTU/06-ConfigHostEnv.md'
+    - 最小系统快速上手:
+      - 运行helloword应用:  'DongshanNezhaSTU/05-1_RunHelloword.md'
+      - 运行helloword驱动:  'DongshanNezhaSTU/05-2_RunHellowordDriver.md'
+    - Buildroot-SDK系统开发:      
+      - 编译构建最小系统: 'DongshanNezhaSTU/07-Buildroot-SDK_DevelopmentGuide.md'
+      - 编译开发bootloader: 'DongshanNezhaSTU/08-BuildBootloader.md'
+      - 编译开发kernel: 'DongshanNezhaSTU/09-BuildLinuxKernel.md'
+      - 编译开发Rootfs: 'DongshanNezhaSTU/10-BuildRootfs.md'
+      - 支持wifi蓝牙组件: 'DongshanNezhaSTU/10-1_BuildrootSupportWifiBluetooth.md'
+    - Tina-SDK系统开发:      
+      - 编译构建最小系统: 'DongshanNezhaSTU/11-Tina-SDK_DevelopmentGuide.md'          
+  - DongshanPI-壹号:
+    - 主板简介: 'DongshanPi-One/01-BoardIntroduction.md'
+    - 配套资源: 'DongshanPi-One/02-SupportingResources.md'
+    - 快速上手:
+      - 连接开发板: 'DongshanPi-One/03-QuickStart.md'
+      - 常见问题: 'DongshanPi-One/03-SomeQustion.md'
+    - 快速项目开发:
+      - 获取源码: 'DongshanPi-One/05-GetSourceCode.md'
+      - 编译烧写Boot: 'DongshanPi-One/06-BuildFlashBoot.md'
+      - 编译烧写Kernel: 'DongshanPi-One/07-BuildFlashKernel.md'
+      - 编译烧写系统: 'DongshanPi-One/08-BuildFlashSystem.md'
+      - 应用Demo示例: 'DongshanPi-One/16-RunDempApp.md'
+    - Linux社区版本:
+      - 社区版本简述: 'DongshanPi-One/15-SupportLinuxCommunity.md'
+      - Das u-boot开发: 'DongshanPi-One/17-Das u-boot.md'
+      - Linux Kernel开发: 'DongshanPi-One/18-LinuxKernel.md'
+      - rootfs开发: 'DongshanPi-One/19.Buildroot.md'
+      - 开源工具: 'DongshanPi-One/19.OpensourceMstarTools.md'      
+    - 系统加强:      
+      - 支持的模块: 'DongshanPi-One/09-SupportHardware.md'
+      - 支持的工具: 'DongshanPi-One/10-SupportTools.md'
+      - 支持的其它系统: 'DongshanPi-One/11-SupportOtherSystem.md'
+  - DongshanPI-柒号:
+    - 主板简介: 'DongshanPi-Seven/01-BoardIntroduction.md'
+    - 配套资源: 'DongshanPi-Seven/02-SupportingResources.md' 
+    - 快速上手:
+      - 连接开发板: 'DongshanPi-Seven/03-QuickStart.md'
+      - 烧写&恢复系统: 'DongshanPi-Seven/04.FlashDefaultSystem.md'
+      - 其它常见问题: 'DongshanPi-Seven/04-SomeQustion.md'
+    - APP应用开发:
+      - LVGL界面开发: 'DongshanPi-Seven/05-LVGL_GuiDevelopment.md'
+      - QT界面开发:  'DongshanPi-Seven/05-QT_GuiDevelopment.md'
+      - MQTT协议开发: 'DongshanPi-Seven/05-MQTT_Development.md'    
+      - Socket网路编程: 'DongshanPi-Seven/05-Socket_Development.md'
+      - Web服务开发:  'DongshanPi-Seven/05-Web_Developmen.md'
+      - ALSA音频编程: 'DongshanPi-Seven/05-ALSA_Developmen.md'      
+      - V4L2视频编程: 'DongshanPi-Seven/05-V4L2_Developmen.md'
+      - CAN应用编程:  'DongshanPi-Seven/05-CAN_Developmen.md'
+      - D-bus通信编程: 'DongshanPi-Seven/05-D-BUS_Developmen.md'
+    - 嵌入式系统开发:
+      - Linux驱动开发: 'DongshanPi-Seven/06-GetSourceCode.md'
+      - OTA升级开发: 'DongshanPi-Seven/07-SYSTEM_OTA.md'
+      - OPTEE开发: 'DongshanPi-Seven/09-OPTEE-OS.md'               
+  - 关于我们:
+     - 简介: 'About.md'
+
+extra_javascript:
+  - javascripts/shortcuts.js
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/d3@6.7.0/dist/d3.min.js
+  - https://unpkg.com/markmap-lib@0.14.1/dist/browser/index.min.js
+  - https://unpkg.com/markmap-view@0.14.0/dist/index.min.js  
+
