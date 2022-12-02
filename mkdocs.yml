@@ -173,7 +173,12 @@ markdown_extensions:
 nav:
   - 根页面:
     - 网站简介: 'index.md'
-  - Linux-SDK模块开发指南上半截:
+    - Linux-SDK模块开发指南上: 'SdkModuleDevelopment1.md'
+    - Linux-SDK模块开发指南下: 'SdkModuleDevelopment2.md'
+    - Linux基础组件开发指南上: 'BasicComponentDevelopment1.md'    
+    - Linux基础组件开发指南中: 'BasicComponentDevelopment2.md'
+    - Linux基础组件开发指南下: 'BasicComponentDevelopment3.md'        
+  - Linux-SDK模块开发指南上:
     - CCU_开发指南:
       - 概述: 'SdkModuleDevelopment/Linux_CCU_DevelopmentGuide-01.md'
       - 模块介绍: 'SdkModuleDevelopment/Linux_CCU_DevelopmentGuide-02.md'      
@@ -190,7 +195,7 @@ nav:
     - GPIO_开发指南: 'SdkModuleDevelopment/Linux_GPIO_DevelopmentGuide-01.md'
     - ISP_开发指南: 'SdkModuleDevelopment/Linux_ISP_DevelopmentGuide-01.md'
     - LCD_开发指南: 'SdkModuleDevelopment/Linux_LCD_DevelopmentGuide-01.md'
-  - Linux-SDK模块开发指南下半截:    
+  - Linux-SDK模块开发指南下:    
     - MIPI_CSI_开发指南: 'SdkModuleDevelopment/Linux_MIPI_CSI_DevelopmentGuide-01.md'
     - MMC_开发指南: 'SdkModuleDevelopment/Linux_MMC_DevelopmentGuide-01.md'
     - Nor_开发指南: 'SdkModuleDevelopment/Linux_Nor_DevelopmentGuide-01.md'
@@ -206,18 +211,18 @@ nav:
     - UART_开发指南: 'SdkModuleDevelopment/Linux_UART_DevelopmentGuide-01.md'
     - USB_开发指南: 'SdkModuleDevelopment/Linux_USB_DevelopmentGuide-01.md'
     - 安全_开发指南: 'SdkModuleDevelopment/Linux_Security_DevelopmentGuide-01.md'    
-  - Linux基础组件开发指南上半截:
+  - Linux基础组件开发指南上:
     - Linux_PWM_开发指南:
       - 概述: 'BasicComponentDevelopment/Linux_PWM_DevelopmentGuide-01.md'
       - 术语及概念: 'BasicComponentDevelopment/Linux_PWM_DevelopmentGuide-02.md'   
-      - 模块描述: 'BasicComponentDevelopment/Linux_PWM_DevelopmentGuide-0.md'          
+      - 模块描述: 'BasicComponentDevelopment/Linux_PWM_DevelopmentGuide-03.md'          
     - MPP_Sample_使用说明: 'BasicComponentDevelopment/MPP_Sample_Instructionsforuse-01.md'
     - E907开发指南: 'BasicComponentDevelopment/Linux_E907_DevelopmentGuide-01.md'
     - Camera_开发指南: 'BasicComponentDevelopment/Linux_Camera_DevelopmentGuide-01.md'
     - Display_开发指南: 'BasicComponentDevelopment/Linux_Display_DevelopmentGuide-01.md'
     - Key_快速配置_使用指南: 'BasicComponentDevelopment/Linux_Key_QuickConfiguration_UserGuide-01.md'
     - LCD_调试指南: 'BasicComponentDevelopment/Linux_LCD_DebuggingGuide-01.md'
-  - Linux基础组件开发指南中半截:    
+  - Linux基础组件开发指南中:    
     - NPU开发简介: 'BasicComponentDevelopment/IntroductiontoLinux_NPUDevelopment-01.md'
     - NPU混合量化部署: 'BasicComponentDevelopment/Linux_NPUmixedquantitativedeployment-01.md'
     - NPU部署工具安装指导: 'BasicComponentDevelopment/Linux_NPUdeploymenttoolinstallationguide-01.md'    
@@ -229,7 +234,7 @@ nav:
     - OTA_开发指南: 'BasicComponentDevelopment/Linux_OTA_DevelopmentGuide-01.md'
     - PMU_开发指南: 'BasicComponentDevelopment/Linux_PMU_DevelopmentGuide-01.md'
     - USB_开发指南: 'BasicComponentDevelopment/Linux_USB_DevelopmentGuide-01.md'
-  - Linux基础组件开发指南下半截:    
+  - Linux基础组件开发指南下:    
     - Wi-Fi_开发指南: 'BasicComponentDevelopment/Linux_Wi-Fi_DevelopmentGuide-01.md'
     - WiFi_RF测试_使用指南: 'BasicComponentDevelopment/Linux_WiFi_RFTest_UsageGuide-01.md'
     - syslog_使用指南: 'BasicComponentDevelopment/Linux_syslog_UsageGuide-01.md'
