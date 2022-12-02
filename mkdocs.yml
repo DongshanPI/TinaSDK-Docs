@@ -222,7 +222,18 @@ nav:
     - Display_开发指南: 'BasicComponentDevelopment/Linux_Display_DevelopmentGuide-01.md'
     - Key_快速配置_使用指南: 'BasicComponentDevelopment/Linux_Key_QuickConfiguration_UserGuide-01.md'
     - LCD_调试指南: 'BasicComponentDevelopment/Linux_LCD_DebuggingGuide-01.md'
-  - Linux基础组件开发指南中:    
+    - OTA_开发指南: 'BasicComponentDevelopment/Linux_OTA_DevelopmentGuide-01.md'
+    - PMU_开发指南: 'BasicComponentDevelopment/Linux_PMU_DevelopmentGuide-01.md'
+    - USB_开发指南: 'BasicComponentDevelopment/Linux_USB_DevelopmentGuide-01.md'    
+  - Linux基础组件开发指南中: 
+    - 网络性能_参考指南: 'BasicComponentDevelopment/Linux_NetworkPerformance_ReferenceGuide-01.md'
+    - 蓝牙_开发指南: 'BasicComponentDevelopment/Linux_Bluetooth_DevelopmentGuide-01.md'
+    - 蓝牙_模组移植指南: 'BasicComponentDevelopment/Linux_Bluetooth_ModuleMigrationGuide-01.md'
+    - Wi-Fi_开发指南: 'BasicComponentDevelopment/Linux_Wi-Fi_DevelopmentGuide-01.md'
+    - WiFi_RF测试_使用指南: 'BasicComponentDevelopment/Linux_WiFi_RFTest_UsageGuide-01.md'    
+    - 配网_开发指南: 'BasicComponentDevelopment/Linux_DistributionNetwork_DevelopmentGuide-01.md'
+    - 配置_开发指南: 'BasicComponentDevelopment/Linux_Configuration_DevelopmentGuide-01.md'
+    - 音频_开发指南: 'BasicComponentDevelopment/Linux_Audio_DevelopmentGuide-01.md'
     - NPU开发简介: 'BasicComponentDevelopment/IntroductiontoLinux_NPUDevelopment-01.md'
     - NPU混合量化部署: 'BasicComponentDevelopment/Linux_NPUmixedquantitativedeployment-01.md'
     - NPU部署工具安装指导: 'BasicComponentDevelopment/Linux_NPUdeploymenttoolinstallationguide-01.md'    
@@ -231,12 +242,7 @@ nav:
     - NPU_VIPLite_API说明: 'BasicComponentDevelopment/DescriptionofLinux_NPU_VIPLite_API-01.md'
     - NPU_Yolact模型部署: 'BasicComponentDevelopment/Linux_NPU_Yolactmodeldeployment-01.md'
     - NPU常见网络性能分析数据: 'BasicComponentDevelopment/Linux_NPUcommonnetworkperformanceanalysisdata-01.md'
-    - OTA_开发指南: 'BasicComponentDevelopment/Linux_OTA_DevelopmentGuide-01.md'
-    - PMU_开发指南: 'BasicComponentDevelopment/Linux_PMU_DevelopmentGuide-01.md'
-    - USB_开发指南: 'BasicComponentDevelopment/Linux_USB_DevelopmentGuide-01.md'
   - Linux基础组件开发指南下:    
-    - Wi-Fi_开发指南: 'BasicComponentDevelopment/Linux_Wi-Fi_DevelopmentGuide-01.md'
-    - WiFi_RF测试_使用指南: 'BasicComponentDevelopment/Linux_WiFi_RFTest_UsageGuide-01.md'
     - syslog_使用指南: 'BasicComponentDevelopment/Linux_syslog_UsageGuide-01.md'
     - 内存优化_开发指南: 'BasicComponentDevelopment/Linux_MemoryOptimization_DevelopmentGuide-01.md'
     - 功耗管理_开发指南: 'BasicComponentDevelopment/Linux_PowerManagement_DevelopmentGuide-01.md'
@@ -251,12 +257,6 @@ nav:
     - 系统裁剪_开发指南: 'BasicComponentDevelopment/Linux_SystemTailoring_DevelopmentGuide-01.md'
     - 系统调试_使用指南: 'BasicComponentDevelopment/Linux_SystemDebugging_UsageGuide-01.md'
     - 系统软件_开发指南: 'BasicComponentDevelopment/Linux_SystemSoftware_DevelopmentGuide-01.md'
-    - 网络性能_参考指南: 'BasicComponentDevelopment/Linux_NetworkPerformance_ReferenceGuide-01.md'
-    - 蓝牙_开发指南: 'BasicComponentDevelopment/Linux_Bluetooth_DevelopmentGuide-01.md'
-    - 蓝牙_模组移植指南: 'BasicComponentDevelopment/Linux_Bluetooth_ModuleMigrationGuide-01.md'
-    - 配网_开发指南: 'BasicComponentDevelopment/Linux_DistributionNetwork_DevelopmentGuide-01.md'
-    - 配置_开发指南: 'BasicComponentDevelopment/Linux_Configuration_DevelopmentGuide-01.md'
-    - 音频_开发指南: 'BasicComponentDevelopment/Linux_Audio_DevelopmentGuide-01.md'
 
 extra_javascript:
   - javascripts/shortcuts.js
