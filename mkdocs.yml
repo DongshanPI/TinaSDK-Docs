@@ -171,7 +171,7 @@ markdown_extensions:
   
 # Page tree
 nav:
-  - 根页面:
+  - 网站简述:
     - 网站简介: 'index.md'
     - Linux-SDK模块开发指南上: 'SdkModuleDevelopment1.md'
     - Linux-SDK模块开发指南下: 'SdkModuleDevelopment2.md'
