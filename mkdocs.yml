@@ -1,13 +1,13 @@
 # Project information
-site_name: DongshanPI Board Documentation Center.
+site_name: Tina SDK Documentation Center.
 site_url: https://github.com/DongshanPI/TinaSDK-Docs.git
 site_author: 100askTeam
 site_description: >-
-  DongShanPI boards Docs Start Page.
+  Tina SDK Docs Start Page.
 copyright: Copyright &copy; 2008 - 2022 100ask Team
 edit_uri: edit/master/docs/
 repo_url: https://github.com/DongshanPI/TinaSDK-Docs/
-repo_name: DongshanPI/Dongshanpi-Docs
+repo_name: DongshanPI/TinaSDK-Docs
 
 # Configuration
 theme:
@@ -173,128 +173,20 @@ markdown_extensions:
 nav:
   - 根页面:
     - 网站简介: 'index.md'
-    - DongshanPI-D1s: 'index.md'
-    - 柚木PI-蜥蜴: 'index.md'
-    - 柚木PI-变色龙: 'index.md'
-    - DongshanPI-哪吒STU: 'index.md'
-    - DongshanPI-壹号: 'index.md'
-    - DongshanPI-柒号: 'index.md'
-  - DongshanPI-D1s:
-    - 主板简介: 'DongshanPI-D1s/01-BoardIntroduction.md'          
-    - 配套资源: 'DongshanPI-D1s/02-SupportingResources.md'
-    - 快速启动:
-      - 连接开发板: 'DongshanPI-D1s/03-QuickStart.md'
-      - 更新系统: 'DongshanPI-D1s/03-1_FlashSystem.md'
-      - 常见问题: 'DongshanPI-D1s/03-SomeQustion.md'    
-    - 配置开发环境: 'DongshanPI-D1s/06-ConfigHostEnv.md'
-    - 最小系统快速上手:
-      - 运行helloword应用:  'DongshanPI-D1s/05-1_RunHelloword.md'
-      - 运行helloword驱动:  'DongshanPI-D1s/05-2_RunHellowordDriver.md'
-    - Tina-SDK系统开发:   
-      - 构建Tina系统: 'DongshanPI-D1s/07-TinaSDK_DevelopmentGuide.md'
-      - 编译开发bootloader: 'DongshanPI-D1s/08-TinaSDK_BuildBootloader.md'
-      - 编译开发kernel: 'DongshanPI-D1s/09-TinaSDK_BuildLinuxKernel.md'
-      - 编译开发Rootfs: 'DongshanPI-D1s/10-TinaSDK_BuildRootfs.md'
-      - 支持wifi蓝牙: 'DongshanPI-D1s/12-1_TinaSDK_SupportWifiBluetooth.md'
-      - 支持MIPI摄像头: 'DongshanPI-D1s/13-1_TinaSDK_SupportMIPICamera.md'      
-      - 支持MIPI显示屏: 'DongshanPI-D1s/14-1_TinaSDK_SupportMIPIDisplay.md'     
-  - 柚木PI-蜥蜴:
-    - 主板简介: 'YuzukiHD-Lizard/01-BoardIntroduction.md'          
-    - 配套资源: 'YuzukiHD-Lizard/02-SupportingResources.md'
-    - 快速启动:
-      - 连接开发板: 'YuzukiHD-Lizard/03-QuickStart.md'
-      - 更新系统: 'YuzukiHD-Lizard/03-1_FlashSystem.md'
-      - 常见问题: 'YuzukiHD-Lizard/03-SomeQustion.md'    
-    - 配置开发环境: 'YuzukiHD-Lizard/06-ConfigHostEnv.md'
-    - 最小系统快速上手:
-      - 运行helloword应用:  'YuzukiHD-Lizard/05-1_RunHelloword.md'
-      - 运行helloword驱动:  'YuzukiHD-Lizard/05-2_RunHellowordDriver.md'
-    - Tina-SDK系统开发:   
-      - 构建Tina系统: 'YuzukiHD-Lizard/07-TinaSDK_DevelopmentGuide.md'
-      - 编译开发bootloader: 'YuzukiHD-Lizard/08-TinaSDK_BuildBootloader.md'
-      - 编译开发kernel: 'YuzukiHD-Lizard/09-TinaSDK_BuildLinuxKernel.md'
-      - 编译开发Rootfs: 'YuzukiHD-Lizard/10-TinaSDK_BuildRootfs.md'
-      - 支持wifi蓝牙: 'YuzukiHD-Lizard/12-1_TinaSDK_SupportWifiBluetooth.md'
-      - 支持MIPI摄像头: 'YuzukiHD-Lizard/13-1_TinaSDK_SupportMIPICamera.md'      
-      - 支持MIPI显示屏: 'YuzukiHD-Lizard/14-1_TinaSDK_SupportMIPIDisplay.md'      
-  - 柚木PI-变色龙:
-    - 主板简介: 'YuzukiHD-Chameleon/01-BoardIntroduction.md'
-    - 配套资源: 'YuzukiHD-Chameleon/02-SupportingResources.md'
-    - 快速启动: 'YuzukiHD-Chameleon/03-QuickStart.md'
-    - 配置开发环境: 'YuzukiHD-Chameleon/06-ConfigHostEnv.md'
-    - 最小系统快速上手:
-      - 运行helloword应用:  'YuzukiHD-Chameleon/05-1_RunHelloword.md'
-      - 运行helloword驱动:  'YuzukiHD-Chameleon/05-2_RunHellowordDriver.md'
-    - Buildroot-SDK系统开发:      
-      - 编译构建最小系统: 'YuzukiHD-Chameleon/07-Buildroot-SDK_DevelopmentGuide.md'
-      - 编译开发bootloader: 'YuzukiHD-Chameleon/08-BuildBootloader.md'
-      - 编译开发kernel: 'YuzukiHD-Chameleon/09-BuildLinuxKernel.md'
-      - 编译开发Rootfs: 'YuzukiHD-Chameleon/10-BuildRootfs.md'
-      - 支持wifi蓝牙组件: 'YuzukiHD-Chameleon/10-1_BuildrootSupportWifiBluetooth.md'
-    - Tina-SDK系统开发:      
-      - 编译构建最小系统: 'YuzukiHD-Chameleon/11-Tina-SDK_DevelopmentGuide.md'      
-  - DongshanPI-哪吒STU:
-    - 主板简介: 'DongshanNezhaSTU/01-BoardIntroduction.md'
-    - 配套资源: 'DongshanNezhaSTU/02-SupportingResources.md'
-    - 快速启动: 'DongshanNezhaSTU/03-QuickStart.md'
-    - 配置开发环境: 'DongshanNezhaSTU/06-ConfigHostEnv.md'
-    - 最小系统快速上手:
-      - 运行helloword应用:  'DongshanNezhaSTU/05-1_RunHelloword.md'
-      - 运行helloword驱动:  'DongshanNezhaSTU/05-2_RunHellowordDriver.md'
-    - Buildroot-SDK系统开发:      
-      - 编译构建最小系统: 'DongshanNezhaSTU/07-Buildroot-SDK_DevelopmentGuide.md'
-      - 编译开发bootloader: 'DongshanNezhaSTU/08-BuildBootloader.md'
-      - 编译开发kernel: 'DongshanNezhaSTU/09-BuildLinuxKernel.md'
-      - 编译开发Rootfs: 'DongshanNezhaSTU/10-BuildRootfs.md'
-      - 支持wifi蓝牙组件: 'DongshanNezhaSTU/10-1_BuildrootSupportWifiBluetooth.md'
-    - Tina-SDK系统开发:      
-      - 编译构建最小系统: 'DongshanNezhaSTU/11-Tina-SDK_DevelopmentGuide.md'          
-  - DongshanPI-壹号:
-    - 主板简介: 'DongshanPi-One/01-BoardIntroduction.md'
-    - 配套资源: 'DongshanPi-One/02-SupportingResources.md'
-    - 快速上手:
-      - 连接开发板: 'DongshanPi-One/03-QuickStart.md'
-      - 常见问题: 'DongshanPi-One/03-SomeQustion.md'
-    - 快速项目开发:
-      - 获取源码: 'DongshanPi-One/05-GetSourceCode.md'
-      - 编译烧写Boot: 'DongshanPi-One/06-BuildFlashBoot.md'
-      - 编译烧写Kernel: 'DongshanPi-One/07-BuildFlashKernel.md'
-      - 编译烧写系统: 'DongshanPi-One/08-BuildFlashSystem.md'
-      - 应用Demo示例: 'DongshanPi-One/16-RunDempApp.md'
-    - Linux社区版本:
-      - 社区版本简述: 'DongshanPi-One/15-SupportLinuxCommunity.md'
-      - Das u-boot开发: 'DongshanPi-One/17-Das u-boot.md'
-      - Linux Kernel开发: 'DongshanPi-One/18-LinuxKernel.md'
-      - rootfs开发: 'DongshanPi-One/19.Buildroot.md'
-      - 开源工具: 'DongshanPi-One/19.OpensourceMstarTools.md'      
-    - 系统加强:      
-      - 支持的模块: 'DongshanPi-One/09-SupportHardware.md'
-      - 支持的工具: 'DongshanPi-One/10-SupportTools.md'
-      - 支持的其它系统: 'DongshanPi-One/11-SupportOtherSystem.md'
-  - DongshanPI-柒号:
-    - 主板简介: 'DongshanPi-Seven/01-BoardIntroduction.md'
-    - 配套资源: 'DongshanPi-Seven/02-SupportingResources.md' 
-    - 快速上手:
-      - 连接开发板: 'DongshanPi-Seven/03-QuickStart.md'
-      - 烧写&恢复系统: 'DongshanPi-Seven/04.FlashDefaultSystem.md'
-      - 其它常见问题: 'DongshanPi-Seven/04-SomeQustion.md'
-    - APP应用开发:
-      - LVGL界面开发: 'DongshanPi-Seven/05-LVGL_GuiDevelopment.md'
-      - QT界面开发:  'DongshanPi-Seven/05-QT_GuiDevelopment.md'
-      - MQTT协议开发: 'DongshanPi-Seven/05-MQTT_Development.md'    
-      - Socket网路编程: 'DongshanPi-Seven/05-Socket_Development.md'
-      - Web服务开发:  'DongshanPi-Seven/05-Web_Developmen.md'
-      - ALSA音频编程: 'DongshanPi-Seven/05-ALSA_Developmen.md'      
-      - V4L2视频编程: 'DongshanPi-Seven/05-V4L2_Developmen.md'
-      - CAN应用编程:  'DongshanPi-Seven/05-CAN_Developmen.md'
-      - D-bus通信编程: 'DongshanPi-Seven/05-D-BUS_Developmen.md'
-    - 嵌入式系统开发:
-      - Linux驱动开发: 'DongshanPi-Seven/06-GetSourceCode.md'
-      - OTA升级开发: 'DongshanPi-Seven/07-SYSTEM_OTA.md'
-      - OPTEE开发: 'DongshanPi-Seven/09-OPTEE-OS.md'               
-  - 关于我们:
-     - 简介: 'About.md'
-
+  - Linux-SDK模块开发指南:
+    - CCU_开发指南:
+      - 概述: 'SdkModuleDevelopment/Linux_CCU_DevelopmentGuide-01.md'
+      - 模块介绍: 'SdkModuleDevelopment/Linux_CCU_DevelopmentGuide-02.md'      
+      - 模块接口说明: 'SdkModuleDevelopment/Linux_CCU_DevelopmentGuide-03.md'            
+      - 模块使用规范: 'SdkModuleDevelopment/Linux_CCU_DevelopmentGuide-04.md'                  
+    - CE开发指南: 'SdkModuleDevelopment/Linux_CE_DevelopmentGuide-01.md' 
+    - DMAC_开发指南: 'SdkModuleDevelopment/Linux_DMAC_DevelopmentGuide-01.md'
+    - G2D_开发指南: 'SdkModuleDevelopment/Linux_G2D_DevelopmentGuide-01.md'
+  - Linux基础组件开发指南:
+    - Linux_PWM_开发指南:
+      - 概述: 'BasicComponentDevelopment/Linux_PWM_DevelopmentGuide-01.md'
+      - 术语及概念: 'BasicComponentDevelopment/Linux_PWM_DevelopmentGuide-02.md'   
+      - 模块描述: 'BasicComponentDevelopment/Linux_PWM_DevelopmentGuide-03.md'          
 extra_javascript:
   - javascripts/shortcuts.js
 
