@@ -173,12 +173,9 @@ markdown_extensions:
 nav:
   - 网站简述:
     - 网站简介: 'index.md'
-    - Linux-SDK模块开发指南上: 'SdkModuleDevelopment1.md'
-    - Linux-SDK模块开发指南下: 'SdkModuleDevelopment2.md'
-    - Linux基础组件开发指南上: 'BasicComponentDevelopment1.md'    
-    - Linux基础组件开发指南中: 'BasicComponentDevelopment2.md'
-    - Linux基础组件开发指南下: 'BasicComponentDevelopment3.md'        
-  - Linux-SDK模块开发指南上:
+    - LinuxSDK模块开发指南: 'SdkModuleDevelopment.md'
+    - Linux基础组件开发指南: 'BasicComponentDevelopment.md'
+  - Linux-SDK模块开发指南上:     
     - UART_开发指南:
       - 概述与介绍: 'SdkModule/Linux_UART_DevelopmentGuide-01.md'
       - 模块配置介绍: 'SdkModule/Linux_UART_DevelopmentGuide-02.md'
@@ -210,7 +207,6 @@ nav:
     - EMAC_开发指南: 'SdkModule/Linux_EMAC_DevelopmentGuide-01.md'
     - GPADC_开发指南: 'SdkModule/Linux_GPADC_DevelopmentGuide-01.md'
     - ISP_开发指南: 'SdkModule/Linux_ISP_DevelopmentGuide-01.md'
-
   - Linux-SDK模块开发指南下:    
     - MIPI_CSI_开发指南: 'SdkModule/Linux_MIPI_CSI_DevelopmentGuide-01.md'
     - MMC_开发指南: 'SdkModule/Linux_MMC_DevelopmentGuide-01.md'
