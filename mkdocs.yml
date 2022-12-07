@@ -179,6 +179,23 @@ nav:
     - Linux基础组件开发指南中: 'BasicComponentDevelopment2.md'
     - Linux基础组件开发指南下: 'BasicComponentDevelopment3.md'        
   - Linux-SDK模块开发指南上:
+    - UART_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_UART_DevelopmentGuide-01.md'
+      - 模块配置介绍: 'SdkModule/Linux_UART_DevelopmentGuide-02.md'
+      - 接口描述: 'SdkModule/Linux_UART_DevelopmentGuide-03.md'      
+      - 模块使用范例: 'SdkModule/Linux_UART_DevelopmentGuide-04.md'            
+      - 常见问题: 'SdkModule/Linux_UART_DevelopmentGuide-05.md'                  
+    - GPIO_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_GPIO_DevelopmentGuide-01.md'
+      - 模块配置介绍: 'SdkModule/Linux_GPIO_DevelopmentGuide-02.md'
+      - 接口描述: 'SdkModule/Linux_GPIO_DevelopmentGuide-03.md'      
+      - 模块使用范例: 'SdkModule/Linux_GPIO_DevelopmentGuide-04.md'            
+      - 常见问题: 'SdkModule/Linux_GPIO_DevelopmentGuide-05.md'          
+    - LCD_开发指南: 
+      - 概述与介绍: 'SdkModule/Linux_LCD_DevelopmentGuide-01.md'
+      - IC规格: 'SdkModule/Linux_LCD_DevelopmentGuide-02.md'
+      - 模块介绍: 'SdkModule/Linux_LCD_DevelopmentGuide-03.md'      
+      - 硬件参数说明: 'SdkModule/Linux_LCD_DevelopmentGuide-04.md'        
     - CCU_开发指南:
       - 概述: 'SdkModule/Linux_CCU_DevelopmentGuide-01.md'
       - 模块介绍: 'SdkModule/Linux_CCU_DevelopmentGuide-02.md'      
@@ -192,9 +209,8 @@ nav:
     - Display_开发指南: 'SdkModule/Linux_Display_DevelopmentGuide-01.md'
     - EMAC_开发指南: 'SdkModule/Linux_EMAC_DevelopmentGuide-01.md'
     - GPADC_开发指南: 'SdkModule/Linux_GPADC_DevelopmentGuide-01.md'
-    - GPIO_开发指南: 'SdkModule/Linux_GPIO_DevelopmentGuide-01.md'
     - ISP_开发指南: 'SdkModule/Linux_ISP_DevelopmentGuide-01.md'
-    - LCD_开发指南: 'SdkModule/Linux_LCD_DevelopmentGuide-01.md'
+
   - Linux-SDK模块开发指南下:    
     - MIPI_CSI_开发指南: 'SdkModule/Linux_MIPI_CSI_DevelopmentGuide-01.md'
     - MMC_开发指南: 'SdkModule/Linux_MMC_DevelopmentGuide-01.md'
@@ -208,7 +224,6 @@ nav:
     - Standby_开发指南: 'SdkModule/Linux_Standby_DevelopmentGuide-01.md'
     - TWI_开发指南: 'SdkModule/Linux_TWI_DevelopmentGuide-01.md'
     - U-Boot_开发指南: 'SdkModule/Linux_U-Boot_DevelopmentGuide-01.md'
-    - UART_开发指南: 'SdkModule/Linux_UART_DevelopmentGuide-01.md'
     - USB_开发指南: 'SdkModule/Linux_USB_DevelopmentGuide-01.md'
     - 安全_开发指南: 'SdkModule/Linux_Security_DevelopmentGuide-01.md'    
   - Linux基础组件开发指南上:
