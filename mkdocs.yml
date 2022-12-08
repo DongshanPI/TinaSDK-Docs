@@ -226,24 +226,22 @@ nav:
     - U-Boot_开发指南: 'SdkModule/Linux_U-Boot_DevelopmentGuide-01.md'
     - USB_开发指南: 'SdkModule/Linux_USB_DevelopmentGuide-01.md'
     - 安全_开发指南: 'SdkModule/Linux_Security_DevelopmentGuide-01.md'    
-  - Linux基础组件开发指南上:
-    - Linux_PWM_开发指南:
-      - 概述: 'BasicComponent/Linux_PWM_DevelopmentGuide-01.md'
-      - 术语及概念: 'BasicComponent/Linux_PWM_DevelopmentGuide-02.md'   
-      - 模块描述: 'BasicComponent/Linux_PWM_DevelopmentGuide-03.md'          
-    - MPP_Sample_使用说明: 'BasicComponent/MPP_Sample_Instructionsforuse-01.md'
-    - E907开发指南:
-      - 简述: 'BasicComponent/Linux_E907_DevelopmentGuide-01.md'
-      - 环境搭建: 'BasicComponent/Linux_E907_DevelopmentGuide-02.md'      
-      - 开发使用: 'BasicComponent/Linux_E907_DevelopmentGuide-03.md'
-      - 常见问题: 'BasicComponent/Linux_E907_DevelopmentGuide-04.md'
-    - LCD_调试指南:
+  - Linux基础组件开发指南上:        
+    - MPPSample使用:
+      - 概述与配置: 'BasicComponent/MPP_Sample_Instructionsforuse-01.md'
+      - 编译: 'BasicComponent/MPP_Sample_Instructionsforuse-02.md'
+      - 运行测试: 'BasicComponent/MPP_Sample_Instructionsforuse-03.md'
+      - 类别: 'BasicComponent/MPP_Sample_Instructionsforuse-04.md'
+      - 状态: 'BasicComponent/MPP_Sample_Instructionsforuse-05.md'
+      - 正文: 'BasicComponent/MPP_Sample_Instructionsforuse-06.md'                        
+      - 常见问题: 'BasicComponent/MPP_Sample_Instructionsforuse-07.md'                       
+    - LCD调试:
       - 简述: 'BasicComponent/Linux_LCD_DebuggingGuide-01.md'
       - 模块介绍: 'BasicComponent/Linux_LCD_DebuggingGuide-02.md'
       - 硬件参数说明: 'BasicComponent/Linux_LCD_DebuggingGuide-03.md'       
       - 调试方法: 'BasicComponent/Linux_LCD_DebuggingGuide-04.md'
       - 常见问题: 'BasicComponent/Linux_LCD_DebuggingGuide-05.md'
-    - Display_开发指南:
+    - Display开发:
       - 简述: 'BasicComponent/Linux_Display_DevelopmentGuide-01.md'
       - 模块接口概述: 'BasicComponent/Linux_Display_DevelopmentGuide-02.md'
       - 显示接口参数说明: 'BasicComponent/Linux_Display_DevelopmentGuide-03.md'
@@ -251,21 +249,21 @@ nav:
       - IOCTL接口描述: 'BasicComponent/Linux_Display_DevelopmentGuide-05.md'            
       - sysfs接口描述: 'BasicComponent/Linux_Display_DevelopmentGuide-06.md'                  
       - Data Structure: 'BasicComponent/Linux_Display_DevelopmentGuide-07.md'                        
-      - 调试: 'BasicComponent/Linux_Display_DevelopmentGuide-08.md'                              
-    - Camera_开发指南: 'BasicComponent/Linux_Camera_DevelopmentGuide-01.md'
-    - Key_快速配置_使用指南: 'BasicComponent/Linux_Key_QuickConfiguration_UserGuide-01.md'
-    - OTA_开发指南: 'BasicComponent/Linux_OTA_DevelopmentGuide-01.md'
-    - PMU_开发指南: 'BasicComponent/Linux_PMU_DevelopmentGuide-01.md'
-    - USB_开发指南: 'BasicComponent/Linux_USB_DevelopmentGuide-01.md'    
-  - Linux基础组件开发指南中: 
-    - 网络性能_参考指南: 'BasicComponent/Linux_NetworkPerformance_ReferenceGuide-01.md'
-    - 蓝牙_开发指南: 'BasicComponent/Linux_Bluetooth_DevelopmentGuide-01.md'
-    - 蓝牙_模组移植指南: 'BasicComponent/Linux_Bluetooth_ModuleMigrationGuide-01.md'
-    - Wi-Fi_开发指南: 'BasicComponent/Linux_Wi-Fi_DevelopmentGuide-01.md'
-    - WiFi_RF测试_使用指南: 'BasicComponent/Linux_WiFi_RFTest_UsageGuide-01.md'    
-    - 配网_开发指南: 'BasicComponent/Linux_DistributionNetwork_DevelopmentGuide-01.md'
-    - 配置_开发指南: 'BasicComponent/Linux_Configuration_DevelopmentGuide-01.md'
-    - 音频_开发指南: 'BasicComponent/Linux_Audio_DevelopmentGuide-01.md'
+      - 调试: 'BasicComponent/Linux_Display_DevelopmentGuide-08.md' 
+    - LinuxPWM开发:
+      - 概述: 'BasicComponent/Linux_PWM_DevelopmentGuide-01.md'
+      - 术语及概念: 'BasicComponent/Linux_PWM_DevelopmentGuide-02.md'   
+      - 模块描述: 'BasicComponent/Linux_PWM_DevelopmentGuide-03.md'                                     
+    - Camera开发:
+      - 简述: 'BasicComponent/Linux_Camera_DevelopmentGuide-01.md'
+      - 模块介绍: 'BasicComponent/Linux_Camera_DevelopmentGuide-02.md'      
+      - 模块开发: 'BasicComponent/Linux_Camera_DevelopmentGuide-03.md'
+      - 模块配置: 'BasicComponent/Linux_Camera_DevelopmentGuide-04.md'
+      - 调试常见问题: 'BasicComponent/Linux_Camera_DevelopmentGuide-05.md'
+      - 功能测试: 'BasicComponent/Linux_Camera_DevelopmentGuide-06.md'  
+    - 各平台多媒体格式: 'BasicComponent/Linux_Multimediaformatsforeachplatform-01.md'          
+    - 图形系统开发: 'BasicComponent/Linux_GraphicsSystem_DevelopmentGuide-01.md'
+    - 多媒体MPP开发: 'BasicComponent/Linux_MultimediaMPP_DevelopmentGuide-01.md'      
     - NPU开发简介: 'BasicComponent/IntroductiontoLinux_NPUDevelopment-01.md'
     - NPU混合量化部署: 'BasicComponent/Linux_NPUmixedquantitativedeployment-01.md'
     - NPU部署工具安装指导: 'BasicComponent/Linux_NPUdeploymenttoolinstallationguide-01.md'    
@@ -273,15 +271,34 @@ nav:
     - NPU_Lenet模型之从训练到端侧部署: 'BasicComponent/Linux_NPU_Lenetmodelfromtrainingtoend-sidedeployment-01.md'
     - NPU_VIPLite_API说明: 'BasicComponent/DescriptionofLinux_NPU_VIPLite_API-01.md'
     - NPU_Yolact模型部署: 'BasicComponent/Linux_NPU_Yolactmodeldeployment-01.md'
-    - NPU常见网络性能分析数据: 'BasicComponent/Linux_NPUcommonnetworkperformanceanalysisdata-01.md'
+    - NPU常见网络性能分析数据: 'BasicComponent/Linux_NPUcommonnetworkperformanceanalysisdata-01.md'                            
+  - Linux基础组件开发指南中: 
+    - Key快速配置:
+      - 模块简述:  'BasicComponent/Linux_Key_QuickConfiguration_UserGuide-01.md'
+      - GPIO-Key:  'BasicComponent/Linux_Key_QuickConfiguration_UserGuide-02.md'      
+      - ADC-Key:  'BasicComponent/Linux_Key_QuickConfiguration_UserGuide-03.md'      
+      - AXP-KeY:  'BasicComponent/Linux_Key_QuickConfiguration_UserGuide-04.md'             
+    - USB开发: 'BasicComponent/Linux_USB_DevelopmentGuide-01.md'      
+    - 网络性能参考: 'BasicComponent/Linux_NetworkPerformance_ReferenceGuide-01.md'
+    - 蓝牙开发: 'BasicComponent/Linux_Bluetooth_DevelopmentGuide-01.md'
+    - 蓝牙模组移植: 'BasicComponent/Linux_Bluetooth_ModuleMigrationGuide-01.md'
+    - Wi-Fi开发: 'BasicComponent/Linux_Wi-Fi_DevelopmentGuide-01.md'
+    - WiFiRF测试: 'BasicComponent/Linux_WiFi_RFTest_UsageGuide-01.md'    
+    - 无线配网: 'BasicComponent/Linux_DistributionNetwork_DevelopmentGuide-01.md'
+    - 单板资源配置: 'BasicComponent/Linux_Configuration_DevelopmentGuide-01.md'
+    - 音频开发: 'BasicComponent/Linux_Audio_DevelopmentGuide-01.md'
+    - E907开发:
+      - 简述: 'BasicComponent/Linux_E907_DevelopmentGuide-01.md'
+      - 环境搭建: 'BasicComponent/Linux_E907_DevelopmentGuide-02.md'      
+      - 开发使用: 'BasicComponent/Linux_E907_DevelopmentGuide-03.md'
+      - 常见问题: 'BasicComponent/Linux_E907_DevelopmentGuide-04.md'    
   - Linux基础组件开发指南下:    
+    - PMU_开发指南: 'BasicComponent/Linux_PMU_DevelopmentGuide-01.md'  
+    - OTA_开发指南: 'BasicComponent/Linux_OTA_DevelopmentGuide-01.md'
     - syslog_使用指南: 'BasicComponent/Linux_syslog_UsageGuide-01.md'
     - 内存优化_开发指南: 'BasicComponent/Linux_MemoryOptimization_DevelopmentGuide-01.md'
     - 功耗管理_开发指南: 'BasicComponent/Linux_PowerManagement_DevelopmentGuide-01.md'
-    - 各平台多媒体格式: 'BasicComponent/Linux_Multimediaformatsforeachplatform-01.md'
-    - 启动优化_开发指南: 'BasicComponent/Linux_BootOptimization_DevelopmentGuide-01.md'
-    - 图形系统_开发指南: 'BasicComponent/Linux_GraphicsSystem_DevelopmentGuide-01.md'
-    - 多媒体MPP_开发指南: 'BasicComponent/Linux_MultimediaMPP_DevelopmentGuide-01.md'
+    - Linux启动优化开发指南: 'BasicComponent/Linux_BootOptimization_DevelopmentGuide-01.md'
     - 存储_开发指南: 'BasicComponent/Linux_Storage_DevelopmentGuide-01.md'
     - 存储性能_参考指南: 'BasicComponent/Linux_StoragePerformance_ReferenceGuide-01.md'
     - 安全_开发指南: 'BasicComponent/Linux_Security_DevelopmentGuide-01.md'
@@ -289,7 +306,6 @@ nav:
     - 系统裁剪_开发指南: 'BasicComponent/Linux_SystemTailoring_DevelopmentGuide-01.md'
     - 系统调试_使用指南: 'BasicComponent/Linux_SystemDebugging_UsageGuide-01.md'
     - 系统软件_开发指南: 'BasicComponent/Linux_SystemSoftware_DevelopmentGuide-01.md'
-
 extra_javascript:
   - javascripts/shortcuts.js
 
