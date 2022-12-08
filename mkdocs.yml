@@ -171,8 +171,8 @@ markdown_extensions:
   
 # Page tree
 nav:
-  - 网站简述:
-    - 网站简介: 'index.md'
+  - Tina-SDKDocs站点简介:
+    - Tina-SDK网站简介: 'index.md'
     - LinuxSDK模块开发指南: 'SdkModuleDevelopment.md'
     - Linux基础组件开发指南: 'BasicComponentDevelopment.md'
   - Linux-SDK模块开发指南上:     
