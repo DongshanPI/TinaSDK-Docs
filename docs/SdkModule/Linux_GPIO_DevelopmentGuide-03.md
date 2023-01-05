@@ -1,346 +1,184 @@
-# GPIO-接口说明
-## 4 模块接口说明
+## 3 模块配置
 
-### 4.1 pinctrl 接口说明
+### 3.1 kernel menuconfig 配置
 
-#### 4.1.1 pin4ctrl_get
+进入 longan 根目录，执行./build.sh menuconfig
 
-*•* 函数原型：struct pinctrl *pinctrl_get(struct device *dev);
+进入配置主界面，并按以下步骤操作:
 
-*•* 作用：获取设备的 pin 操作句柄，所有 pin 操作必须基于此 pinctrl 句柄。
+首先，选择 Device Drivers 选项进入下一级配置，如下图所示：
 
-*•* 参数：
+![](http://photos.100ask.net/tina-docs/LinuxGPIODevelopmentGuide_003.png)
 
-* dev: 指向申请 pin 操作句柄的设备句柄。
+​                                                        图 3-1: 内核 menuconfig 根菜单
 
-*•* 返回：
 
-- 成功，返回 pinctrl 句柄。
 
-- 失败，返回 NULL。
+选择 Pin controllers, 进入下级配置，如下图所示：
 
+ ![](http://photos.100ask.net/tina-docs/LinuxGPIODevelopmentGuide_004.png)
 
+​                                                      图 3-2: 内核 menuconfig device drivers 菜单
 
-#### 4.1.2 pinctrl_put
 
-*•* 函数原型：void pinctrl_put(struct pinctrl *p)
 
-*•* 作用：释放 pinctrl 句柄，必须与 pinctrl_get 配对使用。
+选择 Allwinner SoC PINCTRL DRIVER, 进入下级配置，如下图所示：
 
-*•* 参数：
+![](http://photos.100ask.net/tina-docs/LinuxGPIODevelopmentGuide_005.png)
 
-​    	*•* p: 指向释放的 pinctrl 句柄。
+​                                                    图 3-3: 内核 menuconfig pinctrl drivers 菜单
 
-*•* 返回：
 
-​	    *•* 没有返回值。
 
-**!** 警告
+Sunxi pinctrl driver 默认编译进内核，如下图（以 sun50iw9p1 平台为例，其他平台类似）所示：
 
-必须与 **pinctrl_get** 配对使用。
+![](http://photos.100ask.net/tina-docs/LinuxGPIODevelopmentGuide_006.png)
 
+​                                                  图 3-4: 内核 menuconfig allwinner pinctrl drivers 菜单
 
 
-#### 4.1.3 devm_pinctrl_get
 
-*•* 函数原型：struct pinctrl *devm_pinctrl_get(struct device *dev)
 
-*•* 作用：根据设备获取 pin 操作句柄，所有 pin 操作必须基于此 pinctrl 句柄，与 pinctrl_get功能完全一样，只是 devm_pinctrl_get 会将申请到的 pinctrl 句柄做记录，绑定到设备句柄信息中。设备驱动申请 pin 资源，推荐优先使用 devm_pinctrl_get 接口。
 
-*•* 参数：
+### 3.2 device tree 源码结构和路径
 
-​    	*•* dev: 指向申请 pin 操作句柄的设备句柄。
+对于 Linux4.9： 
 
-*•* 返回：
+*•* 设备树文件的配置是该 SoC 所有方案的通用配置，对于 ARM64 CPU 而言，设备树的路径为：kernel/{KERNEL}/arch/arm64/boot/dts/sunxi/sun*-pinctrl.dtsi。 
 
-​		*•* 成功，返回 pinctrl 句柄。
+*•* 设备树文件的配置是该 SoC 所有方案的通用配置，对于 ARM32 CPU 而言，设备树的路径为：kernel/{KERNEL}/arch/arm32/boot/dts/sun*-pinctrl.dtsi。 
 
-​		*•* 失败，返回 NULL。
+*•* 板级设备树 (board.dts) 路径：/device/config/chips/{IC}/configs/{BOARD}/board.dts
 
+device tree 的源码结构关系如下：
 
+```
+board.dts
+|--------sun*.dtsi
+		     |------sun*-pinctrl.dtsi
+		     |------sun*-clk.dtsi
+```
 
-#### 4.1.4 devm_pinctrl_put
 
-*•* 函数原型：void devm_pinctrl_put(struct pinctrl *p)
 
-*•* 作用：释放 pinctrl 句柄，必须与 devm_pinctrl_get 配对使用。
+对于 Linux5.4:
 
-*•* 参数：
+*•* 设备树文件的配置是该 SoC 所有方案的通用配置，对于 ARM64 CPU 而言，5.4 内核中不再维护单独的 pinctrl 的 dtsi，直接将 pin 的信息放在了：kernel/{KERNEL}/arch/arm32/boot/dts/sun*.dtsi
 
-​		*•* p: 指向释放的 pinctrl 句柄。
+*•* 设备树文件的配置是该 SoC 所有方案的通用配置，对于 ARM32 CPU 而言，5.4 内核中不再维护单独的 pinctrl 的 dtsi，直接将 pin 的信息放在了：kernel/{KERNEL}/arch/arm32/boot/dts/sun*.dtsi
 
-*•* 返回：
+*•* 板级设备树 (board.dts) 路径：/device/config/chips/{IC}/configs/{BOARD}/board.dts
 
-​		*•* 没有返回值。
+*•* device tree 的源码包含关系如下：
 
-**!** 警告
+```
+board.dts
+    |--------sun*.dtsi
+```
 
-必须与 **devm_pinctrl_get** 配对使用，可以不显式的调用该接口。
 
 
 
-#### 4.1.5 pinctrl_lookup_state
 
-*•* 函数原型：struct pinctrl_state *pinctrl_lookup_state(struct pinctrl *p, const char *name)
+#### 3.2.1 device tree 对 gpio 控制器的通用配置
 
-*•* 作用：根据 pin 操作句柄，查找 state 状态句柄。
+在 kernel/{KERNEL}/arch/arm64/boot/dts/sunxi/sun*-pinctrl.dtsi* 文件中 *(Linux5.4* 直接放在 *sun*.dtsi 中)，配置了该 SoC 的 pinctrl 控制器的通用配置信息，一般不建议修改，有 pinctrl 驱动维护者维护。目前，在 sunxi 平台，我们根据电源域，注册两个 pinctrl 设备：r_pio 设 备 (PL0 后的所有 pin) 和 pio 设备 (PL0 前的所有 pin)，两个设备的通用配置信息如下：
 
-*•* 参数：
+```
+r_pio: pinctrl@07022000 {
+	compatible = "allwinner,sun50iw9p1-r-pinctrl"; //兼容属性，用于驱动和设备绑定
+	reg = <0x0 0x07022000 0x0 0x400>; //寄存器基地址0x07022000和范围0x400
+    clocks = <&clk_cpurpio>;          //r_pio设置使用的时钟 
+    device_type = "r_pio";            //设备类型属性 
+    gpio-controller;                  //表示是一个gpio控制器 
+    interrupt-controller;             //表示一个中断控制器，不支持中断可以删除 
+    #interrupt-cells = <3>;           //pin中断属性需要配置的参数个数，不支持中断可以删除 
+    #size-cells = <0>;                //没有使用，配置0
+    #gpio-cells = <6>;                //gpio属性配置需要的参数个数,对于linux-5.4为3
 
-​		*•* p: 指向要操作的 pinctrl 句柄。
+    /*
+     * 以下配置为模块使用的pin的配置，模块通过引用相应的节点对pin进行操作
+     * 由于不同板级的pin经常改变，建议通过板级dts修改（参考下一小节）
+     */
+    s_rsb0_pins_a: s_rsb0@0 {
+        allwinner,pins = "PL0", "PL1";
+        allwinner,function = "s_rsb0";
+        allwinner,muxsel = <2>;
+        allwinner,drive = <2>;
+        allwinner,pull = <1>;
+    };
+
+    /*
+     * 以下配置为linux-5.4模块使用pin的配置，模块通过引用相应的节点对pin进行操作
+     * 由于不同板级的pin经常改变，建议将模块pin的引用放到board dts中
+     *（类似pinctrl-0 = <&scr1_ph_pins>;),并使用scr1_ph_pins这种更有标识性的名字）。
+     */
+    scr1_ph_pins: scr1-ph-pins {
+        pins = "PH0", "PH1";
+        function = "sim1";
+        drive-strength = <10>;
+        bias-pull-up;
+    };
+};
+
+pio: pinctrl@0300b000 {
+    compatible = "allwinner,sun50iw9p1-pinctrl"; //兼容属性，用于驱动和设备绑定
+    reg = <0x0 0x0300b000 0x0 0x400>; //寄存器基地址0x0300b000和范围0x400
+    interrupts = <GIC_SPI 51 IRQ_TYPE_LEVEL_HIGH>, /* AW1823_GIC_Spec: GPIOA: 83-32=51 */
+            <GIC_SPI 52 IRQ_TYPE_LEVEL_HIGH>,
+            <GIC_SPI 53 IRQ_TYPE_LEVEL_HIGH>,
+            <GIC_SPI 54 IRQ_TYPE_LEVEL_HIGH>,
+            <GIC_SPI 55 IRQ_TYPE_LEVEL_HIGH>,
+            <GIC_SPI 56 IRQ_TYPE_LEVEL_HIGH>,
+            <GIC_SPI 57 IRQ_TYPE_LEVEL_HIGH>; //该设备每个bank支持的中断配置和gic中断号，每个中断号对应一个支持中断的bank
+    device_type = "pio"; //设备类型属性
+    clocks = <&clk_pio>, <&clk_losc>, <&clk_hosc>; //该设备使用的时钟
+    gpio-controller;          //表示是一个gpio控制器
+    interrupt-controller;     //表示是一个中断控制器
+    #interrupt-cells = <3>;   //pin中断属性需要配置的参数个数，不支持中断可以删除
+    #size-cells = <0>;        //没有使用
+    #gpio-cells = <6>;        //gpio属性需要配置的参数个数,对于linux-5.4为3
+    /* takes the debounce time in usec as argument */
+}
+```
+
+
+
+#### 3.2.2 board.dts 板级配置
+
+board.dts 用于保存每个板级平台的设备信息 (如 demo 板、demo2.0 板等等)，以 demo 板为例，board.dts 路径如下：
+
+/device/config/chips/{CHIP}/configs/demo/board.dts
+
+在 board.dts 中的配置信息如果在 *.dtsi 中 (如 sun50iw9p1.dtsi 等) 存在，则会存在以下覆盖规则：
+
+*•* 相同属性和结点，board.dts 的配置信息会覆盖 *.dtsi 中的配置信息。
+
+*•* 新增加的属性和结点，会追加到最终生成的 dtb 文件中。
+
+linux-4.9 上面 pinctrl 中一些模块使用 board.dts 的简单配置如下：
+
+```
+pio: pinctrl@0300b000 {
+    input-debounce = <0 0 0 0 0 0 0>; /*配置中断采样频率，每个对应一个支持中断的bank，单位us*/
+    
+    spi0_pins_a: spi0@0 {
+        allwinner,pins = "PC0", "PC2", "PC4"; 
+        allwinner,pname = "spi0_sclk", "spi0_mosi", "spi0_miso"; 
+        allwinner,function = "spi0"; 
+    };
+};
+```
+
+对于 linux-5.4，不建议采用上面的覆盖方式，而是修改驱动 pinctrl-0 引用的节点。
+
+linux-5.4 上面 board.dts 的配置如下：
+
+```
+&pio{
+    input-debounce = <0 0 0 0 1 0 0 0 0>; //配置中断采样频率，每个对应一个支持中断的bank，单位us
+    vcc-pe-supply = <&reg_pio1_8>; //配置IO口耐压值，例如这里的含义是将pe口设置成1.8v耐压值 
+};
+```
 
-​		*•* name: 指向状态名称，如 “default”、“sleep” 等。
 
-*•* 返回：
-
-​		*•* 成功，返回执行 pin 状态的句柄 struct pinctrl_state *。 
-
-​	    *•* 失败，返回 NULL。
-
-
-
-#### 4.1.6 pinctrl_select_state
-
-*•* 函数原型：int pinctrl_select_state(struct pinctrl *p, struct pinctrl_state *s)
-
-*•* 作用：将 pin 句柄对应的 pinctrl 设置为 state 句柄对应的状态。
-
-*•* 参数：
-
-​		*•* p: 指向要操作的 pinctrl 句柄。
-
-​		*•* s: 指向 state 句柄。
-
-*•* 返回：
-
-​		*•* 成功，返回 0。 
-
-​		*•* 失败，返回错误码。
-
-
-
-#### 4.1.7 devm_pinctrl_get_select
-
-*•* 函数原型：struct pinctrl *devm_pinctrl_get_select(struct device *dev, const char *name)
-
-*•* 作用：获取设备的 pin 操作句柄，并将句柄设定为指定状态。
-
-*•* 参数：
-
-​		*•* dev: 指向管理 pin 操作句柄的设备句柄。
-
-​		*•* name: 要设置的 state 名称，如 “default”、“sleep” 等。
-
-*•* 返回：
-
-​		*•* 成功，返回 pinctrl 句柄。
-
-​		*•* 失败，返回 NULL。
-
-
-
-#### 4.1.8 devm_pinctrl_get_select_default
-
-*•* 函数原型：struct pinctrl *devm_pinctrl_get_select_default(struct device *dev)
-
-*•* 作用：获取设备的 pin 操作句柄，并将句柄设定为默认状态。
-
-*•* 参数：
-
-​		*•* dev: 指向管理 pin 操作句柄的设备句柄。
-
-*•* 返回：
-
-​		*•* 成功，返回 pinctrl 句柄。
-
-​		*•* 失败，返回 NULL。
-
-
-
-#### 4.1.9 pin_config_get
-
-*•* 作用：获取指定 pin 的属性。
-
-*•* 参数：
-
-​		*•* dev_name: 指向 pinctrl 设备。
-
-​		*•* name: 指向 pin 名称。
-
-​		*•* config: 保存 pin 的配置信息。
-
-*•* 返回：
-
-​		*•* 成功，返回 pin 编号。
-
-​		*•* 失败，返回错误码。
-
-**!** 警告
-
-该接口在 **linux-5.4** 已经移除。
-
-
-
-#### 4.1.10 pin_config_set
-
-*•* 作用：设置指定 pin 的属性。
-
-*•* 参数：
-
-​		*•* dev_name: 指向 pinctrl 设备。
-
-​		*•* name: 指向 pin 名称。
-
-​		*•* config:pin 的配置信息。
-
-*•* 返回：
-
-​		*•* 成功，返回 0。 
-
-​		*•* 失败，返回错误码。
-
-**!** 警告
-
-该接口在 **linux-5.4** 已经移除。
-
-
-
-### 4.2 gpio 接口说明
-
-#### 4.2.1 gpio_request
-
-*•* 函数原型：int gpio_request(unsigned gpio, const char *label)
-
-*•* 作用：申请 gpio，获取 gpio 的访问权。
-
-*•* 参数：
-
-​		*•* gpio:gpio 编号。
-
-​		*•* label:gpio 名称，可以为 NULL。 
-
-*•* 返回：
-
-​		*•* 成功，返回 0。 
-
-​		*•* 失败，返回错误码。
-
-
-
-#### 4.2.2 gpio_free
-
-*•* 函数原型：void gpio_free(unsigned gpio)
-
-*•* 作用：释放 gpio。 
-
-*•* 参数：
-
-​		*•* gpio:gpio 编号。
-
-*•* 返回：
-
-​		*•* 无返回值。
-
-
-
-#### 4.2.3 gpio_direction_input
-
-*•* 函数原型：int gpio_direction_input(unsigned gpio)
-
-*•* 作用：设置 gpio 为 input。 
-
-*•* 参数：
-
-​		*•* gpio:gpio 编号。
-
-*•* 返回：
-
-​		*•* 成功，返回 0。 
-
-​		*•* 失败，返回错误码。
-
-
-
-#### 4.2.5 __gpio_get_value
-
-*•* 函数原型：int __gpio_get_value(unsigned gpio)
-
-*•* 作用：获取 gpio 电平值 (gpio 已为 input/output 状态)。 
-
-*•* 参数：
-
-​		*•* gpio:gpio 编号。
-
-*•* 返回：
-
-​		*•* 返回 gpio 对应的电平逻辑，1 表示高, 0 表示低。
-
-
-
-#### 4.2.6 __gpio_set_value
-
-*•* 函数原型：void __gpio_set_value(unsigned gpio, int value)
-
-*•* 作用：设置 gpio 电平值 (gpio 已为 input/output 状态)。 
-
-*•* 参数：
-
-​		*•* gpio:gpio 编号。
-
-​		*•* value: 期望设置的 gpio 电平值，非 0 表示高, 0 表示低。
-
-*•* 返回：
-
-​		*•* 无返回值
-
-
-
-#### 4.2.7 of_get_named_gpio
-
-*•* 函数原型：int of_get_named_gpio(struct device_node *np, const char *propname, int index)
-
-*•* 作用：通过名称从 dts 解析 gpio 属性并返回 gpio 编号。
-
-*•* 参数：
-
-​		*•* np: 指向使用 gpio 的设备结点。
-
-​		*•* propname:dts 中属性的名称。
-
-​		*•* index:dts 中属性的索引值。
-
-*•* 返回：
-
-​		*•* 成功，返回 gpio 编号。
-
-​		*•* 失败，返回错误码。
-
-
-
-#### 4.2.8 of_get_named_gpio_flags
-
-*•* 函数原型：int of_get_named_gpio_flags(struct device_node *np, const char *list_name, int index,
-
-enum of_gpio_flags *flags)
-
-*•* 作用：通过名称从 dts 解析 gpio 属性并返回 gpio 编号。
-
-*•* 参数：
-
-​		*•* np: 指向使用 gpio 的设备结点。
-
-​		*•* propname:dts 中属性的名称。
-
-​		*•* index:dts 中属性的索引值
-
-​		*•* flags: 在 sunxi 平台上，必须定义为 struct gpio_config * 类型变量，因为 sunxi pinctrl的 pin 支持上下拉，					 驱动能力等信息，而内核 enum of_gpio_flags * 类型变量只能包含输入、输出信息，后续 sunxi 平台					 需要标准化该接口。
-
-*•* 返回：
-
-​		*•* 成功，返回 gpio 编号。
-
-​		*•* 失败，返回错误码。
-
-**!** 警告
-
-该接口的 **flags** 参数，在 **sunxi linux-4.9** 及以前的平台上，必须定义为 **struct gpio_config** 类型变量。**linux-5.4** 已经标准化该接口，直接采用 **enum of_gpio_flags** 的定义。

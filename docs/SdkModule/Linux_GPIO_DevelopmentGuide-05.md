@@ -1,240 +1,421 @@
-# GPIO开发常见问题
-## 6 FAQ
+## 5 使用示例
 
-### 6.1 常用 debug 方法
+### 5.1 使用 pin 的驱动 dts 配置示例
 
-#### 6.1.1 利用 sunxi_dump 读写相应寄存器
+对于使用 pin 的驱动来说，驱动主要设置 pin 的常用的几种功能，列举如下：
 
-需要开启 SUNXI_DUMP 模块：
+*•* 驱动使用者只配置通用 GPIO, 即用来做输入、输出和中断的
 
-```
-make kernel_menuconfig
-	---> Device Drivers
-		---> dump reg driver for sunxi platform (选中)
-```
+*•* 驱动使用者设置 pin 的 pin mux，如 uart 设备的 pin,lcd 设备的 pin 等，用于特殊功能
 
-使用方法：
+*•* 驱动使用者既要配置 pin 的通用功能，也要配置 pin 的特性
 
-```
-cd /sys/class/sunxi_dump
-1.查看一个寄存器
-echo 0x0300b048 > dump ;cat dump
-2.写值到寄存器上
-echo 0x0300b058 0xfff > write ;cat write
-3.查看一片连续寄存器
-echo 0x0300b000,0x0300bfff > dump;cat dump
-
-4.写一组寄存器的值
-echo 0x0300b058 0xfff,0x0300b0a0 0xfff > write;cat write
-
-通过上述方式，可以查看，修改相应gpio的寄存器，从而发现问题所在。
-```
+下面对常见使用场景进行分别介绍。
 
 
 
-#### 6.1.2 利用 sunxi_pinctrl 的 debug 节点
+#### 5.1.1 配置通用 GPIO 功能/中断功能
 
-需要开启 DEBUG_FS：
+用法一：配置 GPIO，中断，device tree 配置 demo 如下所示：
 
 ```
-make kernel_menuconfig
-	---> Kernel hacking
-		---> Compile-time checks and compiler options
-			---> Debug Filesystem (选中)
+soc{
+    ...
+    gpiokey {
+        device_type = "gpiokey"; 
+        compatible = "gpio-keys";
+        
+        ok_key {
+            device_type = "ok_key";
+            label = "ok_key";
+            gpios = <&r_pio PL 0x4 0x0 0x1 0x0 0x1>; //如果是linux-5.4，则应该为gpios = <&r_pio 0 4 GPIO_ACTIVE_HIGH>;
+            linux,input-type = "1>";
+            linux,code = <0x1c>;
+            wakeup-source = <0x1>;
+            };
+        };
+    ...
+};
 ```
 
-挂载文件节点，并进入相应目录：
+说明
 
 ```
-mount -t debugfs none /sys/kernel/debug
-cd /sys/kernel/debug/sunxi_pinctrl
+说明：gpio in/gpio out/ interrupt采用dts的配置方法，配置参数解释如下：
+对于linux-4.9:
+gpios = <&r_pio PL 0x4 0x0 0x1 0x0 0x1>;
+            |    |  |   |   |   |   `---输出电平，只有output才有效
+            |    |  |   |   |   `-------驱动能力，值为0x0时采用默认值
+            |    |  |   |   `-----------上下拉，值为0x1时采用默认值
+            |    |  |   `---------------复用类型
+            |    |  `-------------------当前bank中哪个引脚
+            |    `-----------------------哪个bank
+            `---------------------------指向哪个pio，属于cpus要用&r_pio
+使用上述方式配置gpio时，需要驱动调用以下接口解析dts的配置参数：
+int of_get_named_gpio_flags(struct device_node *np, const char *list_name, int index,
+enum of_gpio_flags *flags)
+拿到gpio的配置信息后(保存在flags参数中，见4.2.8.小节)，在根据需要调用相应的标准接口实现自己的功能
+对于linux-5.4:
+gpios = <&r_pio 0 4 GPIO_ACTIVE_HIGH>;
+            |   |      |
+            |   |      `-------------------gpio active时状态，如果需要上下拉，还可以或上
+            GPIO_PULL_UP、GPIO_PULL_DOWN标志
+            |   `-----------------------哪个bank
+            `---------------------------指向哪个pio，属于cpus要用&r_pio
 ```
 
 
 
-1.查看 pin 的配置: 
+#### 5.1.2 用法二
+
+用法二：配置设备引脚，device tree 配置 demo 如下所示：
 
 ```
-echo PC2 > sunxi_pin
-cat sunxi_pin_configure
+device tree对应配置
+soc{
+    pio: pinctrl@0300b000 {
+        ...
+        uart0_ph_pins_a: uart0-ph-pins-a {
+            allwinner,pins = "PH7", "PH8"; 
+            allwinner,function = "uart0"; 
+            allwinner,muxsel = <3>;
+            allwinner,drive = <0x1>;
+            allwinner,pull = <0x1>;
+        };
+        /* 对于linux-5.4 请使用下面这种方式配置 */
+        mmc2_ds_pin: mmc2-ds-pin {
+            pins = "PC1";
+            function = "mmc2";
+            drive-strength = <30>;
+            bias-pull-up;
+        };
+        ...
+    }；
+    ...
+    uart0: uart@05000000 {
+        compatible = "allwinner,sun8i-uart";
+        device_type = "uart0";
+        reg = <0x0 0x05000000 0x0 0x400>;
+        interrupts = <GIC_SPI 49 IRQ_TYPE_LEVEL_HIGH>;
+        clocks = <&clk_uart0>;
+        pinctrl-names = "default", "sleep";
+        pinctrl-0 = <&uart0_pins_a>;
+        pinctrl-1 = <&uart0_pins_b>;
+        uart0_regulator = "vcc-io";
+        uart0_port = <0>;
+        uart0_type = <2>;
+    };
+    ...
+};
 ```
 
-结果如下图所示：
+其中：
+
+*•* pinctrl-0 对应 pinctrl-names 中的 default，即模块正常工作模式下对应的 pin 配置
+
+*•* pinctrl-1 对应 pinctrl-names 中的 sleep，即模块休眠模式下对应的 pin 配置
 
 
 
-​																	图 6-1: 查看 pin 配置图
+### 5.2 接口使用示例
 
-2.修改 pin 属性
+#### 5.2.1 配置设备引脚
 
-每个 pin 都有四种属性，如复用 (function)，数据 (data)，驱动能力 (dlevel)，上下拉 (pull)，
+一般设备驱动只需要使用一个接口 devm_pinctrl_get_select_default 就可以申请到设备所有pin 资源。
 
-修改 pin 属性的命令如下：
+```c
+static int sunxi_pin_req_demo(struct platform_device *pdev)
+{ 
+	struct pinctrl *pinctrl;
+	/* request device pinctrl, set as default state */
+	pinctrl = devm_pinctrl_get_select_default(&pdev->dev);
+	if (IS_ERR_OR_NULL(pinctrl))
+		return -EINVAL;
 
-```
-echo PC2 1 > pull;cat pull
-cat sunxi_pin_configure  //查看修改情况
-```
-
-修改后结果如下图所示：
-
-
-
-
-
-​																图 6-2: 修改结果图
-
-
-
-注意：在 sunxi 平台，目前多个 pinctrl 的设备，分别是 pio 和 r_pio 和 axpxxx-gpio，当操作 PL 之后的 pin 时，请通过以下命令切换 pin 的设备，否则操作失败，切换命令如下：
-
-```
-echo pio > /sys/kernel/debug/sunxi_pinctrl/dev_name //切换到pio设备 
-cat /sys/kernel/debug/sunxi_pinctrl/dev_name
-echo r_pio > /sys/kernel/debug/sunxi_pinctrl/dev_name //切换到r_pio设备 
-cat /sys/kernel/debug/sunxi_pinctrl/dev_name
+	return 0;
+}
 ```
 
-修改结果如下图所示：
 
 
-
-​															  图 6-3: pin 设备图
-
-
-
-#### 6.1.3 利用 pinctrl core 的 debug 节点
+#### 5.2.2 获取 GPIO 号 
 
 ```
-mount -t debugfs none /sys/kernel/debug
-cd /sys/kernel/debug/sunxi_pinctrl
+static int sunxi_pin_req_demo(struct platform_device *pdev)
+{
+    struct device *dev = &pdev->dev;
+    struct device_node *np = dev->of_node;
+    unsigned int gpio;
+    
+    #get gpio config in device node.
+    gpio = of_get_named_gpio(np, "vdevice_3", 0);
+    if (!gpio_is_valid(gpio)) {
+    	if (gpio != -EPROBE_DEFER)
+    		dev_err(dev, "Error getting vdevice_3\n");
+		return gpio;
+    }
+}
 ```
 
-1.查看 pin 的管理设备：
+
+
+#### 5.2.3 GPIO 属性配置
+
+通过 pin_config_set/pin_config_get/pin_config_group_set/pin_config_group_get 接口单独控制指定 pin 或 group 的相关属性。
 
 ```
-cat pinctrl-devices
+static int pctrltest_request_all_resource(void)
+{
+    struct device *dev;
+    struct device_node *node;
+    struct pinctrl *pinctrl;
+    struct sunxi_gpio_config *gpio_list = NULL;
+    struct sunxi_gpio_config *gpio_cfg;
+    unsigned gpio_count = 0;
+    unsigned gpio_index;
+    unsigned long config;
+    int ret;
+
+    dev = bus_find_device_by_name(&platform_bus_type, NULL, sunxi_ptest_data->dev_name);
+    if (!dev) {
+        pr_warn("find device [%s] failed...\n", sunxi_ptest_data->dev_name);
+        return -EINVAL;
+    }
+
+    node = of_find_node_by_type(NULL, dev_name(dev));
+    if (!node) {
+        pr_warn("find node for device [%s] failed...\n", dev_name(dev));
+        return -EINVAL;
+    }
+    dev->of_node = node;
+
+    pr_warn("++++++++++++++++++++++++++++%s++++++++++++++++++++++++++++\n", __func__);
+    pr_warn("device[%s] all pin resource we want to request\n", dev_name(dev));
+    pr_warn("-----------------------------------------------\n");
+
+    pr_warn("step1: request pin all resource.\n");
+    pinctrl = devm_pinctrl_get_select_default(dev);
+    if (IS_ERR_OR_NULL(pinctrl)) {
+        pr_warn("request pinctrl handle for device [%s] failed...\n", dev_name(dev));
+        return -EINVAL;
+    }
+
+    pr_warn("step2: get device[%s] pin count.\n", dev_name(dev));
+    ret = dt_get_gpio_list(node, &gpio_list, &gpio_count);
+    if (ret < 0 || gpio_count == 0) {
+        pr_warn(" devices own 0 pin resource or look for main key failed!\n");
+        return -EINVAL;
+    }
+
+    pr_warn("step3: get device[%s] pin configure and check.\n", dev_name(dev));
+    for (gpio_index = 0; gpio_index < gpio_count; gpio_index++) {
+        gpio_cfg = &gpio_list[gpio_index];
+
+        /*check function config */
+        config = SUNXI_PINCFG_PACK(SUNXI_PINCFG_TYPE_FUNC, 0xFFFF);
+        pin_config_get(SUNXI_PINCTRL, gpio_cfg->name, &config);
+        if (gpio_cfg->mulsel != SUNXI_PINCFG_UNPACK_VALUE(config)) {
+            pr_warn("failed! mul value isn't equal as dt.\n");
+            return -EINVAL;
+        }
+
+        /*check pull config */
+        if (gpio_cfg->pull != GPIO_PULL_DEFAULT) {
+            config = SUNXI_PINCFG_PACK(SUNXI_PINCFG_TYPE_PUD, 0xFFFF);
+            pin_config_get(SUNXI_PINCTRL, gpio_cfg->name, &config);
+            if (gpio_cfg->pull != SUNXI_PINCFG_UNPACK_VALUE(config)) {
+                pr_warn("failed! pull value isn't equal as dt.\n");
+                return -EINVAL;
+            }
+        }
+
+        /*check dlevel config */
+        if (gpio_cfg->drive != GPIO_DRVLVL_DEFAULT) {
+            config = SUNXI_PINCFG_PACK(SUNXI_PINCFG_TYPE_DRV, 0XFFFF);
+            pin_config_get(SUNXI_PINCTRL, gpio_cfg->name, &config);
+            if (gpio_cfg->drive != SUNXI_PINCFG_UNPACK_VALUE(config)) {
+                pr_warn("failed! dlevel value isn't equal as dt.\n");
+                return -EINVAL;
+            }
+        }
+
+        /*check data config */
+        if (gpio_cfg->data != GPIO_DATA_DEFAULT) {
+            config = SUNXI_PINCFG_PACK(SUNXI_PINCFG_TYPE_DAT, 0XFFFF);
+            pin_config_get(SUNXI_PINCTRL, gpio_cfg->name, &config);
+            if (gpio_cfg->data != SUNXI_PINCFG_UNPACK_VALUE(config)) {
+                pr_warn("failed! pin data value isn't equal as dt.\n");
+                return -EINVAL;
+            }
+        }
+    }
+
+    pr_warn("-----------------------------------------------\n");
+    pr_warn("test pinctrl request all resource success!\n");
+    pr_warn("++++++++++++++++++++++++++++end++++++++++++++++++++++++++++\n\n");
+    return 0;
+}
+注：需要注意，存在SUNXI_PINCTRL和SUNXI_R_PINCTRL两个pinctrl设备，cpus域的pin需要使用
+SUNXI_R_PINCTRL
 ```
 
-结果如下图所示:
+**!** 警告
+
+**linux5.4** 中 使 用 **pinctrl_gpio_set_config** 配 置 **gpio** 属 性， 对 应 使 用**pinconf_to_config_pack** 生成 **config** 参数：
+
+*•* **SUNXI_PINCFG_TYPE_FUNC** 已不再生效，暂未支持 **FUNC** 配置（建议使用 **pinctrl_select_state**接口代替）
+
+*•* **SUNXI_PINCFG_TYPE_PUD** 更新为内核标准定义（**PIN_CONFIG_BIAS_PULL_UP/PIN_CONFIG_BIAS_PULL_DOWN**） 
+
+*•* **SUNXI_PINCFG_TYPE_DRV** 更新为内核标准定义（**PIN_CONFIG_DRIVE_STRENGTH**），相应的 **val** 对应关系为（**4.9->5.4: 0->10, 1->20…**） 
+
+*•* **SUNXI_PINCFG_TYPE_DAT** 已不再生效，暂未支持 **DAT** 配置（建议使用 **gpio_direction_output**或者 **__gpio_set_value** 设置电平值）
 
 
 
+### 5.3 设备驱动使用 GPIO 中断功能
 
-
-​														图 6-4: pin 设备图	
-
-2.查看 pin 的状态和对应的使用设备
-
-结果如下图 log 所示：
+方式一：通过 gpio_to_irq 获取虚拟中断号，然后调用申请中断函数即可目前 sunxi-pinctrl 使用 irq-domain 为 gpio 中断实现虚拟 irq 的功能，使用 gpio 中断功能时，设备驱动只需要通过 gpio_to_irq 获取虚拟中断号后，其他均可以按标准 irq 接口操作。
 
 ```
-console:/sys/kernel/debug/pinctrl # ls
-pinctrl-devices pinctrl-handles pinctrl-maps pio r_pio
-console:/sys/kernel/debug/pinctrl # cat pinctrl-handles
-Requested pin control handlers their pinmux maps:
-device: twi3 current state: sleep
-	state: default
-        type: MUX_GROUP controller pio group: PA10 (10) function: twi3 (15)
-        type: CONFIGS_GROUP controller pio group PA10 (10)config 00001409
-config 00000005
-        type: MUX_GROUP controller pio group: PA11 (11) function: twi3 (15)
-        type: CONFIGS_GROUP controller pio group PA11 (11)config 00001409
-config 00000005
-	state: sleep
-        type: MUX_GROUP controller pio group: PA10 (10) function: io_disabled (5)
-        type: CONFIGS_GROUP controller pio group PA10 (10)config 00001409
-config 00000001
-        type: MUX_GROUP controller pio group: PA11 (11) function: io_disabled (5)
-        type: CONFIGS_GROUP controller pio group PA11 (11)config 00001409
-config 00000001
-device: twi5 current state: default
-    state: default
-        type: MUX_GROUP controller r_pio group: PL0 (0) function: s_twi0 (3)
-        type: CONFIGS_GROUP controller r_pio group PL0 (0)config 00001409
-config 00000005
-        type: MUX_GROUP controller r_pio group: PL1 (1) function: s_twi0 (3)
-        type: CONFIGS_GROUP controller r_pio group PL1 (1)config 00001409
-config 00000005
-	state: sleep
-        type: MUX_GROUP controller r_pio group: PL0 (0) function: io_disabled (4)
-        type: CONFIGS_GROUP controller r_pio group PL0 (0)config 00001409
-config 00000001
-        type: MUX_GROUP controller r_pio group: PL1 (1) function: io_disabled (4)
-        type: CONFIGS_GROUP controller r_pio group PL1 (1)config 00001409
-config 00000001
-device: soc@03000000:pwm5@0300a000 current state: active
-	state: active
-        type: MUX_GROUP controller pio group: PA12 (12) function: pwm5 (16)
-        type: CONFIGS_GROUP controller pio group PA12 (12)config 00000001
-config 00000000
-config 00000000
-	state: sleep
-        type: MUX_GROUP controller pio group: PA12 (12) function: io_disabled (5)
-        type: CONFIGS_GROUP controller pio group PA12 (12)config 00000001
-config 00000000
-config 00000000
-device: uart0 current state: default
-	state: default
-	state: sleep
-device: uart1 current state: default
-	state: default
-        type: MUX_GROUP controller pio group: PG6 (95) function: uart1 (37)
-        type: CONFIGS_GROUP controller pio group PG6 (95)config 00001409
-config 00000005
-        type: MUX_GROUP controller pio group: PG7 (96) function: uart1 (37)
-        type: CONFIGS_GROUP controller pio group PG7 (96)config 00001409
-config 00000005
-        type: MUX_GROUP controller pio group: PG8 (97) function: uart1 (37)
-        type: CONFIGS_GROUP controller pio group PG8 (97)config 00001409
-config 00000005
-        type: MUX_GROUP controller pio group: PG9 (98) function: uart1 (37)
-        type: CONFIGS_GROUP controller pio group PG9 (98)config 00001409
-config 00000005
-	state: sleep
-        type: MUX_GROUP controller pio group: PG6 (95) function: io_disabled (5)
-        type: CONFIGS_GROUP controller pio group PG6 (95)config 00001409
-config 00000001
-        type: MUX_GROUP controller pio group: PG7 (96) function: io_disabled (5)
-        type: CONFIGS_GROUP controller pio group PG7 (96)config 00001409
-config 00000001
-        type: MUX_GROUP controller pio group: PG8 (97) function: io_disabled (5)
-        type: CONFIGS_GROUP controller pio group PG8 (97)config 00001409
-config 00000001
-        type: MUX_GROUP controller pio group: PG9 (98) function: io_disabled (5)
-        type: CONFIGS_GROUP controller pio group PG9 (98)config 00001409
-....
+static int sunxi_gpio_eint_demo(struct platform_device *pdev)
+{ 
+    struct device *dev = &pdev->dev;
+    int virq;
+    int ret;
+    /* map the virq of gpio */
+    virq = gpio_to_irq(GPIOA(0));
+    if (IS_ERR_VALUE(virq)) {
+	    pr_warn("map gpio [%d] to virq failed, errno = %d\n",
+    											GPIOA(0), virq);
+        return -EINVAL;
+    }
+    pr_debug("gpio [%d] map to virq [%d] ok\n", GPIOA(0), virq);
+    /* request virq, set virq type to high level trigger */
+    ret = devm_request_irq(dev, virq, sunxi_gpio_irq_test_handler,
+                                IRQF_TRIGGER_HIGH, "PA0_EINT", NULL);
+    if (IS_ERR_VALUE(ret)) {
+        pr_warn("request virq %d failed, errno = %d\n", virq, ret);
+        return -EINVAL;
+    }
+    
+	return 0;
+}
 ```
 
-从上面的部分 log 可以看到那些设备管理的 pin 以及 pin 当前的状态是否正确。以 twi3 设备为例，twi3 管理的 pin 有 PA10/PA11，分别有两组状态 sleep 和 default，default 状态表示使用状态，sleep 状态表示 pin 处于 io disabled 状态，表示 pin 不可正常使用，twi3 设备使用的 pin 当前状态处于 sleep 状态的。
+方式二：通过 dts 配置 gpio 中断，通过 dts 解析函数获取虚拟中断号，最后调用申请中断函数即可，demo 如下所示：
+
+```
+dts配置如下：
+soc{
+	...
+    Vdevice: vdevice@0 {
+        compatible = "allwinner,sun8i-vdevice";
+        device_type = "Vdevice";
+        interrupt-parent = <&pio>; /*依赖的中断控制器(带interrupt-controller属性的结 点)*/
+        interrupts = < PD 3 IRQ_TYPE_LEVEL_HIGH>;
+                        | |   `------------------中断触发条件、类型
+                        | `-------------------------pin bank内偏移
+                        `---------------------------哪个bank
+        pinctrl-names = "default";
+        pinctrl-0 = <&vdevice_pins_a>;
+        test-gpios = <&pio PC 3 1 2 2 1>;
+        status = "okay";
+	};
+	...
+};
+```
+
+在驱动中，通过 platform_get_irq() 标准接口获取虚拟中断号，如下所示：
+
+```
+static int sunxi_pctrltest_probe(struct platform_device *pdev)
+{ 
+    struct device_node *np = pdev->dev.of_node;
+    struct gpio_config config;
+    int gpio, irq;
+    int ret;
+
+    if (np == NULL) {
+        pr_err("Vdevice failed to get of_node\n");
+        return -ENODEV;
+    }
+    ....
+    irq = platform_get_irq(pdev, 0);
+    if (irq < 0) {
+        printk("Get irq error!\n");
+        return -EBUSY;
+    }
+	.....
+	sunxi_ptest_data->irq = irq;
+	......
+	return ret;
+}
+
+//申请中断：
+static int pctrltest_request_irq(void)
+{
+    int ret;
+    int virq = sunxi_ptest_data->irq;
+    int trigger = IRQF_TRIGGER_HIGH;
+
+    reinit_completion(&sunxi_ptest_data->done);
+
+    pr_warn("step1: request irq(%s level) for irq:%d.\n",
+	    trigger == IRQF_TRIGGER_HIGH ? "high" : "low", virq);
+	ret = request_irq(virq, sunxi_pinctrl_irq_handler_demo1,
+			trigger, "PIN_EINT", NULL);
+    if (IS_ERR_VALUE(ret)) {
+        pr_warn("request irq failed !\n");
+        return -EINVAL;
+    }
+
+    pr_warn("step2: wait for irq.\n");
+    ret = wait_for_completion_timeout(&sunxi_ptest_data->done, HZ);
+    
+    if (ret == 0) {
+        pr_warn("wait for irq timeout!\n");
+        free_irq(virq, NULL);
+        return -EINVAL;
+    }
+
+    free_irq(virq, NULL);
+
+    pr_warn("-----------------------------------------------\n");
+    pr_warn("test pin eint success !\n");
+    pr_warn("+++++++++++++++++++++++++++end++++++++++++++++++++++++++++\n\n\n");
+
+    return 0;
+}
+```
 
 
 
-#### 6.1.4 GPIO 中断问题排查步骤
+### 5.4 设备驱动设置中断 debounce 功能
 
-##### 6.1.4.1 GPIO 中断一直响应
+方式一：通过 dts 配置每个中断 bank 的 debounce，以 pio 设备为例，如下所示：
 
-1. 排查中断信号是否一直触发中断
+```
+&pio {
+    /* takes the debounce time in usec as argument */
+    input-debounce = <0 0 0 0 0 0 0>;
+                      | | | | | | `----------PA bank
+                      | | | | | `------------PC bank
+                      | | | | `--------------PD bank
+                      | | | `----------------PF bank
+                      | | `------------------PG bank
+                      | `--------------------PH bank
+                      `----------------------PI bank
+};
+```
 
-2. 利用 sunxi_dump 节点，确认中断 pending 位是否没有清 (参考 6.1.1 小节)
+注意：input-debounce 的属性值中需把 pio 设备支持中断的 bank 都配上，如果缺少，会以bank 的顺序设置相应的属性值到 debounce 寄存器，缺少的 bank 对应的 debounce 应该是默认值（启动时没修改的情况）。sunxi linux-4.9 平台，中断采样频率最大是 24M, 最小 32k，debounce 的属性值只能为 0 或 1。对于 linux-5.4，debounce 取值范围是 0~1000000（单位 usec）。
 
-3. 是否在 gpio 中断服务程序里对中断检测的 gpio 进行 pin mux 的切换，不允许这样切换，否则会导致中断异常
+方式二：驱动模块调用 gpio 相关接口设置中断 debounce 
 
+```
+static inline int gpio_set_debounce(unsigned gpio, unsigned debounce);
+int gpiod_set_debounce(struct gpio_desc *desc, unsigned debounce);
+```
 
-
-##### 6.1.4.2 GPIO 检测不到中断
-
-1. 排查中断信号是否正常，若不正常，则排查硬件，若正常，则跳到步骤 2
-
-2. 利用 sunxi_dump 节点，查看 gpio 中断 pending 位是否置起，若已经置起，则跳到步骤5，否则跳到步骤 3
-
-3. 利用 sunxi_dump 节点，查看 gpio 的中断触发方式是否配置正确，若正确，则跳到步骤 4，否则跳到步骤 5
-
-4. 检查中断的采样时钟，默认应该是 32k，可以通过 sunxi_dump 节点，切换 gpio 中断采样时钟到 24M 进行实验
-
-5. 利用 sunxi_dump，确认中断是否使能
-
-
-
-
-
+在驱动中，调用上面两个接口即可设置 gpio 对应的中断 debounce 寄存器，注意，debounce 是以 ms 为单位的 (linux-5.4 已经移除这个接口)。

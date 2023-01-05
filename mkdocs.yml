@@ -1,5 +1,5 @@
 # Project information
-site_name: Tina SDK Documentation Center.
+site_name: Allwinner Tina SDK Documentation Center.
 site_url: https://github.com/DongshanPI/TinaSDK-Docs.git
 site_author: 100askTeam
 site_description: >-
@@ -171,141 +171,93 @@ markdown_extensions:
   
 # Page tree
 nav:
-  - Tina-SDKDocs站点简介:
-    - Tina-SDK网站简介: 'index.md'
-    - LinuxSDK模块开发指南: 'SdkModuleDevelopment.md'
-    - Linux基础组件开发指南: 'BasicComponentDevelopment.md'
-  - Linux-SDK模块开发指南上:     
-    - UART_开发指南:
-      - 概述与介绍: 'SdkModule/Linux_UART_DevelopmentGuide-01.md'
-      - 模块配置介绍: 'SdkModule/Linux_UART_DevelopmentGuide-02.md'
-      - 接口描述: 'SdkModule/Linux_UART_DevelopmentGuide-03.md'      
-      - 模块使用范例: 'SdkModule/Linux_UART_DevelopmentGuide-04.md'            
-      - 常见问题: 'SdkModule/Linux_UART_DevelopmentGuide-05.md'                  
+  - 0.站点指南:
+    - 阅读指南: 'index.md'
+    - 配套硬件: 'SupportHardware.md'
+  - 1.构建工具使用:
+    - TinaSDK开发指南:
+      - 概述与介绍: 'SdkModule/Linux_SystemSoftware_DevelopmentGuide-01.md'
+      - Tina环境搭建: 'SdkModule/Linux_SystemSoftware_DevelopmentGuide-02.md'
+      - Tina编译与烧写: 'SdkModule/Linux_SystemSoftware_DevelopmentGuide-03.md'
+      - uboot与kernel定制开发: 'SdkModule/Linux_SystemSoftware_DevelopmentGuide-04.md'
+      - 系统定制开发: 'SdkModule/Linux_SystemSoftware_DevelopmentGuide-05.md'
+  - 2.Bootloader开发:
+    - U-boot_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_U-boot_DevelopmentGuide-01.md'
+      - 编译方法介绍: 'SdkModule/Linux_U-boot_DevelopmentGuide-02.md'
+      - U-Boot功能与配置: 'SdkModule/Linux_U-boot_DevelopmentGuide-03.md'
+      - U-Boot常用命令介绍: 'SdkModule/Linux_U-boot_DevelopmentGuide-04.md'
+      - 调试方法与烧写: 'SdkModule/Linux_U-boot_DevelopmentGuide-05.md'
+      - 常用接口函数: 'SdkModule/Linux_U-boot_DevelopmentGuide-06.md'
+  - 3.Linux驱动开发:     
+    - SID_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_SID_DevelopmentGuide-01.md'
+      - 模块描述: 'SdkModule/Linux_SID_DevelopmentGuide-02.md'
+      - 模块设计: 'SdkModule/Linux_SID_DevelopmentGuide-03.md'
+      - 接口设计: 'SdkModule/Linux_SID_DevelopmentGuide-04.md'
+      - 可测试性与其他说明: 'SdkModule/Linux_SID_DevelopmentGuide-05.md'
     - GPIO_开发指南:
       - 概述与介绍: 'SdkModule/Linux_GPIO_DevelopmentGuide-01.md'
-      - 模块配置介绍: 'SdkModule/Linux_GPIO_DevelopmentGuide-02.md'
-      - 接口描述: 'SdkModule/Linux_GPIO_DevelopmentGuide-03.md'      
-      - 模块使用范例: 'SdkModule/Linux_GPIO_DevelopmentGuide-04.md'            
-      - 常见问题: 'SdkModule/Linux_GPIO_DevelopmentGuide-05.md'          
-    - LCD_开发指南: 
-      - 概述与介绍: 'SdkModule/Linux_LCD_DevelopmentGuide-01.md'
-      - IC规格: 'SdkModule/Linux_LCD_DevelopmentGuide-02.md'
-      - 模块介绍: 'SdkModule/Linux_LCD_DevelopmentGuide-03.md'      
-      - 硬件参数说明: 'SdkModule/Linux_LCD_DevelopmentGuide-04.md'        
-    - TWI_开发指南: 
-      - 概述与介绍: 'SdkModule/Linux_TWI_DevelopmentGuide-01.md'
-      - 模块接口说明: 'SdkModule/Linux_TWI_DevelopmentGuide-02.md'
-      - 模块使用范例: 'SdkModule/Linux_TWI_DevelopmentGuide-03.md'            
-      - 常见问题: 'SdkModule/Linux_TWI_DevelopmentGuide-04.md' 
-    - CCU_开发指南:
-      - 概述: 'SdkModule/Linux_CCU_DevelopmentGuide-01.md'
-      - 模块介绍: 'SdkModule/Linux_CCU_DevelopmentGuide-02.md'      
-      - 模块接口说明: 'SdkModule/Linux_CCU_DevelopmentGuide-03.md'            
-      - 模块使用规范: 'SdkModule/Linux_CCU_DevelopmentGuide-04.md'                  
-    - CE开发指南: 'SdkModule/Linux_CE_DevelopmentGuide-01.md' 
-    - DMAC_开发指南: 'SdkModule/Linux_DMAC_DevelopmentGuide-01.md'
-    - G2D_开发指南: 'SdkModule/Linux_G2D_DevelopmentGuide-01.md'
-    - CE开发指南: 'SdkModule/Linux_CE_DevelopmentGuide-01.md'
-    - DMAC_开发指南: 'SdkModule/Linux_EMAC_DevelopmentGuide-01.md'
-    - Display_开发指南: 'SdkModule/Linux_Display_DevelopmentGuide-01.md'
-    - EMAC_开发指南: 'SdkModule/Linux_EMAC_DevelopmentGuide-01.md'
-    - GPADC_开发指南: 'SdkModule/Linux_GPADC_DevelopmentGuide-01.md'
-    - ISP_开发指南: 'SdkModule/Linux_ISP_DevelopmentGuide-01.md'
-  - Linux-SDK模块开发指南下:    
-    - MIPI_CSI_开发指南: 'SdkModule/Linux_MIPI_CSI_DevelopmentGuide-01.md'
-    - MMC_开发指南: 'SdkModule/Linux_MMC_DevelopmentGuide-01.md'
-    - Nor_开发指南: 'SdkModule/Linux_Nor_DevelopmentGuide-01.md'
-    - PMIC_开发指南: 'SdkModule/Linux_PMIC_DevelopmentGuide-01.md'
-    - RTC_开发指南: 'SdkModule/Linux_RTC_DevelopmentGuide-01.md'
-    - SID_开发指南: 'SdkModule/Linux_SID_DevelopmentGuide-01.md'
-    - SPI-NAND_开发指南: 'SdkModule/Linux_SPI-NAND_DevelopmentGuide-01.md'
-    - SPINAND_UBI离线烧录_开发指南: 'SdkModule/Linux_SPINAND_UBIOfflineProgramming_DevelopmentGuide-01.md'
-    - SPI_开发指南: 'SdkModule/Linux_SPI_DevelopmentGuide-01.md'
-    - Standby_开发指南: 'SdkModule/Linux_Standby_DevelopmentGuide-01.md'
-    - U-Boot_开发指南: 'SdkModule/Linux_U-Boot_DevelopmentGuide-01.md'
-    - USB_开发指南: 'SdkModule/Linux_USB_DevelopmentGuide-01.md'
-    - 安全_开发指南: 'SdkModule/Linux_Security_DevelopmentGuide-01.md'    
-  - Linux基础组件开发指南上:        
-    - MPPSample使用:
-      - 概述与配置: 'BasicComponent/MPP_Sample_Instructionsforuse-01.md'
-      - 编译: 'BasicComponent/MPP_Sample_Instructionsforuse-02.md'
-      - 运行测试: 'BasicComponent/MPP_Sample_Instructionsforuse-03.md'
-      - 类别: 'BasicComponent/MPP_Sample_Instructionsforuse-04.md'
-      - 状态: 'BasicComponent/MPP_Sample_Instructionsforuse-05.md'
-      - 正文: 'BasicComponent/MPP_Sample_Instructionsforuse-06.md'                        
-      - 常见问题: 'BasicComponent/MPP_Sample_Instructionsforuse-07.md'                       
-    - LCD调试:
-      - 简述: 'BasicComponent/Linux_LCD_DebuggingGuide-01.md'
-      - 模块介绍: 'BasicComponent/Linux_LCD_DebuggingGuide-02.md'
-      - 硬件参数说明: 'BasicComponent/Linux_LCD_DebuggingGuide-03.md'       
-      - 调试方法: 'BasicComponent/Linux_LCD_DebuggingGuide-04.md'
-      - 常见问题: 'BasicComponent/Linux_LCD_DebuggingGuide-05.md'
-    - Display开发:
-      - 简述: 'BasicComponent/Linux_Display_DevelopmentGuide-01.md'
-      - 模块接口概述: 'BasicComponent/Linux_Display_DevelopmentGuide-02.md'
-      - 显示接口参数说明: 'BasicComponent/Linux_Display_DevelopmentGuide-03.md'
-      - 输出设备介绍: 'BasicComponent/Linux_Display_DevelopmentGuide-04.md'
-      - IOCTL接口描述: 'BasicComponent/Linux_Display_DevelopmentGuide-05.md'            
-      - sysfs接口描述: 'BasicComponent/Linux_Display_DevelopmentGuide-06.md'                  
-      - Data Structure: 'BasicComponent/Linux_Display_DevelopmentGuide-07.md'                        
-      - 调试: 'BasicComponent/Linux_Display_DevelopmentGuide-08.md' 
-    - LinuxPWM开发:
-      - 概述: 'BasicComponent/Linux_PWM_DevelopmentGuide-01.md'
-      - 术语及概念: 'BasicComponent/Linux_PWM_DevelopmentGuide-02.md'   
-      - 模块描述: 'BasicComponent/Linux_PWM_DevelopmentGuide-03.md'                                     
-    - Camera开发:
-      - 简述: 'BasicComponent/Linux_Camera_DevelopmentGuide-01.md'
-      - 模块介绍: 'BasicComponent/Linux_Camera_DevelopmentGuide-02.md'      
-      - 模块开发: 'BasicComponent/Linux_Camera_DevelopmentGuide-03.md'
-      - 模块配置: 'BasicComponent/Linux_Camera_DevelopmentGuide-04.md'
-      - 调试常见问题: 'BasicComponent/Linux_Camera_DevelopmentGuide-05.md'
-      - 功能测试: 'BasicComponent/Linux_Camera_DevelopmentGuide-06.md'  
-    - 各平台多媒体格式: 'BasicComponent/Linux_Multimediaformatsforeachplatform-01.md'          
-    - 图形系统开发: 'BasicComponent/Linux_GraphicsSystem_DevelopmentGuide-01.md'
-    - 多媒体MPP开发: 'BasicComponent/Linux_MultimediaMPP_DevelopmentGuide-01.md'      
-    - NPU开发简介: 'BasicComponent/IntroductiontoLinux_NPUDevelopment-01.md'
-    - NPU混合量化部署: 'BasicComponent/Linux_NPUmixedquantitativedeployment-01.md'
-    - NPU部署工具安装指导: 'BasicComponent/Linux_NPUdeploymenttoolinstallationguide-01.md'    
-    - NPU_AI模型混合量化指导: 'BasicComponent/Linux_NPU_AIModelHybridQuantizationGuide-01.md'
-    - NPU_Lenet模型之从训练到端侧部署: 'BasicComponent/Linux_NPU_Lenetmodelfromtrainingtoend-sidedeployment-01.md'
-    - NPU_VIPLite_API说明: 'BasicComponent/DescriptionofLinux_NPU_VIPLite_API-01.md'
-    - NPU_Yolact模型部署: 'BasicComponent/Linux_NPU_Yolactmodeldeployment-01.md'
-    - NPU常见网络性能分析数据: 'BasicComponent/Linux_NPUcommonnetworkperformanceanalysisdata-01.md'                            
-  - Linux基础组件开发指南中: 
-    - Key快速配置:
-      - 模块简述:  'BasicComponent/Linux_Key_QuickConfiguration_UserGuide-01.md'
-      - GPIO-Key:  'BasicComponent/Linux_Key_QuickConfiguration_UserGuide-02.md'      
-      - ADC-Key:  'BasicComponent/Linux_Key_QuickConfiguration_UserGuide-03.md'      
-      - AXP-KeY:  'BasicComponent/Linux_Key_QuickConfiguration_UserGuide-04.md'             
-    - USB开发: 'BasicComponent/Linux_USB_DevelopmentGuide-01.md'      
-    - 网络性能参考: 'BasicComponent/Linux_NetworkPerformance_ReferenceGuide-01.md'
-    - 蓝牙开发: 'BasicComponent/Linux_Bluetooth_DevelopmentGuide-01.md'
-    - 蓝牙模组移植: 'BasicComponent/Linux_Bluetooth_ModuleMigrationGuide-01.md'
-    - Wi-Fi开发: 'BasicComponent/Linux_Wi-Fi_DevelopmentGuide-01.md'
-    - WiFiRF测试: 'BasicComponent/Linux_WiFi_RFTest_UsageGuide-01.md'    
-    - 无线配网: 'BasicComponent/Linux_DistributionNetwork_DevelopmentGuide-01.md'
-    - 单板资源配置: 'BasicComponent/Linux_Configuration_DevelopmentGuide-01.md'
-    - 音频开发: 'BasicComponent/Linux_Audio_DevelopmentGuide-01.md'
-    - E907开发:
-      - 简述: 'BasicComponent/Linux_E907_DevelopmentGuide-01.md'
-      - 环境搭建: 'BasicComponent/Linux_E907_DevelopmentGuide-02.md'      
-      - 开发使用: 'BasicComponent/Linux_E907_DevelopmentGuide-03.md'
-      - 常见问题: 'BasicComponent/Linux_E907_DevelopmentGuide-04.md'    
-  - Linux基础组件开发指南下:    
-    - PMU_开发指南: 'BasicComponent/Linux_PMU_DevelopmentGuide-01.md'  
-    - OTA_开发指南: 'BasicComponent/Linux_OTA_DevelopmentGuide-01.md'
-    - syslog_使用指南: 'BasicComponent/Linux_syslog_UsageGuide-01.md'
-    - 内存优化_开发指南: 'BasicComponent/Linux_MemoryOptimization_DevelopmentGuide-01.md'
-    - 功耗管理_开发指南: 'BasicComponent/Linux_PowerManagement_DevelopmentGuide-01.md'
-    - Linux启动优化开发指南: 'BasicComponent/Linux_BootOptimization_DevelopmentGuide-01.md'
-    - 存储_开发指南: 'BasicComponent/Linux_Storage_DevelopmentGuide-01.md'
-    - 存储性能_参考指南: 'BasicComponent/Linux_StoragePerformance_ReferenceGuide-01.md'
-    - 安全_开发指南: 'BasicComponent/Linux_Security_DevelopmentGuide-01.md'
-    - 打包流程_说明指南: 'BasicComponent/Linux_packagingprocess_instructionguide-01.md'
-    - 系统裁剪_开发指南: 'BasicComponent/Linux_SystemTailoring_DevelopmentGuide-01.md'
-    - 系统调试_使用指南: 'BasicComponent/Linux_SystemDebugging_UsageGuide-01.md'
-    - 系统软件_开发指南: 'BasicComponent/Linux_SystemSoftware_DevelopmentGuide-01.md'
+      - 模块介绍: 'SdkModule/Linux_GPIO_DevelopmentGuide-02.md'
+      - 模块配置: 'SdkModule/Linux_GPIO_DevelopmentGuide-03.md'
+      - 模块接口说明: 'SdkModule/Linux_GPIO_DevelopmentGuide-04.md'
+      - 使用示例: 'SdkModule/Linux_GPIO_DevelopmentGuide-05.md'
+      - FAQ: 'SdkModule/Linux_GPIO_DevelopmentGuide-06.md'
+    - MIPI_CSI_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_MIPI_CSI_DevelopmentGuide-01.md'
+      - 模块介绍: 'SdkModule/Linux_MIPI_CSI_DevelopmentGuide-02.md'
+      - V4L2接口描述: 'SdkModule/Linux_MIPI_CSI_DevelopmentGuide-03.md'
+      - 模块使用范例: 'SdkModule/Linux_MIPI_CSI_DevelopmentGuide-04.md'
+      - FAQ: 'SdkModule/Linux_MIPI_CSI_DevelopmentGuide-05.md'
+    - MMC_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_MMC_DevelopmentGuide-01.md'
+      - 模块介绍: 'SdkModule/Linux_MMC_DevelopmentGuide-02.md'
+      - 模块接口说明: 'SdkModule/Linux_MMC_DevelopmentGuide-03.md'
+      - FAQ: 'SdkModule/Linux_MMC_DevelopmentGuide-04.md'
+    - RTC_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_RTC_DevelopmentGuide-01.md'
+      - 模块介绍: 'SdkModule/Linux_RTC_DevelopmentGuide-02.md'
+      - 模块配置介绍: 'SdkModule/Linux_RTC_DevelopmentGuide-03.md'
+      - 接口描述: 'SdkModule/Linux_RTC_DevelopmentGuide-04.md'
+      - 模块使用范例: 'SdkModule/Linux_RTC_DevelopmentGuide-05.md'
+      - FAQ: 'SdkModule/Linux_RTC_DevelopmentGuide-06.md'
+  - 4.基础组件软件库:     
+    - PWM_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_PWM_DevelopmentGuide-01.md' 
+      - 模块描述:  'SdkModule/Linux_PWM_DevelopmentGuide-01.md' 
+  - 5.系统开发:      
+    - 系统配置_开发指南:
+      - 概述与配置介绍: 'SdkModule/Linux_Deploy_DevelopmentGuide-01.md'
+      - 系统配置介绍: 'SdkModule/Linux_Deploy_DevelopmentGuide-02.md'
+      - 设备树介绍: 'SdkModule/Linux_Deploy_DevelopmentGuide-03.md'
+      - 设备树的使用与调试: 'SdkModule/Linux_Deploy_DevelopmentGuide-04.md'
+      - 分区表说明: 'SdkModule/Linux_Deploy_DevelopmentGuide-05.md'
+    - 系统调试_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_SystemDebug_DevelopmentGuide-01.md'
+      - 调试方法及工具: 'SdkModule/Linux_SystemDebug_DevelopmentGuide-02.md'
+    - 系统裁剪_参考指南:
+      - 概述与介绍: 'SdkModule/Linux_SystemClipping_Reference_Guide-01.md'
+      - 系统裁剪介绍: 'SdkModule/Linux_SystemClipping_Reference_Guide-02.md'
+    - 启动优化_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_systemStartup_Optimization-01.md'  
+      - 启动速度优化简介: 'SdkModule/Linux_systemStartup_Optimization-02.md'
+      - Tina启动速度优化: 'SdkModule/Linux_systemStartup_Optimization-03.md'   
+    - SPINAND_UBI_离线烧录_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_Spinubi_OfflineBurning_DevelopmentGuide-01.md'
+      - 数据布局说明: 'SdkModule/Linux_Spinubi_OfflineBurning_DevelopmentGuide-02.md'
+      - 调整内存说明: 'SdkModule/Linux_Spinubi_OfflineBurning_DevelopmentGuide-03.md'
+    - NOR_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_NOR_DevelopmentGuide-01.md'
+      - 模块介绍: 'SdkModule/Linux_NOR_DevelopmentGuide-02.md'
+      - 接口描述: 'SdkModule/Linux_NOR_DevelopmentGuide-03.md'
+      - 使用例子: 'SdkModule/Linux_NOR_DevelopmentGuide-04.md'
+    - SPINAND 开发指南:
+      - 概述与介绍: 'SdkModule/Linux_SPINAND_DevelopmentGuide-01.md'
+      - 流程设计: 'SdkModule/Linux_SPINAND_DevelopmentGuide-02.md'
+      - 模块配置: 'SdkModule/Linux_SPINAND_DevelopmentGuide-03.md'
+  - 6.应用示例与项目:     
+    - UART_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_UART_DevelopmentGuide-01.md'          
 extra_javascript:
   - javascripts/shortcuts.js
 
@@ -315,5 +267,4 @@ extra_css:
 extra_javascript:
   - https://unpkg.com/d3@6.7.0/dist/d3.min.js
   - https://unpkg.com/markmap-lib@0.14.1/dist/browser/index.min.js
-  - https://unpkg.com/markmap-view@0.14.0/dist/index.min.js  
-
+  - https://unpkg.com/markmap-view@0.14.0/dist/index.min.js

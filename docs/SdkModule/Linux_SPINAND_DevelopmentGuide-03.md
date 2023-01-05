@@ -1,0 +1,96 @@
+## 4 模块配置
+
+### 4.1 uboot 模块配置
+
+```
+Device Drivers-->Sunxi flash support-->
+[*]Support sunxi nand devices
+[*]Support sunxi nand ubifs devices
+[*]Support COMM NAND V1 interface
+```
+
+
+
+如下图：
+
+![image-20221227120338239](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_003.png)
+
+​																	图 4-1: u-boot-spinand-menuconfig
+
+​	
+
+### 4.2 kernel 模块配置
+
+```
+Device Drivers->Memory Technology Device(MTD) support-->sunxi-nand
+```
+
+![image-20221227140347684](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_004.png)
+
+​																	图 4-2: UBI
+
+![image-20221227140501741](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_005.png)
+
+​																	图 4-3: ker_nand-cfg
+
+![image-20221227140541762](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_006.png)
+
+​																	图 4-4: ker_spinand
+
+```
+Device Drivers->SPI support
+```
+
+![image-20221227140943318](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_007.png)
+
+​																图 4-5: spi-1
+
+![image-20221227141017709](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_008.png)
+
+​																图 4-6: spi-2
+
+
+
+```
+Device Drivers->DMA Engine support
+```
+
+
+
+![image-20221227141059654](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_009.png)
+
+​																图 4-7: DMA-1
+
+![image-20221227141126258](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_0010.png)
+
+​																图 4-8: DMA-2
+
+
+
+```
+Device Drivers->SOC（System On Chip）
+```
+
+![image-20221227141153846](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_0011.png)
+
+​																图 4-9: SID
+
+
+
+```
+File systems-->Miscellaneous filesystems-->
+```
+
+![image-20221227141435508](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_0012.png)
+
+​																图 4-10: menuconfig_spinand_ubifs
+
+
+
+#### 4.3 env.cfg
+
+在 env.cfg 中添加修改下值，setargs_nand_ubi 先 copy 一份 setargs_nand 再添加对应变量
+
+![image-20221227141519171](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_0013.png)
+
+​																图 4-11: build-mkcmd
