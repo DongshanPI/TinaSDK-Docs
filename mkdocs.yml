@@ -428,8 +428,8 @@ nav:
       - 量产测试流程: 'SdkModule/Linux_Mass_Production_UserGuide-04.md'
       - 各平台Tinatest场景验证表: 'SdkModule/Linux_Mass_Production_UserGuide-05.md'
   - 6.应用示例与项目:
-    - UART_开发指南:
-      - 概述与介绍: 'SdkModule/Linux_UART_DevelopmentGuide-01.md'          
+    - LVGL开发实战:
+      - 2048小游戏: 'ProjectActualCombat/GUI-LvglExample-01.md'          
 extra_javascript:
   - javascripts/shortcuts.js
 
