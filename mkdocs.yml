@@ -175,7 +175,7 @@ nav:
     - 阅读指南: 'index.md'
     - 配套硬件: 'SupportHardware.md'
   - 1.构建工具使用:
-    - TinaSDK开发指南:
+    - TinaSDK_开发指南:
       - 概述与介绍: 'SdkModule/Linux_SystemSoftware_DevelopmentGuide-01.md'
       - Tina环境搭建: 'SdkModule/Linux_SystemSoftware_DevelopmentGuide-02.md'
       - Tina编译与烧写: 'SdkModule/Linux_SystemSoftware_DevelopmentGuide-03.md'
@@ -221,10 +221,112 @@ nav:
       - 接口描述: 'SdkModule/Linux_RTC_DevelopmentGuide-04.md'
       - 模块使用范例: 'SdkModule/Linux_RTC_DevelopmentGuide-05.md'
       - FAQ: 'SdkModule/Linux_RTC_DevelopmentGuide-06.md'
+    - SPI_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_SPI_DevelopmentGuide-01.md'
+      - 模块介绍: 'SdkModule/Linux_SPI_DevelopmentGuide-02.md'
+      - 接口描述: 'SdkModule/Linux_SPI_DevelopmentGuide-03.md'
+      - 模块使用范例: 'SdkModule/Linux_SPI_DevelopmentGuide-04.md'
+      - FAQ: 'SdkModule/Linux_SPI_DevelopmentGuide-05.md'
+    - Standby_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_Standby_DevelopmentGuide-01.md'
+      - 模块介绍: 'SdkModule/Linux_Standby_DevelopmentGuide-02.md'
+      - FAQ: 'SdkModule/Linux_Standby_DevelopmentGuide-03.md'
+    - TWI_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_TWI_DevelopmentGuide-01.md'
+      - 模块接口说明: 'SdkModule/Linux_TWI_DevelopmentGuide-02.md'
+      - 模块使用范例: 'SdkModule/Linux_TWI_DevelopmentGuide-03.md'
+      - FAQ: 'SdkModule/Linux_TWI_DevelopmentGuide-04.md'
+    - UART_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_UART_DevelopmentGuide-01.md'
+      - 模块配置介绍: 'SdkModule/Linux_UART_DevelopmentGuide-02.md'
+      - 接口描述: 'SdkModule/Linux_UART_DevelopmentGuide-03.md'
+      - 模块使用范例: 'SdkModule/Linux_UART_DevelopmentGuide-04.md'
+      - FAQ: 'SdkModule/Linux_UART_DevelopmentGuide-05.md'
+    - USB_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_USB_DevelopmentGuide-01.md'
+      - 模块介绍: 'SdkModule/Linux_USB_DevelopmentGuide-02.md'
+      - FAQ: 'SdkModule/Linux_USB_DevelopmentGuide-03.md'
+      - 附录: 'SdkModule/Linux_USB_DevelopmentGuide-04.md'
+    - Key_快速配置使用指南:
+      - 概述与介绍: 'SdkModule/Linux_Key_Quick_Configuration_UserGuide-01.md'
+      - 模块介绍: 'SdkModule/Linux_Key_Quick_Configuration_UserGuide-02.md'
+      - GPIO-Key: 'SdkModule/Linux_Key_Quick_Configuration_UserGuide-03.md'
+      - ADC-Key: 'SdkModule/Linux_Key_Quick_Configuration_UserGuide-04.md'
+      - AXP-Key: 'SdkModule/Linux_Key_Quick_Configuration_UserGuide-05.md'
+    - PMU_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_PMU_DevelopmentGuide-01.md'
+      - 模块介绍: 'SdkModule/Linux_PMU_DevelopmentGuide-02.md'
+      - 模块使用范例: 'SdkModule/Linux_PMU_DevelopmentGuide-03.md'
+      - FAQ: 'SdkModule/Linux_PMU_DevelopmentGuide-04.md'
+    - Wi-Fi_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_Wi-Fi_DevelopmentGuide-01.md'
+      - Wi-Fi简介: 'SdkModule/Linux_Wi-Fi_DevelopmentGuide-02.md'
+      - Wi-Fi模组移植: 'SdkModule/Linux_Wi-Fi_DevelopmentGuide-03.md'
+      - Wi-Fi_manager与Softap介绍: 'SdkModule/Linux_Wi-Fi_DevelopmentGuide-04.md'
+      - 常见问题: 'SdkModule/Linux_Wi-Fi_DevelopmentGuide-05.md'
   - 4.基础组件软件库:     
     - PWM_开发指南:
       - 概述与介绍: 'SdkModule/Linux_PWM_DevelopmentGuide-01.md' 
       - 模块描述:  'SdkModule/Linux_PWM_DevelopmentGuide-01.md' 
+    - MPP_sample_使用说明:
+      - 简述: 'SdkModule/Linux_MPP_Sample_Instructions-01.md' 
+      - 配置编译测试: 'SdkModule/Linux_MPP_Sample_Instructions-02.md' 
+      - 分类情况: 'SdkModule/Linux_MPP_Sample_Instructions-03.md' 
+      - 各平台支持情况: 'SdkModule/Linux_MPP_Sample_Instructions-04.md' 
+      - 测试方法: 'SdkModule/Linux_MPP_Sample_Instructions-05.md' 
+      - FAQ: 'SdkModule/Linux_MPP_Sample_Instructions-06.md' 
+    - Camera_开发指南:
+      - 概述: 'SdkModule/Linux_Camera_DevelopmentGuide-01.md' 
+      - 模块介绍: 'SdkModule/Linux_Camera_DevelopmentGuide-02.md' 
+      - 模块开发: 'SdkModule/Linux_Camera_DevelopmentGuide-03.md' 
+      - 模块配置: 'SdkModule/Linux_Camera_DevelopmentGuide-04.md' 
+      - 模块调试常见问题: 'SdkModule/Linux_Camera_DevelopmentGuide-05.md' 
+      - camera功能测试: 'SdkModule/Linux_Camera_DevelopmentGuide-06.md' 
+    - E907_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_E907_DevelopmentGuide-01.md' 
+      - 启动E907环境: 'SdkModule/Linux_E907_DevelopmentGuide-02.md' 
+      - AMP环境搭建: 'SdkModule/Linux_E907_DevelopmentGuide-03.md' 
+      - 开发使用: 'SdkModule/Linux_E907_DevelopmentGuide-04.md' 
+      - 其他: 'SdkModule/Linux_E907_DevelopmentGuide-05.md' 
+    - LCD_调试指南:
+      - 概述与介绍: 'SdkModule/Linux_LCD_DevelopmentGuide-01.md' 
+      - 模块介绍: 'SdkModule/Linux_LCD_DevelopmentGuide-02.md' 
+      - 硬件参数说明:  'SdkModule/Linux_LCD_DevelopmentGuide-03.md' 
+      - 调试方法: 'SdkModule/Linux_LCD_DevelopmentGuide-04.md' 
+      - FAQ: 'SdkModule/Linux_LCD_DevelopmentGuide-05.md' 
+      - 总结: 'SdkModule/Linux_LCD_DevelopmentGuide-06.md' 
+    - Display_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_Display_DevelopmentGuide-01.md' 
+      - 模块介绍: 'SdkModule/Linux_Display_DevelopmentGuide-02.md' 
+      - 模块接口概述: 'SdkModule/Linux_Display_DevelopmentGuide-03.md' 
+      - 操作与接口说明: 'SdkModule/Linux_Display_DevelopmentGuide-04.md' 
+      - 输出设备介绍: 'SdkModule/Linux_Display_DevelopmentGuide-05.md' 
+      - IOCTL接口描述: 'SdkModule/Linux_Display_DevelopmentGuide-06.md' 
+      - sysfs接口描述: 'SdkModule/Linux_Display_DevelopmentGuide-07.md' 
+      - 数据结构: 'SdkModule/Linux_Display_DevelopmentGuide-08.md' 
+      - 调试: 'SdkModule/Linux_Display_DevelopmentGuide-09.md' 
+    - 图形系统_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_GraphicsSystem_DevelopmentGuide-01.md' 
+      - MiniGUI: 'SdkModule/Linux_GraphicsSystem_DevelopmentGuide-02.md' 
+      - QT: 'SdkModule/Linux_GraphicsSystem_DevelopmentGuide-03.md' 
+      - EFL与GTK+: 'SdkModule/Linux_GraphicsSystem_DevelopmentGuide-04.md' 
+      - WebKitGtk与DirectFB: 'SdkModule/Linux_GraphicsSystem_DevelopmentGuide-05.md' 
+      - Wayland: 'SdkModule/Linux_GraphicsSystem_DevelopmentGuide-06.md' 
+      - LVGL: 'SdkModule/Linux_GraphicsSystem_DevelopmentGuide-07.md' 
+      - Flutter: 'SdkModule/Linux_GraphicsSystem_DevelopmentGuide-08.md' 
+    - 音频_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_AudioFrequency_DevelopmentGuide-01.md' 
+      - 模块介绍: 'SdkModule/Linux_AudioFrequency_DevelopmentGuide-02.md' 
+      - 常用工具及调试方法: 'SdkModule/Linux_AudioFrequency_DevelopmentGuide-03.md' 
+      - 常用接口说明: 'SdkModule/Linux_AudioFrequency_DevelopmentGuide-04.md' 
+      - 开机音乐功能: 'SdkModule/Linux_AudioFrequency_DevelopmentGuide-05.md' 
+      - 各平台音频模块注意事项: 'SdkModule/Linux_AudioFrequency_DevelopmentGuide-06.md' 
+    - WiFi_RF测试_使用指南:
+      - 概述与介绍: 'SdkModule/Linux_WiFi_RFTest_UserGuide-01.md' 
+      - WiFi测试: 'SdkModule/Linux_WiFi_RFTest_UserGuide-02.md' 
+      - XRADIO系列模组: 'SdkModule/Linux_WiFi_RFTest_UserGuide-03.md' 
+      - RTL系列模组: 'SdkModule/Linux_WiFi_RFTest_UserGuide-04.md' 
+      - SRRC认证: 'SdkModule/Linux_WiFi_RFTest_UserGuide-05.md' 
   - 5.系统开发:      
     - 系统配置_开发指南:
       - 概述与配置介绍: 'SdkModule/Linux_Deploy_DevelopmentGuide-01.md'
