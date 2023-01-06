@@ -1,2 +1,1 @@
-# Dongshanpi-Docs
-DongshanPI  boards  Docs.
+# Allwinner Tina-SDK Docs.

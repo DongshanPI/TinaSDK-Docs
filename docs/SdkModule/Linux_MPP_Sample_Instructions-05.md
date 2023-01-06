@@ -21,7 +21,7 @@
 
 测试通路：
 
-![image-20221120170233258](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120170233258.png)
+![image-20221120170233258](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120170233258.png)
 
 <center><center><center>图 8-1: MPP_sample 测试通路-sample_driverVipp</center>
 
@@ -90,7 +90,7 @@ mpp_vi
 
 测试通路：
 
-![image-20221120170355890](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120170355890.png)
+![image-20221120170355890](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120170355890.png)
 
 <center>图 8-2: MPP_sample 测试通路-sample_virvi</center>
 
@@ -221,7 +221,7 @@ mpp_vo
 
 测试通路：
 
-![image-20221120170432649](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120170432649.png)
+![image-20221120170432649](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120170432649.png)
 
 <center>图 8-3: MPP_sample 测试通路-sample_virvi2vo</center>
 
@@ -326,7 +326,7 @@ mpp_vo
 
 测试通路：
 
-![image-20221120170458268](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120170458268.png)
+![image-20221120170458268](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120170458268.png)
 
 <center>图 8-4: MPP_sample 测试通路-sample_virvi2vo_zoom</center>
 
@@ -402,7 +402,7 @@ zoom_max_cnt: 缩放的次数。
 
 测试通路：
 
-![image-20221120172327049](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120172327049.png)
+![image-20221120172327049](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120172327049.png)
 
 <center>图 8-5: MPP_sample 测试通路-sample_vi_reset</center>
 
@@ -471,7 +471,7 @@ mpp_system_rgb_ctrl
 
 测试通路：
 
-![image-20221120172512591](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120172512591.png)
+![image-20221120172512591](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120172512591.png)
 
 <center>图 8-6: MPP_sample 测试通路-sample_isposd</center>
 
@@ -548,7 +548,7 @@ output_file_path: 指定编码视频的保存路径。
 
 测试通路：
 
-![image-20221120172530947](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120172530947.png)
+![image-20221120172530947](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120172530947.png)
 
 <center>图 8-7: MPP_sample 测试通路-sample_vin_isp_test</center>
 
@@ -624,7 +624,7 @@ output_file_path: 指定编码视频的保存路径。
 
 测试通路：
 
-![image-20221120172548521](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120172548521.png)
+![image-20221120172548521](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120172548521.png)
 
 <center>图 8-8: MPP_sample 测试通路-sample_regio</center>
 
@@ -732,7 +732,7 @@ mpp_venc
 
 测试通路：
 
-![image-20221120172626867](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120172626867.png)
+![image-20221120172626867](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120172626867.png)
 
 <center>图 8-9: MPP_sample 测试通路-sample_venc</center>
 
@@ -833,7 +833,7 @@ mpp_muxer
 
 测试通路：
 
-![image-20221120172643094](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120172643094.png)
+![image-20221120172643094](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120172643094.png)
 
 <center>图 8-10: MPP_sample 测试通路-sample_venc2muxer</center>
 
@@ -919,7 +919,7 @@ mpp_venc
 
 测试通路：
 
-![image-20221120172701504](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120172701504.png)
+![image-20221120172701504](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120172701504.png)
 
 <center>图 8-11: MPP_sample 测试通路-sample_virvi2venc</center>
 
@@ -1079,7 +1079,7 @@ mpp_muxer
 
 测试通路：
 
-![image-20221120172720694](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120172720694.png)
+![image-20221120172720694](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120172720694.png)
 
 <center><center>图 8-12: MPP_sample 测试通路-sample_timelapse</center>
 
@@ -1156,7 +1156,7 @@ mpp_muxer
 
 测试通路：
 
-![image-20221120172731258](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120172731258.png)
+![image-20221120172731258](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120172731258.png)
 
 <center>图 8-13: MPP_sample 测试通路-sample_virvi2venc2muxer</center>
 
@@ -1328,7 +1328,7 @@ mpp_muxer
 
 测试通路：
 
-![image-20221120173040894](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120173040894.png)
+![image-20221120173040894](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120173040894.png)
 
 <center>图 8-14: MPP_sample 测试通路-sample_multi_vi2venc2muxer</center>
 
@@ -1480,7 +1480,7 @@ mpp_system_rtsp
 
 测试通路：
 
-![image-20221120173139208](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120173139208.png)
+![image-20221120173139208](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120173139208.png)
 
 <center>图 8-15: MPP_sample 测试通路-sample_rtsp</center>
 
@@ -1622,7 +1622,7 @@ mpp_vo
 
 测试通路：
 
-![image-20221120173547722](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120173547722.png)
+![image-20221120173547722](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120173547722.png)
 
 <center>图 8-16: MPP_sample 测试通路-sample_CodecParallel</center>
 
@@ -1729,7 +1729,7 @@ mpp_vdec
 
 测试通路：
 
-![image-20221120173607272](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120173607272.png)
+![image-20221120173607272](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120173607272.png)
 
 <center>图 8-17: MPP_sample 测试通路-sample_vdec</center>
 
@@ -1805,7 +1805,7 @@ mpp_demuxer mpp_vdec
 
 测试通路：
 
-![image-20221120173635176](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120173635176.png)
+![image-20221120173635176](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120173635176.png)
 
 <center>图 8-18: MPP_sample 测试通路-sample_demux2vdec</center>
 
@@ -1884,7 +1884,7 @@ mpp_vdec
 
 测试通路：
 
-![image-20221120173657904](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120173657904.png)
+![image-20221120173657904](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120173657904.png)
 
 <center>图 8-19: MPP_sample 测试通路-sample_demux2vdec_saveFrame</center>
 
@@ -1962,7 +1962,7 @@ mpp_vo
 
 测试通路：
 
-![image-20221120173714067](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120173714067.png)
+![image-20221120173714067](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120173714067.png)
 
 <center>图 8-20: MPP_sample 测试通路-sample_demux2vdec2vo</center>
 
@@ -2120,7 +2120,7 @@ mpp_venc
 
 测试通路：
 
-![image-20221120173754294](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120173754294.png)
+![image-20221120173754294](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120173754294.png)
 
 <center>图 8-21: MPP_sample 测试通路-sample_OnlineVenc</center>
 
@@ -2259,7 +2259,7 @@ mpp_venc
 
 测试通路：
 
-![image-20221120173816522](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120173816522.png)
+![image-20221120173816522](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120173816522.png)
 
 <center>图 8-22: MPP_sample 测试通路-sample_vencGdcZoom</center>
 
@@ -2419,7 +2419,7 @@ mpp_venc
 
 测试通路：
 
-![image-20221120173840435](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120173840435.png)
+![image-20221120173840435](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120173840435.png)
 
 <center>图 8-23: MPP_sample 测试通路-sample_takePicture</center>
 
@@ -2508,7 +2508,7 @@ mpp_vo
 
 测试通路：
 
-![image-20221120173856514](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120173856514.png)
+![image-20221120173856514](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120173856514.png)
 
 <center>图 8-24: MPP_sample 测试通路-sample_recorder</center>
 
@@ -2617,7 +2617,7 @@ mpi_vi采集图像，直接传输给mpi_venc进行编码。
 
 测试通路：
 
-![image-20221120173914767](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120173914767.png)
+![image-20221120173914767](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120173914767.png)
 
 <center>图 8-25: MPP_sample 测试通路-sample_vencRecreate</center>
 
@@ -2785,7 +2785,7 @@ mpp_aio
 
 测试通路：
 
-![image-20221120173947583](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120173947583.png)
+![image-20221120173947583](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120173947583.png)
 
 <center>图 8-26: MPP_sample 测试通路-sample_ai</center>
 
@@ -2858,7 +2858,7 @@ mpp_aio
 
 测试通路：
 
-![image-20221120174006397](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120174006397.png)
+![image-20221120174006397](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120174006397.png)
 
 <center>图 8-27: MPP_sample 测试通路-sample_ao</center>
 
@@ -2932,7 +2932,7 @@ mpp_aio
 
 测试通路：
 
-![image-20221120174032703](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120174032703.png)
+![image-20221120174032703](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120174032703.png)
 
 <center>图 8-28: MPP_sample 测试通路-sample_aoSync</center>
 
@@ -3008,7 +3008,7 @@ mpp_aio
 
 测试通路：
 
-![image-20221120174053936](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120174053936.png)
+![image-20221120174053936](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120174053936.png)
 
 <center>图 8-29: MPP_sample 测试通路-sample_ao_resample_mixer</center>
 
@@ -3096,7 +3096,7 @@ mpp_aio
 
 测试通路：
 
-![image-20221120174112839](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120174112839.png)
+![image-20221120174112839](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120174112839.png)
 
 <center>图 8-30: MPP_sample 测试通路-sample_ao2ai_aec</center>
 
@@ -3181,7 +3181,7 @@ mpp_aio
 
 测试通路：
 
-![image-20221120174131348](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120174131348.png)
+![image-20221120174131348](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120174131348.png)
 
 <center>图 8-31: MPP_sample 测试通路-sample_ao2ai_aec_rate_mixer</center>
 
@@ -3281,7 +3281,7 @@ mpp_aio
 
 测试通路：
 
-![image-20221120174326973](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120174326973.png)
+![image-20221120174326973](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120174326973.png)
 
 <center>图 8-32: MPP_sample 测试通路-sample_aec</center>
 
@@ -3359,7 +3359,7 @@ mpp_aio
 
 测试通路：
 
-![image-20221120174354642](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120174354642.png)
+![image-20221120174354642](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120174354642.png)
 
 <center>图 8-33: MPP_sample 测试通路-sample_aenc</center>
 
@@ -3430,7 +3430,7 @@ mpp_aio
 
 测试通路：
 
-![image-20221120174615324](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120174615324.png)
+![image-20221120174615324](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120174615324.png)
 
 <center>图 8-34: MPP_sample 测试通路-sample_ai2aenc</center>
 
@@ -3504,7 +3504,7 @@ mpp_aenc mpp_aio
 
 测试通路：
 
-![image-20221120180717015](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120180717015.png)
+![image-20221120180717015](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120180717015.png)
 
 <center>图 8-35: MPP_sample 测试通路-sample_ai2aenc2muxer</center>
 
@@ -3582,7 +3582,7 @@ mpp_aenc
 
 测试通路：
 
-![image-20221120180958916](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120180958916.png)
+![image-20221120180958916](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120180958916.png)
 
 <center>图 8-36: MPP_sample 测试通路-sample_select</center>
 
@@ -3653,7 +3653,7 @@ mpp_aio
 
 测试通路：
 
-![image-20221120181038350](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120181038350.png)
+![image-20221120181038350](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120181038350.png)
 
 <center>图 8-37: MPP_sample 测试通路-sample_adec</center>
 
@@ -3723,7 +3723,7 @@ mpp_aio
 
 测试通路：
 
-![image-20221120181343452](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120181343452.png)
+![image-20221120181343452](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120181343452.png)
 
 <center>图 8-38: MPP_sample 测试通路-sample_adec2ao</center>
 
@@ -3795,7 +3795,7 @@ mpp_adec
 
 测试通路：
 
-![image-20221120181400905](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120181400905.png)
+![image-20221120181400905](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120181400905.png)
 
 <center>图 8-39: MPP_sample 测试通路-sample_demux2adec</center>
 
@@ -3865,7 +3865,7 @@ mpp_aio
 
 测试通路：
 
-![image-20221120181418259](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120181418259.png)
+![image-20221120181418259](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120181418259.png)
 
 <center>图 8-40: MPP_sample 测试通路-sample_demux2adec2ao</center>
 
@@ -4032,7 +4032,7 @@ mpp_ise
 
 测试通路：
 
-![image-20221120181530045](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120181530045.png)
+![image-20221120181530045](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120181530045.png)
 
 <center>图 8-41: MPP_sample 测试通路-sample_virvi2fish2venc</center>
 
@@ -4144,7 +4144,7 @@ mpp_ise
 
 测试通路：
 
-![image-20221120181611709](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120181611709.png)
+![image-20221120181611709](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120181611709.png)
 
 <center>图 8-42: MPP_sample 测试通路-sample_virvi2fish2vo</center>
 
@@ -4244,7 +4244,7 @@ mpp_vo
 
 测试通路：
 
-![image-20221120181719046](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120181719046.png)
+![image-20221120181719046](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120181719046.png)
 
 <center>图 8-43: MPP_sample 测试通路-sample_virvi2eis2venc</center>
 
@@ -4507,7 +4507,7 @@ mpp_vo
 
 测试通路：
 
-![image-20221120181754900](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120181754900.png)
+![image-20221120181754900](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120181754900.png)
 
 <center>图 8-44: MPP_sample 测试通路-sample_vo</center>
 
@@ -4584,7 +4584,7 @@ mpp_vo
 
 测试通路：
 
-![image-20221120181823704](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120181823704.png)
+![image-20221120181823704](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120181823704.png)
 
 <center>图 8-45: MPP_sample 测试通路-sample_UILayer</center>
 
@@ -4743,7 +4743,7 @@ mpp_vo
 
 测试通路：
 
-![image-20221120181909528](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120181909528.png)
+![image-20221120181909528](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120181909528.png)
 
 <center>图 8-46: MPP_sample 测试通路-sample_vi_g2d</center>
 
@@ -4830,7 +4830,7 @@ PACKAGE_libopenssl
 
 测试通路：
 
-![image-20221120181928952](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120181928952.png)
+![image-20221120181928952](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120181928952.png)
 
 <center>图 8-47: MPP_sample 测试通路-sample_twinchn_virvi2venc2ce</center>
 
@@ -4923,7 +4923,7 @@ PACKAGE_libopenssl
 
 测试通路：
 
-![image-20221120181941799](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120181941799.png)
+![image-20221120181941799](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120181941799.png)
 
 <center>图 8-48: MPP_sample 测试通路-sample_virvi2venc2ce</center>
 
@@ -5010,7 +5010,7 @@ mpp_vdec
 
 测试通路：
 
-![image-20221120182000288](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120182000288.png)
+![image-20221120182000288](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120182000288.png)
 
 <center>图 8-49: MPP_sample 测试通路-sample_uvc2vdec_vo</center>
 
@@ -5097,7 +5097,7 @@ mpp_vdec
 
 测试通路：
 
-![image-20221120183915416](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120183915416.png)
+![image-20221120183915416](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120183915416.png)
 
 <center>图 8-50: MPP_sample 测试通路-sample_uvc2vdenc2vo</center>
 
@@ -5177,7 +5177,7 @@ mpp_vo
 
 测试通路：
 
-![image-20221120184430678](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120184430678.png)
+![image-20221120184430678](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120184430678.png)
 
 <center>图 8-51: MPP_sample 测试通路-sample_uvc2vo</center>
 
@@ -5259,7 +5259,7 @@ mpp_vo
 
 测试通路：
 
-![image-20221120184455995](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120184455995.png)
+![image-20221120184455995](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120184455995.png)
 
 <center>图 8-52: MPP_sample 测试通路-sample_uvc_vo</center>
 
@@ -5339,7 +5339,7 @@ mpp_uvc
 
 测试通路：
 
-![image-20221120184516051](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120184516051.png)
+![image-20221120184516051](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120184516051.png)
 
 <center>图 8-53: MPP_sample 测试通路-sample_uvcout</center>
 
@@ -5658,7 +5658,7 @@ mpp_demuxer
 
 测试通路：
 
-![image-20221120184602005](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120184602005.png)
+![image-20221120184602005](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120184602005.png)
 
 <center>图 8-54: MPP_sample 测试通路-sample_demux</center>
 
@@ -6240,7 +6240,7 @@ mpp_aio
 
 测试通路：
 
-![image-20221120184942099](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120184942099.png)
+![image-20221120184942099](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120184942099.png)
 
 <center>图 8-55: MPP_sample 测试通路-sample_sound_controler</center>
 
@@ -6325,7 +6325,7 @@ mpp_venc
 
 测试通路：
 
-![image-20221120185002099](http://photos.100ask.net/tina-docs/MPPSampleInstructionsUse_image-20221120185002099.png)
+![image-20221120185002099](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185002099.png)
 
 <center>图 8-56: MPP_sample 测试通路-sample_thumb</center>
 

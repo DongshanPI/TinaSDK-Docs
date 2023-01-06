@@ -38,7 +38,7 @@ U-Boot 中的各项功能可以通过 defconfig 或配置菜单 menuconfig 进�
 
 2. 开{LICHEE_CHIP}_defconfig或{LICHEE_CHIP}_nor_defconfig后，在相应的宏定义前去掉或添加"#"即可将相应功能开启或关闭。如下图，只要将CONFIG_SUNXI_NAND前的#去掉即可支持 NAND 相关功能，其他宏定义的开启关闭也类似。修改后需要运行make xxx_defconfig使修改后的配置生效。
 
-   ![](http://photos.100ask.net/tina-docs/LinuxU-bootDevelopmentGuide_001.png)
+   ![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxU-bootDevelopmentGuide_001.png)
 
 ​																			图 4-1: defconfig 配置图
 
@@ -52,7 +52,7 @@ U-Boot 中的各项功能可以通过 defconfig 或配置菜单 menuconfig 进�
 
 3. 修改后配置已经生效，直接 make 即可生成对应 bin。如果重新运行make xxx_defconfig，通过menuconfig 方式修改的配置会在运行make xxx_defconfig后被xxx_defconfig中的配置覆盖。
 
-![](http://photos.100ask.net/tina-docs/LinuxU-bootDevelopmentGuide_002.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxU-bootDevelopmentGuide_002.png)
 
 ​																		图 4-2: menuconfig 配置菜单图
 
@@ -135,7 +135,7 @@ CFGCHK u-boot.cfg
 
 1. 为了在启动内核前更新参数到内核 dts 和可以在 U-Boot 控制台查看修改 dts。按阶段划分可以分为使用内部 dts 阶段和使用内核 dts 阶段，如下图所示。
 
-![](http://photos.100ask.net/tina-docs/LinuxU-bootDevelopmentGuide_003.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxU-bootDevelopmentGuide_003.png)
 
 ​																	图 4-3: dts 变化图
 

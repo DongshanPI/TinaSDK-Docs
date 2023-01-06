@@ -23,7 +23,7 @@ m kernel_menuconfig
 
 选中
 
-![image-20221121115519043](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121115519043.png)
+![image-20221121115519043](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121115519043.png)
 
 <center>图6-1: rproc config</center>
 
@@ -38,7 +38,7 @@ m kernel_menuconfig
 
 选中
 
-![image-20221121115554767](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121115554767.png)
+![image-20221121115554767](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121115554767.png)
 
 <center>图6-2: rpmsg config</center>
 
@@ -58,7 +58,7 @@ mmelis menuconfig #选择下面2项
 
 选中
 
-![image-20221121115636186](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121115636186.png)
+![image-20221121115636186](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121115636186.png)
 
 <center>图6-3: msgbox-melis config</center>
 
@@ -73,13 +73,13 @@ mmelis menuconfig
 刚刚Linux 端选择了rpmsg hearbeat demo 和ctrl driver，我们这里也选上对应的驱动hearbeatdriver 和client driver。
 选中
 
-![image-20221121115718036](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121115718036.png)
+![image-20221121115718036](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121115718036.png)
 
 <center>图6-4: openamp config</center>
 
 为了方便在控制台测试rpmsg 通信，rpmsg client driver 还需开启下面2 个选项
 
-![image-20221121115739276](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121115739276.png)
+![image-20221121115739276](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121115739276.png)
 
 <center>图6-5: rpmsg client config</center>
 
@@ -107,7 +107,7 @@ p
 若控制台出现remoteproc0: remote processor e907_rproc is now up，表明启动e907 成功。
 如果使能了rpmsg_heartbeat 和rpmsg_ctrl 驱动，可以在Linux 控制台start 之后会看到如下输出：
 
-![image-20221121115904466](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121115904466.png)
+![image-20221121115904466](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121115904466.png)
 
 <center>图6-6: rproc test</center>
 
@@ -123,7 +123,7 @@ p
 输入如下图命令：
 eptdev_bind 命令：监听name=test 的链接，最大连接数5 个
 
-![image-20221121115954891](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121115954891.png)
+![image-20221121115954891](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121115954891.png)
 
 <center>图6-7: rproc test</center>
 
@@ -132,11 +132,11 @@ eptdev_bind 命令：监听name=test 的链接，最大连接数5 个
 平台：Linux 控制台
 输入如下图的命令，进行节点创建
 
-![image-20221121120018359](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121120018359.png)
+![image-20221121120018359](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121120018359.png)
 
 <center>图6-8: rpmsg test</center>
 
-![image-20221121120038291](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121120038291.png)
+![image-20221121120038291](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121120038291.png)
 
 <center>图6-9: rpmsg test</center>
 
@@ -149,21 +149,21 @@ eptdev_bind 命令：监听name=test 的链接，最大连接数5 个
 rpmsg 节点支持标准的文件操作，直接读写即可。
 Linux 向e907 发数据：
 
-![image-20221121120107001](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121120107001.png)
+![image-20221121120107001](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121120107001.png)
 
 <center>图6-10: rpmsg test</center>
 
-![image-20221121120127394](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121120127394.png)
+![image-20221121120127394](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121120127394.png)
 
 <center>图6-11: rpmsg test</center>
 
 e907 向Linux 发数据：
 
-![image-20221121120151355](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121120151355.png)
+![image-20221121120151355](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121120151355.png)
 
 <center>图6-12: rpmsg test</center>
 
-![image-20221121120206688](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121120206688.png)
+![image-20221121120206688](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121120206688.png)
 
 <center>图6-13: test</center>
 
@@ -171,31 +171,31 @@ e907 向Linux 发数据：
 
 Linux 主动释放：
 
-![image-20221121120236147](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121120236147.png)
+![image-20221121120236147](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121120236147.png)
 
 <center>图6-14: rpmsg test</center>
 
-![image-20221121120250818](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121120250818.png)
+![image-20221121120250818](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121120250818.png)
 
 <center>图6-15: rpmsg test</center>
 
 e907 主动释放：
 
-![image-20221121120354607](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121120354607.png)
+![image-20221121120354607](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121120354607.png)
 
 <center>图6-16: rpmsg test</center>
 
-![image-20221121120410691](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121120410691.png)
+![image-20221121120410691](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121120410691.png)
 
 <center>图6-17: rpmsg test</center>
 
 e907 端接触监听，会释放所有的链接：
 
-![image-20221121120433076](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121120433076.png)
+![image-20221121120433076](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121120433076.png)
 
 <center>图6-18: rpmsg test</center>
 
-![image-20221121120447261](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121120447261.png)
+![image-20221121120447261](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121120447261.png)
 
 <center>图6-19: rpmsg test</center>
 

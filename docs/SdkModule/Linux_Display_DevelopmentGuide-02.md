@@ -2,7 +2,7 @@
 
 ### 2.1 模块功能介绍
 
-![image-20221123145359081](http://photos.100ask.net/tina-docs/Tina_Linux_Display_DevGuide_image-20221123145359081.png)
+![image-20221123145359081](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Display_DevGuide_image-20221123145359081.png)
 
 <center>图2-1: 模块框图</center>
 
@@ -74,7 +74,7 @@ Device Drivers --->
 				<*> DISP Driver Support(sunxi-disp2)
 ```
 
-![image-20221123150416330](http://photos.100ask.net/tina-docs/Tina_Linux_Display_DevGuide_image-20221123150416330.png)
+![image-20221123150416330](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Display_DevGuide_image-20221123150416330.png)
 
 <center>图2-2: disp 配置</center>
 
@@ -121,7 +121,7 @@ include
 
 ### 2.5 驱动框架介绍
 
-![image-20221123151947713](http://photos.100ask.net/tina-docs/Tina_Linux_Display_DevGuide_image-20221123151947713.png)
+![image-20221123151947713](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Display_DevGuide_image-20221123151947713.png)
 
 <center>图2-3: 驱动框图</center>
 

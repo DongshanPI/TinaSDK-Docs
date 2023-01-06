@@ -133,9 +133,9 @@ tina sdk下有相关软件包会设置/etc/asound.conf，可以用作参考。
 
 tina根目录下执行make menuconfig,选择alsa-conf-aw软件包。
 
-![3-1-4-1](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-3-1-4-1.jpg)
+![3-1-4-1](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-3-1-4-1.jpg)
 
-![3-1-4-2](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-3-1-4-2.jpg)
+![3-1-4-2](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-3-1-4-2.jpg)
 
 它会生成/etc/asound.conf文件，下面作简单介绍：
 

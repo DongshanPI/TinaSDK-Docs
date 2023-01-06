@@ -14,7 +14,7 @@ Wi-Fi 的传导测试是通过射频电缆线，以有线的方式连接到测�
 
 ### 2.2 测试指标
 
-![Tina_Linux_WiFi_RFTesting_Development_Guide-image-20230103093015882](http://photos.100ask.net/tina-docs/Tina_Linux_WiFi_RFTesting_Development_Guide-image-20230103093015882.png)
+![Tina_Linux_WiFi_RFTesting_Development_Guide-image-20230103093015882](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_WiFi_RFTesting_Development_Guide-image-20230103093015882.png)
 
 <center>图2-1: RF 测试指标</center>
 

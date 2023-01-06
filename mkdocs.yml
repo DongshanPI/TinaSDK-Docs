@@ -1,5 +1,5 @@
 # Project information
-site_name: Allwinner Tina SDK Documentation Center.
+site_name: 全志Linux Tina-SDK开发完全手册
 site_url: https://github.com/DongshanPI/TinaSDK-Docs.git
 site_author: 100askTeam
 site_description: >-
@@ -327,6 +327,17 @@ nav:
       - XRADIO系列模组: 'SdkModule/Linux_WiFi_RFTest_UserGuide-03.md' 
       - RTL系列模组: 'SdkModule/Linux_WiFi_RFTest_UserGuide-04.md' 
       - SRRC认证: 'SdkModule/Linux_WiFi_RFTest_UserGuide-05.md' 
+    - 各平台多媒体格式支持列表:
+      - 概述与介绍: 'SdkModule/Linux_Support_List_Multimedia_Formats_Each_Platform-01.md'
+      - 芯片: 'SdkModule/Linux_Support_List_Multimedia_Formats_Each_Platform-02.md'
+    - 配网_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_Distribution_Network_DevelopmentGuide-01.md'
+      - wifimanager-v2.0配网: 'SdkModule/Linux_Distribution_Network_DevelopmentGuide-02.md'
+      - 测试说明: 'SdkModule/Linux_Distribution_Network_DevelopmentGuide-03.md'
+    - 网络性能_参考指南:
+      - 概述与介绍: 'SdkModule/Linux_Network_Performance_Reference_Guide-01.md'
+      - Wi-Fi性能测试: 'SdkModule/Linux_Network_Performance_Reference_Guide-02.md'
+      - 蓝牙与WIFI蓝牙共存测试: 'SdkModule/Linux_Network_Performance_Reference_Guide-03.md'
   - 5.系统开发:      
     - 系统配置_开发指南:
       - 概述与配置介绍: 'SdkModule/Linux_Deploy_DevelopmentGuide-01.md'
@@ -357,7 +368,66 @@ nav:
       - 概述与介绍: 'SdkModule/Linux_SPINAND_DevelopmentGuide-01.md'
       - 流程设计: 'SdkModule/Linux_SPINAND_DevelopmentGuide-02.md'
       - 模块配置: 'SdkModule/Linux_SPINAND_DevelopmentGuide-03.md'
-  - 6.应用示例与项目:     
+    - 存储_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_Save_DevelopmentGuide-01.md'
+      - 分区管理: 'SdkModule/Linux_Save_DevelopmentGuide-02.md'
+      - 系统挂载: 'SdkModule/Linux_Save_DevelopmentGuide-03.md'
+      - 文件系统支持情况: 'SdkModule/Linux_Save_DevelopmentGuide-04.md'
+      - UBI_VS._NFTL: 'SdkModule/Linux_Save_DevelopmentGuide-05.md'
+      - rootfs_data及UDISK: 'SdkModule/Linux_Save_DevelopmentGuide-06.md'
+      - 关键数据保护: 'SdkModule/Linux_Save_DevelopmentGuide-07.md'
+    - OTA_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_OTA_DevelopmentGuide-01.md'
+      - ota-burnboot介绍: 'SdkModule/Linux_OTA_DevelopmentGuide-02.md'
+      - Tina_SWUpdate_OTA介绍: 'SdkModule/Linux_OTA_DevelopmentGuide-03.md'
+      - Tina_misc-upgrade介绍: 'SdkModule/Linux_OTA_DevelopmentGuide-04.md'
+      - Tina_upgrade_app介绍: 'SdkModule/Linux_OTA_DevelopmentGuide-05.md'
+      - 注意事项与问题排查: 'SdkModule/Linux_OTA_DevelopmentGuide-06.md'
+    - syslog_使用指南:
+      - 基本介绍: 'SdkModule/Linux_syslog_UserGuide-01.md'
+      - syslog相关软件工具: 'SdkModule/Linux_syslog_UserGuide-02.md'
+      - 不同syslog方案的对比: 'SdkModule/Linux_syslog_UserGuide-03.md'
+      - 其他注意事项: 'SdkModule/Linux_syslog_UserGuide-04.md'
+      - 在Tina中使用syslog: 'SdkModule/Linux_syslog_UserGuide-05.md'
+    - 安全_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_Security_DevelopmentGuide-01.md'
+      - 安全系统基础: 'SdkModule/Linux_Security_DevelopmentGuide-02.md'
+      - 安全启动: 'SdkModule/Linux_Security_DevelopmentGuide-03.md'
+      - 安全操作系统: 'SdkModule/Linux_Security_DevelopmentGuide-04.md'
+      - TA/CA开发环境: 'SdkModule/Linux_Security_DevelopmentGuide-05.md'
+      - 安全存储: 'SdkModule/Linux_Security_DevelopmentGuide-06.md'
+      - 安全性增强的Linux: 'SdkModule/Linux_Security_DevelopmentGuide-07.md'
+      - 量产工具: 'SdkModule/Linux_Security_DevelopmentGuide-08.md'
+      - 参考资料: 'SdkModule/Linux_Security_DevelopmentGuide-09.md'
+    - 功耗管理_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_Power_Consumption_Management_DevelopmentGuide-01.md'
+      - Tina功耗管理框架概述: 'SdkModule/Linux_Power_Consumption_Management_DevelopmentGuide-02.md'
+      - Tina休眠唤醒系统简介: 'SdkModule/Linux_Power_Consumption_Management_DevelopmentGuide-03.md'
+      - 差异化方案说明: 'SdkModule/Linux_Power_Consumption_Management_DevelopmentGuide-04.md'
+      - FAQ问题及处理方法: 'SdkModule/Linux_Power_Consumption_Management_DevelopmentGuide-05.md'
+    - 内存优化_开发指南:
+      - 概述与介绍: 'SdkModule/Linux_Memory_Optimization_DevelopmentGuide-01.md'
+      - 内存使用情况分析: 'SdkModule/Linux_Memory_Optimization_DevelopmentGuide-02.md'
+      - 内存优化: 'SdkModule/Linux_Memory_Optimization_DevelopmentGuide-03.md'
+    - 存储性能_参考指南:
+      - 概述与介绍: 'SdkModule/Linux_Storage_Performance_Reference_Guide-01.md'
+      - 经验性能值: 'SdkModule/Linux_Storage_Performance_Reference_Guide-02.md'
+      - 顺序与随机读写性能: 'SdkModule/Linux_Storage_Performance_Reference_Guide-03.md'
+      - 读写性能的影响因素: 'SdkModule/Linux_Storage_Performance_Reference_Guide-04.md'
+    - 打包流程_说明指南:
+      - 概述与介绍: 'SdkModule/Linux_Packaging_Process_DescriptionGuide-01.md'
+      - 打包工具介绍: 'SdkModule/Linux_Packaging_Process_DescriptionGuide-02.md'
+      - 打包脚本分析: 'SdkModule/Linux_Packaging_Process_DescriptionGuide-03.md'
+      - 获得打包后的分区镜像文件: 'SdkModule/Linux_Packaging_Process_DescriptionGuide-04.md'
+      - 打包常见问题FAQ: 'SdkModule/Linux_Packaging_Process_DescriptionGuide-05.md'
+      - 打包流程总结: 'SdkModule/Linux_Packaging_Process_DescriptionGuide-06.md'
+    - 量产测试_使用指南:
+      - 概述与介绍: 'SdkModule/Linux_Mass_Production_UserGuide-01.md'
+      - 配置: 'SdkModule/Linux_Mass_Production_UserGuide-02.md'
+      - 测试环境搭建: 'SdkModule/Linux_Mass_Production_UserGuide-03.md'
+      - 量产测试流程: 'SdkModule/Linux_Mass_Production_UserGuide-04.md'
+      - 各平台Tinatest场景验证表: 'SdkModule/Linux_Mass_Production_UserGuide-05.md'
+  - 6.应用示例与项目:
     - UART_开发指南:
       - 概述与介绍: 'SdkModule/Linux_UART_DevelopmentGuide-01.md'          
 extra_javascript:

@@ -27,7 +27,7 @@ Tina Linux系统是基于openwrt-14.07的版本的软件开发包，包含了Lin
 ### 3.2 系统框图
 
 
-![图3-1: Tina Linux系统框图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_System_software_development_Guide-3-1.jpg)
+![图3-1: Tina Linux系统框图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_System_software_development_Guide-3-1.jpg)
 
 Tina系统软件框图如图所示，从下至上分为Kernel && Driver、Libraries、System Ser-vices、Applications四个层次。各层次内容如下：
 
@@ -43,7 +43,7 @@ Tina Linux 系统是基于 Linux Kernel，针对多种不同产品形态开发�
 SDK，有效地实现系统定制和应用移植开发。
 
 
-![图3-2: Tina Linux系统开发流程](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_System_software_development_Guide-3-2.jpg)
+![图3-2: Tina Linux系统开发流程](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_System_software_development_Guide-3-2.jpg)
 
 如上图所示，开发者可以遵循上述开发流程，在本地快速构建Tina Linux系统的开发环境和编译
 代码。下面将简单介绍下该流程：

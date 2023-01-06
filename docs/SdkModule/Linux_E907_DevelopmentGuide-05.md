@@ -53,7 +53,7 @@ mmelis menuconfig
 # 第三项为大小,可按需修改
 ```
 
-![image-20221121183344375](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121183344375.png)
+![image-20221121183344375](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121183344375.png)
 
 <center>图8-1: e907 dram config</center>
 
@@ -66,7 +66,7 @@ vim source/projects/v853-e907-ver1-board/kernel.lds
 mmelis -j16
 ```
 
-![image-20221121183431822](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121183431822.png)
+![image-20221121183431822](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121183431822.png)
 
 <center>图8-2: e907 lds config</center>
 
@@ -76,7 +76,7 @@ mmelis -j16
 
 级e907_user，则需要对build/expand_melis.sh文件进行如下修改：
 
-![image-20221122091718934](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221122091718934.png)
+![image-20221122091718934](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221122091718934.png)
 
 <center>图8-3: 新板级配置</center>
 
@@ -95,11 +95,11 @@ mmelis -j16
 
 当用户想要在e907 控制台上执行自定义的命令时候，可以用FINSH_FUNCTION_EXPORT_ALIAS导出自定义的函数。例如：
 
-![image-20221122091828089](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221122091828089.png)
+![image-20221122091828089](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221122091828089.png)
 
 <center>图8-4: 添加自定义命令</center>
 
-![image-20221122091847075](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221122091847075.png)
+![image-20221122091847075](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221122091847075.png)
 
 <center>图8-5: 执行自定义命令</center>
 

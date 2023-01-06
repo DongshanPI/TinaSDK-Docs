@@ -242,7 +242,7 @@ spi1_pins_c: spi1@2 {
 
 选择 Device Drivers 选项进入下一级配置，如下图所示。
 
-![](http://photos.100ask.net/tina-docs/LinuxSPIDevelopmentGuide_001.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxSPIDevelopmentGuide_001.png)
 
 ​																图 2-1: Device Drivers 配置选项
 
@@ -250,7 +250,7 @@ spi1_pins_c: spi1@2 {
 
 选择 SPI support 选项，进入下一级配置，如下图所示。
 
-![](http://photos.100ask.net/tina-docs/LinuxSPIDevelopmentGuide_002.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxSPIDevelopmentGuide_002.png)
 
 ​																图 2-2: SPI support 配置选项
 
@@ -258,7 +258,7 @@ spi1_pins_c: spi1@2 {
 
 选择 SUNXI SPI Controller 选项，可选择直接编译进内核，也可编译成模块。如下图所示。
 
-![](http://photos.100ask.net/tina-docs/LinuxSPIDevelopmentGuide_003.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxSPIDevelopmentGuide_003.png)
 
 ​																图 2-3: SUNXI SPI Controller 配置选项
 
@@ -282,7 +282,7 @@ SPI 总线驱动的源代码位于内核在 drivers/spi 目录下：
 
 Linux 中 SPI 体系结构分为三个层次，如下图所示。
 
-![](http://photos.100ask.net/tina-docs/LinuxSPIDevelopmentGuide_004.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxSPIDevelopmentGuide_004.png)
 
 ​																		图 2-4: Linux SPI 体系结构图
 

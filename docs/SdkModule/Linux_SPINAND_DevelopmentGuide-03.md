@@ -13,7 +13,7 @@ Device Drivers-->Sunxi flash support-->
 
 如下图：
 
-![image-20221227120338239](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_003.png)
+![image-20221227120338239](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxSPINANDDevelopmentGuide_003.png)
 
 ​																	图 4-1: u-boot-spinand-menuconfig
 
@@ -25,15 +25,15 @@ Device Drivers-->Sunxi flash support-->
 Device Drivers->Memory Technology Device(MTD) support-->sunxi-nand
 ```
 
-![image-20221227140347684](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_004.png)
+![image-20221227140347684](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxSPINANDDevelopmentGuide_004.png)
 
 ​																	图 4-2: UBI
 
-![image-20221227140501741](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_005.png)
+![image-20221227140501741](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxSPINANDDevelopmentGuide_005.png)
 
 ​																	图 4-3: ker_nand-cfg
 
-![image-20221227140541762](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_006.png)
+![image-20221227140541762](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxSPINANDDevelopmentGuide_006.png)
 
 ​																	图 4-4: ker_spinand
 
@@ -41,11 +41,11 @@ Device Drivers->Memory Technology Device(MTD) support-->sunxi-nand
 Device Drivers->SPI support
 ```
 
-![image-20221227140943318](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_007.png)
+![image-20221227140943318](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxSPINANDDevelopmentGuide_007.png)
 
 ​																图 4-5: spi-1
 
-![image-20221227141017709](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_008.png)
+![image-20221227141017709](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxSPINANDDevelopmentGuide_008.png)
 
 ​																图 4-6: spi-2
 
@@ -57,11 +57,11 @@ Device Drivers->DMA Engine support
 
 
 
-![image-20221227141059654](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_009.png)
+![image-20221227141059654](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxSPINANDDevelopmentGuide_009.png)
 
 ​																图 4-7: DMA-1
 
-![image-20221227141126258](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_0010.png)
+![image-20221227141126258](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxSPINANDDevelopmentGuide_0010.png)
 
 ​																图 4-8: DMA-2
 
@@ -71,7 +71,7 @@ Device Drivers->DMA Engine support
 Device Drivers->SOC（System On Chip）
 ```
 
-![image-20221227141153846](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_0011.png)
+![image-20221227141153846](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxSPINANDDevelopmentGuide_0011.png)
 
 ​																图 4-9: SID
 
@@ -81,7 +81,7 @@ Device Drivers->SOC（System On Chip）
 File systems-->Miscellaneous filesystems-->
 ```
 
-![image-20221227141435508](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_0012.png)
+![image-20221227141435508](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxSPINANDDevelopmentGuide_0012.png)
 
 ​																图 4-10: menuconfig_spinand_ubifs
 
@@ -91,6 +91,6 @@ File systems-->Miscellaneous filesystems-->
 
 在 env.cfg 中添加修改下值，setargs_nand_ubi 先 copy 一份 setargs_nand 再添加对应变量
 
-![image-20221227141519171](http://photos.100ask.net/tina-docs/LinuxSPINANDDevelopmentGuide_0013.png)
+![image-20221227141519171](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxSPINANDDevelopmentGuide_0013.png)
 
 ​																图 4-11: build-mkcmd

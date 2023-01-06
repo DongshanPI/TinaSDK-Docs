@@ -2,11 +2,11 @@
 
 ubi 方案FLASH 上的数据布局
 
-![image-20221219104342487](http://photos.100ask.net/tina-docs/Linux_SPINAND-UBI_Offline_ProgDevGuide_image-20221219104342487.png)
+![image-20221219104342487](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_SPINAND-UBI_Offline_ProgDevGuide_image-20221219104342487.png)
 
-![image-20221219104355889](http://photos.100ask.net/tina-docs/Linux_SPINAND-UBI_Offline_ProgDevGuide_image-20221219104355889.png)
+![image-20221219104355889](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_SPINAND-UBI_Offline_ProgDevGuide_image-20221219104355889.png)
 
-![image-20221219104405073](http://photos.100ask.net/tina-docs/Linux_SPINAND-UBI_Offline_ProgDevGuide_image-20221219104405073.png)
+![image-20221219104405073](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_SPINAND-UBI_Offline_ProgDevGuide_image-20221219104405073.png)
 
 sys_partition.fex 文件中的各个分区大小会按照LEB 大小对齐，sunxi_mbr 分区概念与UBI卷（volume）概念相同
 需要修改原镜像文件：物理区TOC0 合逻辑区sunxi_mbr.fex
@@ -28,9 +28,9 @@ boot0_nand.fex（非安）or toc0.fex（安全）
 • 填充storage_data
 • 重新生成checksum 并更新boot_file_head_t 中的check_sum
 
-![image-20221219104440259](http://photos.100ask.net/tina-docs/Linux_SPINAND-UBI_Offline_ProgDevGuide_image-20221219104440259.png)
+![image-20221219104440259](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_SPINAND-UBI_Offline_ProgDevGuide_image-20221219104440259.png)
 
-![image-20221219104449232](http://photos.100ask.net/tina-docs/Linux_SPINAND-UBI_Offline_ProgDevGuide_image-20221219104449232.png)
+![image-20221219104449232](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_SPINAND-UBI_Offline_ProgDevGuide_image-20221219104449232.png)
 
 ```
 参考文件
@@ -125,7 +125,7 @@ sbrom_toc0_config_t;
 
 ### 4.5 filling storage_data
 
-![image-20221219104521069](http://photos.100ask.net/tina-docs/Linux_SPINAND-UBI_Offline_ProgDevGuide_image-20221219104521069.png)
+![image-20221219104521069](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_SPINAND-UBI_Offline_ProgDevGuide_image-20221219104521069.png)
 
 下表中红色字体不能配置错，大部分值直接参考drivers/mtd/awnand/spinand/physic/id.c
 

@@ -20,7 +20,7 @@ Enlightenment Foundation Libraries (EFL)驱动Enlightenment，它们也可以独
 下面是应用截图：
 
 
-![图4-1: efl-on-wayland](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image10.jpg)
+![图4-1: efl-on-wayland](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image10.jpg)
 
 
 ### 4.2 EFL配置
@@ -41,12 +41,12 @@ Gui --->
         <*> terminology
 ```
 
-![图4-2:配置EFL选项](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image11.jpg)
+![图4-2:配置EFL选项](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image11.jpg)
 
 
 efl是核心库，ephoto是一个相册应用，该应用可以选择板子里的图片进行浏览与幻灯片播放，terminology是一个终端仿真器，类似于ubuntu中的终端，进入到efl的配置界面，可以配置efl支持的功能。如下图所示：
 
-![图4-3:配置EFL支持的功能选项](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image12.jpg)
+![图4-3:配置EFL支持的功能选项](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image12.jpg)
 
 
 主要关注以下几项配置：
@@ -138,7 +138,7 @@ GTK+是用来创造图形界面的库，它可以运行在许多类UNIX系统，
 Gtk+(GIMP Tool Kit，GIMP工具包)是一个用于创造图形用户接口的图形库，下面是GIMP on GNU/Linux的截图：
 
 
-![图5-1: GTK+GIMP运行截图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image13.jpg)
+![图5-1: GTK+GIMP运行截图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image13.jpg)
 
 Tina系统移植了GTK+3的库及其组件，对应GTK包及依赖说明如下：
 
@@ -194,7 +194,7 @@ gtk3-demo
 ```
 
 
-![图5-2: GTK+Demo运行截图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image14.jpg)
+![图5-2: GTK+Demo运行截图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image14.jpg)
 
 
 ### 5.4 GTK+示例

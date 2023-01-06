@@ -23,7 +23,7 @@ vim board/sun8iw21p1/common.mk
 mboot0 #编译
 ```
 
-![image-20221121115033101](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121115033101.png)
+![image-20221121115033101](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121115033101.png)
 
 <center>图5-1: 配置1</center>
 
@@ -37,7 +37,7 @@ cconfigs
 vim ../board.dts
 ```
 
-![image-20221121115124735](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121115124735.png)
+![image-20221121115124735](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121115124735.png)
 
 <center>图5-2: 关闭IOMMU</center>
 
@@ -51,7 +51,7 @@ vim boot_package.cfg # 取消melis-elf选项的注释，如下图
 保存退出
 ```
 
-![image-20221121115200889](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121115200889.png)
+![image-20221121115200889](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121115200889.png)
 
 <center>图5-3: 打包配置</center>
 
@@ -64,7 +64,7 @@ m kernel_menuconfig
 mkernel -j
 ```
 
-![image-20221121115234331](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121115234331.png)
+![image-20221121115234331](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121115234331.png)
 
 <center>图5-4: 补丁下载</center>
 
@@ -72,7 +72,7 @@ mkernel -j
 mmelis menuconfig # 如下图选中standby支持
 ```
 
-![image-20221121115354868](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121115354868.png)
+![image-20221121115354868](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121115354868.png)
 
 <center>图5-5: e907-standby 配置</center>
 

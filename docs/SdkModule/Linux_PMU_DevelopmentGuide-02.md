@@ -829,7 +829,7 @@ AXP717 与AXP2101 公用同一份控制器、按键以及regularotr 的代码，
     	<*> X-Powers AXP2101 PMICs with I2C
 ```
 
-![Tina_Linux_PMU_Development_Guide-image-20221229171742892](http://photos.100ask.net/tina-docs/Tina_Linux_PMU_Development_Guide-image-20221229171742892.png)
+![Tina_Linux_PMU_Development_Guide-image-20221229171742892](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_PMU_Development_Guide-image-20221229171742892.png)
 
 <center>图2-1: pmu-control-config</center>
 
@@ -841,7 +841,7 @@ AXP717 与AXP2101 公用同一份控制器、按键以及regularotr 的代码，
     	<*> X-POWERS AXP2101 PMIC Regulators
 ```
 
-![Tina_Linux_PMU_Development_Guide-image-20221229171817733](http://photos.100ask.net/tina-docs/Tina_Linux_PMU_Development_Guide-image-20221229171817733.png)
+![Tina_Linux_PMU_Development_Guide-image-20221229171817733](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_PMU_Development_Guide-image-20221229171817733.png)
 
 <center>图2-2: regularot-config</center>
 
@@ -853,7 +853,7 @@ AXP717 与AXP2101 公用同一份控制器、按键以及regularotr 的代码，
 <*> AXP2202 power supply driver
 ```
 
-![Tina_Linux_PMU_Development_Guide-image-20221229171855027](http://photos.100ask.net/tina-docs/Tina_Linux_PMU_Development_Guide-image-20221229171855027.png)
+![Tina_Linux_PMU_Development_Guide-image-20221229171855027](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_PMU_Development_Guide-image-20221229171855027.png)
 
 <center>图2-3: charger-config</center>
 
@@ -866,7 +866,7 @@ AXP717 与AXP2101 公用同一份控制器、按键以及regularotr 的代码，
             <*> X-Powers AXP2101 power button driver
 ```
 
-![Tina_Linux_PMU_Development_Guide-image-20221229171925367](http://photos.100ask.net/tina-docs/Tina_Linux_PMU_Development_Guide-image-20221229171925367.png)
+![Tina_Linux_PMU_Development_Guide-image-20221229171925367](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_PMU_Development_Guide-image-20221229171925367.png)
 
 <center>图2-4: power-key-config</center>
 
@@ -878,7 +878,7 @@ AXP717 与AXP2101 公用同一份控制器、按键以及regularotr 的代码，
     	<*> Virtual regulator consumer support
 ```
 
-![Tina_Linux_PMU_Development_Guide-image-20221229172053147](http://photos.100ask.net/tina-docs/Tina_Linux_PMU_Development_Guide-image-20221229172053147.png)
+![Tina_Linux_PMU_Development_Guide-image-20221229172053147](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_PMU_Development_Guide-image-20221229172053147.png)
 
 <center>图2-5: virtuaal-config</center>
 
@@ -890,7 +890,7 @@ AXP717 与AXP2101 公用同一份控制器、按键以及regularotr 的代码，
         < > AXP2202 power virtual acin
 ```
 
-![Tina_Linux_PMU_Development_Guide-image-20221229172125375](http://photos.100ask.net/tina-docs/Tina_Linux_PMU_Development_Guide-image-20221229172125375.png)
+![Tina_Linux_PMU_Development_Guide-image-20221229172125375](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_PMU_Development_Guide-image-20221229172125375.png)
 
 <center>图2-6: acin-config</center>
 
@@ -916,7 +916,7 @@ AXP 的多功能设备驱动采用i2c 总线跟主控进行交互，使用regmap
 
 （bus、irq）。基本的软件结构图如下图所示。
 
-![Tina_Linux_PMU_Development_Guide-image-20221229172218801](http://photos.100ask.net/tina-docs/Tina_Linux_PMU_Development_Guide-image-20221229172218801.png)
+![Tina_Linux_PMU_Development_Guide-image-20221229172218801](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_PMU_Development_Guide-image-20221229172218801.png)
 
 <center>图2-7: AXP 框架图</center>
 
@@ -924,7 +924,7 @@ AXP 的多功能设备驱动采用i2c 总线跟主控进行交互，使用regmap
 
 系统交互，实现完整的电源管理功能。
 
-![Tina_Linux_PMU_Development_Guide-image-20221229172322260](http://photos.100ask.net/tina-docs/Tina_Linux_PMU_Development_Guide-image-20221229172322260.png)
+![Tina_Linux_PMU_Development_Guide-image-20221229172322260](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_PMU_Development_Guide-image-20221229172322260.png)
 
 <center>图2-8: AXP 软件框架图</center>
 

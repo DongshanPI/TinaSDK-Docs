@@ -292,7 +292,7 @@ subchannel可为LOWER或UPPER。此处的LOWER和UPPER含义为设置信道为�
 
 中心频率在7 信道（2442MHz）。40M 中心频率的计算方法如下：所设信道的中心频率+10M（对于LOWER的情况）或所设信道的中心频率-10M（对于UPPER的情况）。
 
-![Tina_Linux_WiFi_RFTesting_Development_Guide-image-20230103100325051](http://photos.100ask.net/tina-docs/Tina_Linux_WiFi_RFTesting_Development_Guide-image-20230103100325051.png)
+![Tina_Linux_WiFi_RFTesting_Development_Guide-image-20230103100325051](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_WiFi_RFTesting_Development_Guide-image-20230103100325051.png)
 
 #### 3.3.2 传导RX 测试
 

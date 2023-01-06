@@ -10,7 +10,7 @@ ruby/host、flex/host、bison/host、gperf/host、enchant、harfbuzz、icu、lib
 
 下面是WebKitGtk的截图：
 
-![图6-1: WebKitGtk运行截图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image15.jpg)
+![图6-1: WebKitGtk运行截图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image15.jpg)
 
 
 ### 6.2 WebKitGtk配置
@@ -115,4 +115,4 @@ Gui --->
 df_andi
 
 
-![图7-1: DirectFB运行截图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image16.jpg)
+![图7-1: DirectFB运行截图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image16.jpg)

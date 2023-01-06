@@ -222,23 +222,23 @@ reg_usb1_vbus: usb1-vbus {
 
 选择 Device Drivers 选项进入下一级配置，如下图所示。
 
-![](http://photos.100ask.net/tina-docs/LinuxUSBDevelopmentGuide_001.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxUSBDevelopmentGuide_001.png)
 
 ​																图 2-1: Device Drivers 选项配置
 
 选择 USB support 选项，进入下一级配置，如下图所示。
 
-![](http://photos.100ask.net/tina-docs/LinuxUSBDevelopmentGuide_002.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxUSBDevelopmentGuide_002.png)
 
 ​																图 2-2: USB Support 选项配置
 
 打开如下两图的选项，如下图所示。
 
-![](http://photos.100ask.net/tina-docs/LinuxUSBDevelopmentGuide_003.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxUSBDevelopmentGuide_003.png)
 
 ​																图 2-3: USB Support 详细配置 1 
 
-![](http://photos.100ask.net/tina-docs/LinuxUSBDevelopmentGuide_004.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxUSBDevelopmentGuide_004.png)
 
 ​																图 2-4: USB Support 详细配置 2
 
@@ -246,7 +246,7 @@ reg_usb1_vbus: usb1-vbus {
 
 选择 USB Gadget Support，进入下一级配置，如下图所示。
 
-![](http://photos.100ask.net/tina-docs/LinuxUSBDevelopmentGuide_005.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxUSBDevelopmentGuide_005.png)
 
 ​																图 2-5: USB Gadget Support 选项配置	
 
@@ -254,7 +254,7 @@ reg_usb1_vbus: usb1-vbus {
 
 打开下图的选项，并在对应配置中打开所需的功能性配置, 如: 需要存储功能时, 需打开下图中的 “mass storage” 配置, 如下图所示。
 
-![](http://photos.100ask.net/tina-docs/LinuxUSBDevelopmentGuide_006.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxUSBDevelopmentGuide_006.png)
 
 ​																图 2-6: USB Gadget Support 详细配置
 
@@ -262,13 +262,13 @@ reg_usb1_vbus: usb1-vbus {
 
 进入 USB Peripheral Controller，并打开下图选项：
 
-![](http://photos.100ask.net/tina-docs/LinuxUSBDevelopmentGuide_007.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxUSBDevelopmentGuide_007.png)
 
 ​																图 2-7: USB Peripheral Controller 详细配置
 
 返回上一级，即 USB support，进入 SUNXI USB2.0 Dual Role controller support，并打开下图选项，如下图所示。
 
-![](http://photos.100ask.net/tina-docs/LinuxUSBDevelopmentGuide_008.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxUSBDevelopmentGuide_008.png)
 
 ​																图 2-8: SUNXI USB2.0 Dual Role Controller Support 详细配置
 
@@ -276,7 +276,7 @@ reg_usb1_vbus: usb1-vbus {
 
 若需支持 MTP PTP 等功能需开启 TYPEC 配置返回上一级，即 USB support，进入 USB Type-C Support，并打开下图选项，如下图所示：
 
-![](http://photos.100ask.net/tina-docs/LinuxUSBDevelopmentGuide_009.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxUSBDevelopmentGuide_009.png)
 
 ​																图 2-9: USB Type-C Support 详细配置
 
@@ -344,7 +344,7 @@ drivers/usb/sunxi_usb/
 
 Linux 内核提供了完整的 USB 驱动程序框架。USB 总线采用树形结构，在一条总线上只能有唯一的主机设备。Linux 内核从主机和设备两个角度观察 USB 总线结构。下图是 Linux 内核从主机和设备两个角度观察 USB 总线结构的示意图。
 
-![](http://photos.100ask.net/tina-docs/LinuxUSBDevelopmentGuide_0010.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxUSBDevelopmentGuide_0010.png)
 
 ​																		图 2-10: USB 驱动总体结构
 
@@ -370,7 +370,7 @@ Gadget 是指具有 USB 设备控制器的 USB 设备，根据具体的功能配
 
 需在 “USB functions configurable through configfs” 下选择需要的功能。
 
-![](http://photos.100ask.net/tina-docs/LinuxUSBDevelopmentGuide_0011.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxUSBDevelopmentGuide_0011.png)
 
 ​													   图 2-11: linux-4.x usb gadget 配置选择
 

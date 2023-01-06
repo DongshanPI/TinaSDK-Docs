@@ -39,7 +39,7 @@ Size 表示buffer 的完整尺寸，crop 则表示buffer 中需要显示裁减�
 
 只能看到crop 标识的部分，其余部分是隐藏的，不能在屏幕上显示出来的。
 
-![image-20221123152906780](http://photos.100ask.net/tina-docs/Tina_Linux_Display_DevGuide_image-20221123152906780.png)
+![image-20221123152906780](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Display_DevGuide_image-20221123152906780.png)
 
 <center>图3-1: size 和crop 示意图</center>
 
@@ -49,7 +49,7 @@ crop 上面已经介绍过，Screen_win 为crop 部分buffer 在屏幕上显示�
 
 缩放，crop 和screen_win 的width,height 可以不相等。
 
-![image-20221123152930138](http://photos.100ask.net/tina-docs/Tina_Linux_Display_DevGuide_image-20221123152930138.png)
+![image-20221123152930138](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Display_DevGuide_image-20221123152930138.png)
 
 <center>图3-2: crop 和screen win 示意图</center>
 
@@ -61,7 +61,7 @@ Alpha 模式有三种:
 2. pixel alpha: 点alpha，即每个像素都有自己单独的alpha，可以实现部分区域全透，部分区域半透，部分区域不透的效果。
 3. global_pixel alpha: 可以是说以上两种效果的叠加，在实现pxiel alpha 的效果的同时，还可以做淡入浅出的效果。
 
-![image-20221123153137180](http://photos.100ask.net/tina-docs/Tina_Linux_Display_DevGuide_image-20221123153137180.png)
+![image-20221123153137180](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Display_DevGuide_image-20221123153137180.png)
 
 <center>图3-3: alpha 叠加模式</center>
 

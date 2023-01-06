@@ -178,7 +178,7 @@ fat命令可以对 FAT 文件系统的相关存储设备进行查询及文件读
 
 1. fatls : 列出相应设备目录上的所有文件，示例如下图：
 
-![](http://photos.100ask.net/tina-docs/LinuxU-bootDevelopmentGuide_004.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxU-bootDevelopmentGuide_004.png)
 
 ​																	图 5-1: fatls 命令执行示例图
 
@@ -186,7 +186,7 @@ fat命令可以对 FAT 文件系统的相关存储设备进行查询及文件读
 
 **补充说明，fatls mmc 2:2 中的第一个 2 表示的是 emmc 设备，2 表示其分区号，其说明如下图：**
 
-![](http://photos.100ask.net/tina-docs/LinuxU-bootDevelopmentGuide_005.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxU-bootDevelopmentGuide_005.png)
 
 ​																	图 5-2: fatls 命令参数说明图
 
@@ -194,7 +194,7 @@ fat命令可以对 FAT 文件系统的相关存储设备进行查询及文件读
 
 2. fatinfo: 打印出相应设备目录的文件系统信息，示例如下图：
 
-   ![](http://photos.100ask.net/tina-docs/LinuxU-bootDevelopmentGuide_006.png)
+   ![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxU-bootDevelopmentGuide_006.png)
 
 ​																	图 5-3: fatinfo 命令执行示例图
 

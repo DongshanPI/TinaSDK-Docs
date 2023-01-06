@@ -12,7 +12,7 @@ Allwinner
 ```
 
 首先，选择Allwinner 选项进入下一级配置，如下图所示：
-![image-20221123141424322](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123141424322.png)
+![image-20221123141424322](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123141424322.png)
 
 <center>图6-1: allwinner</center>
 
@@ -22,11 +22,11 @@ Allwinner
 
 B 编译该package）。
 
-![image-20221123141504379](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123141504379.png)
+![image-20221123141504379](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123141504379.png)
 
 <center>图6-2: camerademo</center>
 
-![image-20221123141522573](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123141522573.png)
+![image-20221123141522573](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123141522573.png)
 
 <center>图6-3: vinisp</center>
 
@@ -52,7 +52,7 @@ camerademo 的源代码位于package/allwinner/camerademo/目录下：
 
 的格式、路径、添加水印、测试数据输出的帧率、从open 节点到数据流打通需要的时间等，help 打印信息如下图：
 
-![image-20221123142705806](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123142705806.png)
+![image-20221123142705806](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123142705806.png)
 
 <center>图6-4: help</center>
 
@@ -76,7 +76,7 @@ Camerademo 共有4 种运行模式：
 
 当输入camerademo 之后，使用默认的参数运行，则会打印一下信息，如下图：
 
-![image-20221123142833252](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123142833252.png)
+![image-20221123142833252](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123142833252.png)
 
 <center>图6-5: camerademouser</center>
 
@@ -95,19 +95,19 @@ Camerademo 共有4 种运行模式：
 1. 输入camerademo setting，则按照程序的打印提示输入相应选择信息即可。
    • 输入保存路径、照片数量、保存的格式等。
 
-![image-20221123142929515](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123142929515.png)
+![image-20221123142929515](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123142929515.png)
 
 <center>图6-6: info</center>
 
 • 选择输出格式。
 
-![image-20221123142950450](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123142950450.png)
+![image-20221123142950450](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123142950450.png)
 
 <center>图6-7: format</center>
 
 • 选择输出图像分辨率。
 
-![image-20221123143011933](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123143011933.png)
+![image-20221123143011933](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123143011933.png)
 
 <center>图6-8: size</center>
 
@@ -131,7 +131,7 @@ argv[7]：捕获照片的数量；
 
 其它信息与默认设置一致，如需打印详细的信息，运行camerademo argv[1] argv[2] argv[3] argv[4] argv[5] argv[6] argv[7] debug 即可。
 
-![image-20221123143239114](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123143239114.png)
+![image-20221123143239114](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123143239114.png)
 
 <center>图6-9: run1</center>
 
@@ -156,7 +156,7 @@ argv[8]：video节点索引；
 
 其它信息与默认设置一致，如需打印详细的信息，运行camerademo argv[1] argv[2] argv[3] argv[4] argv[5] argv[6] argv[7] argv[8] debug 即可。
 
-![image-20221123143328632](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123143328632.png)
+![image-20221123143328632](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123143328632.png)
 
 <center>图6-10: run2</center>
 
@@ -174,49 +174,49 @@ RGGB10 1920 1080 30 bmp /tmp 5，以上命令输出配置sensor 输出RAW 数据
 
 以下debug 信息将说明sensor 驱动的相关信息，拍摄到的照片保存位置、数量、保存的格式以及水印使用情况等：
 
-![image-20221123143422192](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123143422192.png)
+![image-20221123143422192](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123143422192.png)
 
 <center>图6-11: debug1</center>
 
 以下debug 信息将说明驱动框架支持的格式以及sensor 支持的输出格式：
 
-![image-20221123143618199](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123143618199.png)
+![image-20221123143618199](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123143618199.png)
 
 <center>图6-12: debug2</center>
 
 类似以下的信息代表这相应格式支持的分辨率信息：
 
-![image-20221123143642323](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123143642323.png)
+![image-20221123143642323](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123143642323.png)
 
 <center>图6-13: debug3</center>
 
 以下信息将会提示将要设置到sensor 的格式和分辨率等信息：
 
-![image-20221123143703117](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123143703117.png)
+![image-20221123143703117](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123143703117.png)
 
 <center>图6-14: debug4</center>
 
 以下信息将会提示设置格式的情况，buf 的相应信息等：
 
-![image-20221123143723798](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123143723798.png)
+![image-20221123143723798](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123143723798.png)
 
 <center>图6-15: debug5</center>
 
 以下信息将提示当前拍照的照片索引以及从开启流传输到dqbuf 成功的时间间隔：
 
-![image-20221123143742621](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123143742621.png)
+![image-20221123143742621](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123143742621.png)
 
 <center>图6-16: debug6</center>
 
 以下信息提示该sensor 的实际测量帧率信息：
 
-![image-20221123143807349](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123143807349.png)
+![image-20221123143807349](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123143807349.png)
 
 <center>图6-17: debug7</center>
 
 以下信息提示从open 节点到可以得到第一帧数据的时间间隔，默认设置为测试拍照的相应设置：
 
-![image-20221123143825189](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123143825189.png)
+![image-20221123143825189](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123143825189.png)
 
 <center>图6-18: debug8</center>
 
@@ -228,7 +228,7 @@ bmp_ 格式.bmp 格式保存，如下图所示。
 
 查看图像数据时，需要通过adb pull 命令将相应路径下的图像数据pull 到PC 端查看。
 
-![image-20221123143900168](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123143900168.png)
+![image-20221123143900168](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123143900168.png)
 
 <center>图6-19: save</center>
 

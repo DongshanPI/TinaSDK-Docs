@@ -16,7 +16,7 @@
    - 也可以通过kconfig进行配置lichee/brandy-2.0/u-boot-2018目录下执行makemenu-
      config ARCH=arm，选上对应功能项:选中sun8iw18的codec驱动以及开机音乐功能
 
-![5-1-1](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-5-1-1.jpg)
+![5-1-1](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-5-1-1.jpg)
 
 2. 修改sys_config文件
 

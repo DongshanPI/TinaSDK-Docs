@@ -95,7 +95,7 @@ ckernel
 m kernel_menuconfig # 选择下图配置
 ```
 
-![image-20221121120738002](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121120738002.png)
+![image-20221121120738002](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121120738002.png)
 
 <center>图7-1: rpmsg config</center>
 
@@ -106,13 +106,13 @@ croot
 m menuconfig # 选择下图配置
 ```
 
-![image-20221121175441744](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121175441744.png)
+![image-20221121175441744](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121175441744.png)
 
 <center>图7-2: amp_shell config</center>
 
 melis 配置
 
-![image-20221121175506540](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121175506540.png)
+![image-20221121175506540](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121175506540.png)
 
 <center>图7-3: amp_shell config</center>
 
@@ -130,11 +130,11 @@ p
 
 接在Linux 控制台啊输入amp_shell 即可进入e907 控制台，amp_exit退出控制台。支持执行多次amp_shell，开启多个控制台。
 
-![image-20221121175556831](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121175556831.png)
+![image-20221121175556831](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121175556831.png)
 
 <center>图7-4: amp_shell test</center>
 
-![image-20221121175611748](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121175611748.png)
+![image-20221121175611748](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121175611748.png)
 
 <center>图7-5: amp_shell test</center>
 
@@ -198,11 +198,11 @@ rpmsg_test：会自动生成随机数据并附带MD5 校验值，另一端收到
 
 过程log 如下：
 
-![image-20221121182820753](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121182820753.png)
+![image-20221121182820753](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121182820753.png)
 
 <center>图7-6: Linux 端log</center>
 
-![image-20221121182838167](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121182838167.png)
+![image-20221121182838167](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121182838167.png)
 
 <center>图7-7: e907 端log</center>
 
@@ -217,11 +217,11 @@ buffer
 (e907) rpbuf_demo -N "rpbuf_demo" -d # 删除buffer
 ```
 
-![image-20221121182906578](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121182906578.png)
+![image-20221121182906578](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121182906578.png)
 
 <center>图7-8: Linux 端log</center>
 
-![image-20221121182927251](http://photos.100ask.net/tina-docs/Linux_E907_DevGuide_image-20221121182927251.png)
+![image-20221121182927251](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_E907_DevGuide_image-20221121182927251.png)
 
 <center>图7-9: e907 端log</center>
 

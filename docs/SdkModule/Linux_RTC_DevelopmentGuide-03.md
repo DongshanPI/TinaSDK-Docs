@@ -7,15 +7,15 @@
 在命令行中进入内核根目录(kernel/linux-4.9)，执行make ARCH=arm64(arm) menuconfig(32 位系统为make ARCH=arm menuconfig) 进入配置主界面(linux-5.4 内核版本在longan 目录下执行:./build.sh menuconfig 进入配置主界面)，并按以下步骤操作：
 首先，选择Device Drivers 选项进入下一级配置，如下图所示：
 
-![image-20221216114515324](http://photos.100ask.net/tina-docs/Linux_RTC_DevGuide_image-20221216114515324.png)
+![image-20221216114515324](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_RTC_DevGuide_image-20221216114515324.png)
 
 选择Real Time Clock，进入下级配置，如下图所示：
 
-![image-20221216114527372](http://photos.100ask.net/tina-docs/Linux_RTC_DevGuide_image-20221216114527372.png)
+![image-20221216114527372](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_RTC_DevGuide_image-20221216114527372.png)
 
 选择Allwinner sunxi RTC，如下图所示：
 
-![image-20221216114542981](http://photos.100ask.net/tina-docs/Linux_RTC_DevGuide_image-20221216114542981.png)
+![image-20221216114542981](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_RTC_DevGuide_image-20221216114542981.png)
 
 由于在关机过程中，RTC 一般都是独立供电的，因此在RTC 电源域中的寄存器不会掉电且RTC寄存器的值也不会恢复为默认值。利用此特性，Sunxi 平台支持reboot 命令的一些扩展功能和
 假关机功能，但需要打开support ir fake poweroff 和Sunxi rtc reboot Feature 选项，RTC驱动才能支持这些扩展功能。
@@ -26,15 +26,15 @@
 然后执行./build.sh menuconfig，进入内核图形化配置界面，并按以下步骤操作：
 选择Device Driver选项进入下一级配置，如下图所示：
 
-![image-20221216114823615](http://photos.100ask.net/tina-docs/Linux_RTC_DevGuide_image-20221216114823615.png)
+![image-20221216114823615](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_RTC_DevGuide_image-20221216114823615.png)
 
 选择Real Time Clock进入下一级配置，如下图所示：
 
-![image-20221216114840997](http://photos.100ask.net/tina-docs/Linux_RTC_DevGuide_image-20221216114840997.png)
+![image-20221216114840997](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_RTC_DevGuide_image-20221216114840997.png)
 
 选择Allwinner sunxi RTC配置，如下图所示。
 
-![image-20221216114857679](http://photos.100ask.net/tina-docs/Linux_RTC_DevGuide_image-20221216114857679.png)
+![image-20221216114857679](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_RTC_DevGuide_image-20221216114857679.png)
 
 由于在关机过程中，RTC 一般都是独立供电的，因此在RTC 电源域中的寄存器不会掉电且RTC寄存器的值也不会恢复为默认值。利用此特性，Sunxi 平台支持reboot 命令的一些扩展功能，但需要打开Sunxi rtc reboot flag和Sunxi rtc general register save bootcount选项，RTC 驱动才能支持这些扩展功能。
 

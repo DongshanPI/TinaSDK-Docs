@@ -4,7 +4,7 @@
 
 Wayland，整体结构如下：
 
-![图1-1: Tina窗口系统框架](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image1.jpg)
+![图1-1: Tina窗口系统框架](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image1.jpg)
 
 
 

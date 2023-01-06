@@ -38,7 +38,7 @@
 下面是multimedia-test应用截图：
 
 
-![图2-1: multimedia-test主页截图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image2.jpg)
+![图2-1: multimedia-test主页截图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image2.jpg)
 
 
 点击SD卡和U盘图标，可以对SD卡和U盘格式化，在拍照与录制的时候需要正确的格式，不然不能录制。蓝色的SD卡与U盘表示SD卡与U盘正确挂载，灰色的表示没有正确挂载。SD卡与U盘同时挂载的时候，默认使用SD卡，点击相应图标进入相应功能界面。
@@ -46,13 +46,13 @@
 下面是r11-board应用截图：
 
 
-![图2-2: r11-board主页截图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image3.jpg)
+![图2-2: r11-board主页截图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image3.jpg)
 
 
 主页三个页面可以左右滑动切换下一个页面，点击不同的洗衣图片进入具体的洗衣功能界面。
 
 
-![图2-3: r11-board功能页截图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image4.jpg)
+![图2-3: r11-board功能页截图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image4.jpg)
 
 
 点击底部的洗涤、漂洗和脱水可以弹出滑动列表选择不同的参数，点击功能+按钮有旋转动画。
@@ -61,11 +61,11 @@
 
 
 
-![图2-4: smart-music-player截图 1](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image5.jpg)
+![图2-4: smart-music-player截图 1](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image5.jpg)
 
 
 
-![图2-5: smart-music-player截图 2](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image6.jpg)
+![图2-5: smart-music-player截图 2](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image6.jpg)
 
 
 ### 2.2 MiniGUI配置.

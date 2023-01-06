@@ -2,7 +2,7 @@
 
 ### 3.1 模块功能
 
-![image-20221120190940471](http://photos.100ask.net/tina-docs/Linux_PWM_DevGuide_image-20221120190940471.png)
+![image-20221120190940471](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_PWM_DevGuide_image-20221120190940471.png)
 
 <center>图 3-1: 模块功能</center>
 
@@ -27,25 +27,25 @@ PWM 模块属于硬件驱动层，直接与硬件通信
 在 linux-4.9 中, 在命令行中进入内核根目录，执行 make ARCH=arm(arm64) menuconfig 进入配置主界面，并按以下步骤操作： 
 
 1. 首先，选择 Device Drivers 选项进入下一级配置，如下图所示：
-2. ![image-20221120191004435](http://photos.100ask.net/tina-docs/Linux_PWM_DevGuide_image-20221120191004435.png)
+2. ![image-20221120191004435](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_PWM_DevGuide_image-20221120191004435.png)
 
 <center>图 3-2: Device Drivers</center>
 
 2. 选择 Pulse-Width Modulation (PWM) Support 进入下一步配置，如下图所示:
 
-![image-20221120191036989](http://photos.100ask.net/tina-docs/Linux_PWM_DevGuide_image-20221120191036989.png)
+![image-20221120191036989](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_PWM_DevGuide_image-20221120191036989.png)
 
 <center>图3-3: Pulse-Width Modulation (PWM) Support</center>
 
 3.选择 SUNXI PWM SELECT 进入下一步配置，如下图所示:
 
-![image-20221120191124148](http://photos.100ask.net/tina-docs/Linux_PWM_DevGuide_image-20221120191124148.png)
+![image-20221120191124148](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_PWM_DevGuide_image-20221120191124148.png)
 
 <center>图3-4: SUNXI PWM SELECT</center>
 
 4.选择 Sunxi Enhance PWM support 配置
 
-![image-20221120191147248](http://photos.100ask.net/tina-docs/Linux_PWM_DevGuide_image-20221120191147248.png)
+![image-20221120191147248](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_PWM_DevGuide_image-20221120191147248.png)
 
 <center>图 3-5: Sunxi Enhance PWM support</center>
 
@@ -59,25 +59,25 @@ linux5.4 平台中, 在命令行中进入内核根目录，执行./build.sh menu
 
 1. 首先，选择 Device Drivers 选项进入下一级配置，如下图所示：
 
-   ![image-20221120191213928](http://photos.100ask.net/tina-docs/Linux_PWM_DevGuide_image-20221120191213928.png)
+   ![image-20221120191213928](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_PWM_DevGuide_image-20221120191213928.png)
 
    <center>图 3-6: Device</center>
 
 2. 选择 Pulse-Width Modulation (PWM) Support 进入下一步配置，如下图所示
 
-   ![image-20221120191231809](http://photos.100ask.net/tina-docs/Linux_PWM_DevGuide_image-20221120191231809.png)
+   ![image-20221120191231809](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_PWM_DevGuide_image-20221120191231809.png)
 
    <center>图 3-7: Pulse-Width Modulation (PWM) Suppor<center>
 
 3. 选择 SUNXI PWM SELECT 进入下一步配置，如下图所示:
 
-   ![image-20221120191247355](http://photos.100ask.net/tina-docs/Linux_PWM_DevGuide_image-20221120191247355.png)
+   ![image-20221120191247355](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_PWM_DevGuide_image-20221120191247355.png)
 
    <center>图3-8: SUNXI PWM SELECT</center>
 
 4. 选择 Sunxi PWM group support 配置
 
-   ![image-20221120191310080](http://photos.100ask.net/tina-docs/Linux_PWM_DevGuide_image-20221120191310080.png)
+   ![image-20221120191310080](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_PWM_DevGuide_image-20221120191310080.png)
 
    <center>图3-9: Sunxi PWM group support</center>
 

@@ -25,7 +25,7 @@ Tina SDK对各个平台的音频设备驱动均采用ASoC架构实现。ASoC是�
 3. Machine驱动单独的Platform和Codec驱动是不能工作的，它必须由Machine驱动把它们结合在一起才能完成整个设备的音频处理工作。
 
 
-![图2-1: ASoC框图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-1.jpg)
+![图2-1: ASoC框图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-1.jpg)
 
 ### 2.2 音频接口介绍.
 
@@ -46,7 +46,7 @@ Tina SDK对各个平台的音频设备驱动均采用ASoC架构实现。ASoC是�
 
 R6包含 2 个音频模块，分别是内置audiocodec以及daudio0。
 
-![图2-2: R6音频硬件框图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-2.jpg)
+![图2-2: R6音频硬件框图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-2.jpg)
 
 #### 2.3.2 时钟源
 
@@ -55,7 +55,7 @@ R6中， 2 个音频模块的时钟源均来自pll_audio。
 pll_audio可以输出24.576M或者22.5792M的时钟，分别支持48k系列，44.1k系列的播放录音。
 
 
-![图2-3: R6时钟源](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-3.jpg)
+![图2-3: R6时钟源](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-3.jpg)
 
 #### 2.3.3 代码结构
 
@@ -167,7 +167,7 @@ codec配置，即内置audiocodec驱动的相关配置。
 
 ##### 2.3.4.3 codec数据通路
 
-![图2-4: R6音频通路](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-4.jpg)
+![图2-4: R6音频通路](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-4.jpg)
 
 R6平台的audiocodec驱动会在播歌的时候自动设置相关通路，默认audio map:
 
@@ -405,7 +405,7 @@ arecord -Dhw:sndac1011001a -f S16_LE -r 16000 -c 2 /tmp/test.wav
 R7s包含 2 个音频模块，分别是内置AudioCodec以及Daudio0。
 
 
-![图2-5: R7s音频硬件框图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-5.jpg)
+![图2-5: R7s音频硬件框图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-5.jpg)
 
 
 #### 2.4.2 时钟源
@@ -415,7 +415,7 @@ R7s中， 2 个音频模块的时钟源均来自pll_audio。
 pll_audio可以输出24.576M或者22.5792M的时钟，分别支持48k系列，44.1k系列的播放录音。
 
 
-![图2-6: R7s时钟源](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-6.jpg)
+![图2-6: R7s时钟源](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-6.jpg)
 
 #### 2.4.3 代码结构
 
@@ -498,7 +498,7 @@ dachpf_used = 0
 ##### 2.4.4.3 codec数据通路
 
 
-![图2-7: R7s音频通路](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-4.jpg)
+![图2-7: R7s音频通路](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-4.jpg)
 
 ```
 播歌
@@ -682,7 +682,7 @@ arecord -Dhw:audiocodec -f S16_LE -r 16000 -c 2 /tmp/test.wav
 R11包含 2 个音频模块，分别是内置AudioCodec以及Daudio0。
 
 
-![图2-8: R11音频硬件框图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-8.jpg)
+![图2-8: R11音频硬件框图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-8.jpg)
 
 ### 2.5.2 时钟源
 
@@ -691,7 +691,7 @@ R11中， 2 个音频模块的时钟源均来自pll_audio。
 pll_audio可以输出24.576M或者22.5792M的时钟，分别支持48k系列，44.1k系列的播放录音。
 
 
-![图2-9: R11时钟源](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-9.jpg)
+![图2-9: R11时钟源](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-9.jpg)
 
 ### 2.5.3 代码结构
 
@@ -776,7 +776,7 @@ dachpf_used = 0
 
 #### 2.5.4.3 codec数据通路
 
-![图2-10: R11音频通路](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-10.jpg)
+![图2-10: R11音频通路](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-10.jpg)
 
 ```
 播歌
@@ -938,7 +938,7 @@ arecord -Dhw:audiocodec -f S16_LE -r 16000 -c 1 /tmp/test.wav
 R16包含 3 个音频模块，分别是内置AudioCodec,I2S0以及I2S1。
 
 
-![图2-11: R16音频硬件框图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-11.jpg)
+![图2-11: R16音频硬件框图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-11.jpg)
 
 ### 2.6.2 时钟源
 
@@ -947,7 +947,7 @@ R16中， 3 个音频模块的时钟源均来自pll_audio。
 pll_audio可以输出24.576M或者22.5792M的时钟，分别支持48k系列，44.1k系列的播放录音。
 
 
-![图2-12: R16时钟源](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-12.jpg)
+![图2-12: R16时钟源](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-12.jpg)
 
 ### 2.6.3 代码结构
 
@@ -1046,7 +1046,7 @@ aif1_lrlk_div = 0x40
 
 #### 2.6.4.3 codec数据通路
 
-![图2-13: R16音频通路](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-13.jpg)
+![图2-13: R16音频通路](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-13.jpg)
 
 ```
 通过HPOUTL/R播歌
@@ -1268,7 +1268,7 @@ arecord -Dhw:sndcodec -f S16_LE -r 16000 -c 1 /tmp/test.wav
 
 R18包含 4 个音频模块，分别是内置AudioCodec以及Daudio0,Daudio1,Daudio2。
 
-![图2-14: R18音频硬件框图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-14.jpg)
+![图2-14: R18音频硬件框图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-14.jpg)
 
 ### 2.7.2 时钟源
 
@@ -1277,7 +1277,7 @@ R18中， 4 个音频模块的时钟源均来自pll_audio
 pll_audio可以输出24.576M或者22.5792M的时钟，分别支持48k系列，44.1k系列的播放录音。
 
 
-![图2-15: R18时钟源](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-15.jpg)
+![图2-15: R18时钟源](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-15.jpg)
 
 ### 2.7.3 代码结构
 
@@ -1416,7 +1416,7 @@ codec配置，即内置audiocodec驱动的相关配置
 
 #### 2.7.4.3 codec数据通路
 
-![图2-16: R18音频通路](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-16.jpg)
+![图2-16: R18音频通路](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-16.jpg)
 
 ```
 通过HPOUTL/R播歌
@@ -1878,7 +1878,7 @@ arecord -Dhw:audiocodec -f S16_LE -r 16000 -c 2 /tmp/test.wav
 R30包含 5 个音频模块，分别是内置AudioCodec,Daudio0,Daudio1,Daudio2以及Dmic
 
 
-![图2-17: R30音频硬件框图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-17.jpg)
+![图2-17: R30音频硬件框图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-17.jpg)
 
 ### 2.8.2 时钟源
 
@@ -1887,7 +1887,7 @@ R30中， 5 个音频模块的时钟源均来自pll_audio。
 pll_audio可以输出24.576M或者22.5792M的时钟，分别支持48k系列，44.1k系列的播
 放录音。
 
-![图2-18: R30时钟源](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-18.jpg)
+![图2-18: R30时钟源](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-18.jpg)
 
 ### 2.8.3 代码结构
 
@@ -2016,7 +2016,7 @@ codec配置，即内置audiocodec驱动的相关配置
 
 #### 2.8.4.3 codec数据通路
 
-![图2-19: R30音频通路](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-19.jpg)
+![图2-19: R30音频通路](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-19.jpg)
 
 ```
 通过SPKL/R播歌
@@ -2322,7 +2322,7 @@ Dmic,Spdif。
 
 另外还支持MAD作语音唤醒检测(详细请看R328 MAD章节)。
 
-![图2-34: R328音频硬件框图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-34.jpg)
+![图2-34: R328音频硬件框图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-34.jpg)
 
 
 ### 2.9.2 时钟源.
@@ -2332,7 +2332,7 @@ R328中， 6 个音频模块的时钟源均来自pll_audio。
 pll_audio可以输出24.576M或者22.5792M的时钟，分别支持48k系列，44.1k系列的播
 放录音。
 
-![图2-35: R328时钟源](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-35.jpg)
+![图2-35: R328时钟源](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-35.jpg)
 
 ### 2.9.3 代码结构
 
@@ -2463,7 +2463,7 @@ codec配置，即内置audiocodec驱动的相关配置
 
 #### 2.9.4.3 codec数据通路
 
-![图2-36: R328音频通路](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-36.jpg)
+![图2-36: R328音频通路](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-36.jpg)
 
 ```
 播歌
@@ -3167,7 +3167,7 @@ V853中，音频模块的时钟源来自pll_audio0。
 
 pll_audio0可输出22.5792M和24.576M频率的时钟，分别支持44.1k系列、48k系列的播放录音，但无法同时输出。
 
-![图2-48: V853时钟源](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Audio_development_Guide-2-48.jpg)
+![图2-48: V853时钟源](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Audio_development_Guide-2-48.jpg)
 
 ### 2.20.2 代码结构
 

@@ -183,7 +183,7 @@ echo X > /sys/class/disp/disp/attr/colorbar
 
 上面的操作是显示colorbar，其中的X 可以是0 到8，对应的含义如下图所示：
 
-![image-20221130180522997](http://photos.100ask.net/tina-docs/Linux_LCD_DevGuide_image-20221130180522997.png)
+![image-20221130180522997](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221130180522997.png)
 
 <center>图6-1: colorbar</center>
 

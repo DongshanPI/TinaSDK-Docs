@@ -12,7 +12,7 @@ size：可以省略，默认读取整个分区文件
    例：使用sunxi_flash read 命令将boot 分区读入到0x49000000 中，然后使用md 命令读取
    0x49000000 中的内容。
 
-![image-20221216112650227](http://photos.100ask.net/tina-docs/Linux_Nor_DevGuide_image-20221216112650227.png)
+![image-20221216112650227](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Nor_DevGuide_image-20221216112650227.png)
 
 验证方法：
 
@@ -20,18 +20,18 @@ size：可以省略，默认读取整个分区文件
 2. 在out/pack_out 目录下找到对应的分区文件，使用hexdump -Cv boot.fex -n 500 命
    令输出分区文件的数据，对比一致即读入成功。
 
-![image-20221216112713299](http://photos.100ask.net/tina-docs/Linux_Nor_DevGuide_image-20221216112713299.png)
+![image-20221216112713299](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Nor_DevGuide_image-20221216112713299.png)
 
 2. sunxi_flash write [size] 将内存中的数据，写入到分区中
    例：
    1）使用mm 命令修改内存内容
 
-![image-20221216112743939](http://photos.100ask.net/tina-docs/Linux_Nor_DevGuide_image-20221216112743939.png)
+![image-20221216112743939](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Nor_DevGuide_image-20221216112743939.png)
 
 2）使用sunxi_flash write 0x44000000 env 将内存中的数据写入env 分区
 
-![image-20221216112759532](http://photos.100ask.net/tina-docs/Linux_Nor_DevGuide_image-20221216112759532.png)
+![image-20221216112759532](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Nor_DevGuide_image-20221216112759532.png)
 
 3）重新将env 分区读入内存中，对比一致表示写入成功
 
-![image-20221216112809980](http://photos.100ask.net/tina-docs/Linux_Nor_DevGuide_image-20221216112809980.png)
+![image-20221216112809980](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Nor_DevGuide_image-20221216112809980.png)

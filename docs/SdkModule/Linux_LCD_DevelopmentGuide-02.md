@@ -89,11 +89,11 @@ DE1.0 对应平台：R6(linux-3.10)、R16(linux-3.4)。
 
 DE2.0 对应平台：除R6 和R16 之外的。
 
-![image-20221129102051729](http://photos.100ask.net/tina-docs/Linux_LCD_DevGuide_image-20221129102051729.png)
+![image-20221129102051729](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221129102051729.png)
 
 <center>图4-1: DE1.0 menuconfig 配置图</center>
 
-![image-20221129102107009](http://photos.100ask.net/tina-docs/Linux_LCD_DevGuide_image-20221129102107009.png)
+![image-20221129102107009](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221129102107009.png)
 
 <center>图4-2: DE2.0 menuconfig 配置图</center>
 
@@ -140,7 +140,7 @@ struct __lcd_panel default_panel = {
 
 不需要进行初始化操作的LCD 屏，比如lvds 屏，RGB 屏等，LCD_panel_init 及LCD_panel_exit这函数可以为空。
 
-![image-20221129102353374](http://photos.100ask.net/tina-docs/Linux_LCD_DevGuide_image-20221129102353374.png)
+![image-20221129102353374](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221129102353374.png)
 
 <center>图4-3: LCD 开关屏流程</center>
 
@@ -186,7 +186,7 @@ static __s32 LCD_open_flow(__u32 sel)
 
   如下图，这是屏手册中典型的上电时序图，我们编写屏驱动的时候，也要注意，该延时就得延时。
 
-![image-20221129102545133](http://photos.100ask.net/tina-docs/Linux_LCD_DevGuide_image-20221129102545133.png)
+![image-20221129102545133](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221129102545133.png)
 
 <center>图4-4: power on</center>
 
@@ -248,7 +248,7 @@ static s32 LCD_close_flow(u32 sel)
 
   如下图是典型关屏时序图。
 
-![image-20221129102917140](http://photos.100ask.net/tina-docs/Linux_LCD_DevGuide_image-20221129102917140.png)
+![image-20221129102917140](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221129102917140.png)
 
 <center>图4-5: power off</center>
 
@@ -765,7 +765,7 @@ RGB 接口在全志平台又称HV 接口（Horizontal 同步和Vertical 同步�
 
 #### 4.3.2 RGB 接口管脚
 
-![image-20221129104718608](http://photos.100ask.net/tina-docs/Linux_LCD_DevGuide_image-20221129104718608.png)
+![image-20221129104718608](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221129104718608.png)
 
 <center>图4-6: RGB 管脚</center>
 
@@ -999,7 +999,7 @@ mipi-dsi 的管脚是差分的，分为两种管脚，一种是时钟管脚，�
 
 压就不变，如果擅自改变此路电的电压可能导致模块异常。
 
-![image-20221129105502705](http://photos.100ask.net/tina-docs/Linux_LCD_DevGuide_image-20221129105502705.png)
+![image-20221129105502705](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221129105502705.png)
 
 <center>图4-7: pinmux</center>
 
@@ -1690,7 +1690,7 @@ lcd1: lcd1@01c0c001 {
 
 ### 4.7 RGB 和I8080 管脚配置示意图
 
-![image-20221129120014562](http://photos.100ask.net/tina-docs/Linux_LCD_DevGuide_image-20221129120014562.png)
+![image-20221129120014562](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221129120014562.png)
 
 <center>图4-8: pinmux</center>
 

@@ -640,19 +640,19 @@ Kernel modules
 
 Kernel modules 选项进入下一级配置，如下图所示：
 
-![image-20221123105646196](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123105646196.png)
+![image-20221123105646196](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123105646196.png)
 
 <center>图4-1: menuconfig</center>
 
 然后，选择Video Support 选项，进入下一级配置，如下图所示：
 
-![image-20221123105728564](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123105728564.png)
+![image-20221123105728564](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123105728564.png)
 
 <center>图4-2: video</center>
 
 最后，选择kmod-sunxi-vfe 选项，可选择<*> 表示编译包含到固件，也可以选择表示仅编译不包含在固件。如下图所示：
 
-![image-20221123105750877](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123105750877.png)
+![image-20221123105750877](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123105750877.png)
 
 <center>图4-3: sunxi</center>
 
@@ -705,7 +705,7 @@ MR813 在src/isp522。在libisp/isp_cfg/SENSOR 目录下增加相应的头文件
   （7）WDR 模式标志位
   （8）ISP 参数结构体
 
-![image-20221123113519900](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221123113519900.png)
+![image-20221123113519900](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221123113519900.png)
 
 <center>图4-4: sunxi</center>
 

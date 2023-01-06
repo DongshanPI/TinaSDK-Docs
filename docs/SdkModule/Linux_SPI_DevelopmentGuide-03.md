@@ -46,7 +46,7 @@ module_driver(__spi_driver, spi_register_driver, \
 
 SPI 设备驱动使用 “struct spi_message” 向 SPI 总线请求读写 I/O。一个 spi_message 中包含了一个操作序列，每一个操作称作 spi_transfer，这样方便 SPI 总线驱动中串行的执行一个个原子的序列。内核线程使用队列实现了异步传输的功能，对于同一个数据传输的发起者，既然异步方式无需等待数据传输完成即可返回，返回后，该发起者可以立刻又发起一个 message，而这时上一个 message 还没有处理完。对于另外一个不同的发起者来说，也有可能同时发起一次 message 传输请求。
 
-![](http://photos.100ask.net/tina-docs/LinuxSPIDevelopmentGuide_005.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxSPIDevelopmentGuide_005.png)
 
 ​															图 3-1: Linux SPI 数据传输流程
 

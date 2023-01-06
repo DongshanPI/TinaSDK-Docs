@@ -60,7 +60,7 @@ cat sunxi_pin_configure
 
 结果如下图所示：
 
-![](http://photos.100ask.net/tina-docs/LinuxGPIODevelopmentGuide_007.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxGPIODevelopmentGuide_007.png)
 
 ​																	图 6-1: 查看 pin 配置图
 
@@ -77,7 +77,7 @@ cat sunxi_pin_configure  //查看修改情况
 
 修改后结果如下图所示：
 
-![](http://photos.100ask.net/tina-docs/LinuxGPIODevelopmentGuide_008.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxGPIODevelopmentGuide_008.png)
 
 ​																图 6-2: 修改结果图
 
@@ -94,7 +94,7 @@ cat /sys/kernel/debug/sunxi_pinctrl/dev_name
 
 修改结果如下图所示：
 
-![](http://photos.100ask.net/tina-docs/LinuxGPIODevelopmentGuide_009.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxGPIODevelopmentGuide_009.png)
 
 ​															  图 6-3: pin 设备图
 
@@ -115,7 +115,7 @@ cat pinctrl-devices
 
 结果如下图所示:
 
-![](http://photos.100ask.net/tina-docs/LinuxGPIODevelopmentGuide_0010.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxGPIODevelopmentGuide_0010.png)
 
 ​													  	图 6-4: pin 设备图	
 

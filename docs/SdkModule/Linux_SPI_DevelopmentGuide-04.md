@@ -89,7 +89,7 @@ module_exit(spidev_exit);
 
 在 menuconfig（Device Drivers->SPI support）里面配置上 User mode SPI device driver support 选项。
 
-![](http://photos.100ask.net/tina-docs/LinuxSPIDevelopmentGuide_006.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxSPIDevelopmentGuide_006.png)
 
 ​																		图 4-1: spidev
 
@@ -339,7 +339,7 @@ err:
 
 打 开 menuconfig 的 CONFIG_SPI_SUNXI 与 CONFIG_SPI_SPIDEV，如下图所示。
 
-![](http://photos.100ask.net/tina-docs/LinuxSPIDevelopmentGuide_007.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxSPIDevelopmentGuide_007.png)
 
 ​																图 4-2: menuconfig		
 

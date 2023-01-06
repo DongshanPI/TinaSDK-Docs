@@ -31,7 +31,7 @@
 
 ### 2.3 驱动框架介绍
 
-![](http://photos.100ask.net/tina-docs/LinuxMIPICSIDevelopmentGuide_001.png)
+![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxMIPICSIDevelopmentGuide_001.png)
 
 ​																		图 2-1: 驱动框图
 
@@ -89,19 +89,19 @@ VIN 驱动可以分为 Kernel 层、Video Input Framework、Device Driver 层。
 
 1. 首先，进入 Device Drivers，选择 Multimedia support ，然后依次打开 Cameras/video grabbers support 、Media Controller support 和 SUNXI platform devices, 如下图所示。
 
-   ​									![](http://photos.100ask.net/tina-docs/LinuxMIPICSIDevelopmentGuide_002.png)
+   ​									![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxMIPICSIDevelopmentGuide_002.png)
 
    ​															图 2-2: Device Drivers 选项配置
 
 2. 其次，进入 SUNXI platform devices，选择 sunxi video input (camera csi/mipi isp vipp)driver 和 v4l2 new driver for SUNXI，如下图所示。
 
-   ![](http://photos.100ask.net/tina-docs/LinuxMIPICSIDevelopmentGuide_003.png)
+   ![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxMIPICSIDevelopmentGuide_003.png)
 
    ​                                                            图 2-3: Device Drivers 选项配置
 
 3. 最后，sunxi video input (camera csi/mipi isp vipp)driver 目录下的其他选项需要根据实际产品需求进行开关，如：使用闪光灯、对焦马达、打开 vin log、使用 IOMMU 如下图所示。
 
-   ![](http://photos.100ask.net/tina-docs/LinuxMIPICSIDevelopmentGuide_004.png)
+   ![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxMIPICSIDevelopmentGuide_004.png)
 
    ​															图 2-4: Device Drivers 选项配置
 

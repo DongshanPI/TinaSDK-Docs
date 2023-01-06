@@ -88,7 +88,7 @@ device/config/chips/${chip}/configs/${borad}/board.dts
 示例如图：
 
 
-![OpenRemoved_Tina_Linux_Configuration_Development_Guide-5-1](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Configuration_Development_Guide-5-1.jpg)
+![OpenRemoved_Tina_Linux_Configuration_Development_Guide-5-1](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Configuration_Development_Guide-5-1.jpg)
 
 ```
 说明
@@ -116,7 +116,7 @@ device/config/chips/${chip}/configs/${borad}/board.dts
 示例如图：
 
 
-![OpenRemoved_Tina_Linux_Configuration_Development_Guide-5-1](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Configuration_Development_Guide-5-1-1672044892618.jpg)
+![OpenRemoved_Tina_Linux_Configuration_Development_Guide-5-1](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Configuration_Development_Guide-5-1-1672044892618.jpg)
 
 以R18为例子，上图展示了三个方案的设备树配置信息，其中：
 
@@ -236,7 +236,7 @@ ccc = "4";
 #### 5.3.3 配置sys_config.fex
 
 
-![OpenRemoved_Tina_Linux_Configuration_Development_Guide-5-3](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_Configuration_Development_Guide-5-3.jpg)
+![OpenRemoved_Tina_Linux_Configuration_Development_Guide-5-3](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Configuration_Development_Guide-5-3.jpg)
 
 #### 5.3.4 配置device tree
 

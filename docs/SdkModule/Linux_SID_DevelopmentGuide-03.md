@@ -4,7 +4,7 @@
 
 SID 驱动内部的功能划分如下图所示：
 
-![image-20221219105727865](http://photos.100ask.net/tina-docs/Linux_SID_DevGuide_image-20221219105727865.png)
+![image-20221219105727865](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_SID_DevGuide_image-20221219105727865.png)
 
 总体上，SID 驱动内部可以分为两大部分：
 1.SID Register RW，封装了对寄存器按位读取的接口，以及获取指定compatible 的模块基地址等。
@@ -113,10 +113,10 @@ static unsigned int sunxi_soc_ver;
 
 本节中，这里把SoC Ver、ChipID、SecureEnable 信息统称为“SoC 信息”，因为他们的读取过程非常相似。都是遵循以下流程：
 
-![image-20221219110111514](http://photos.100ask.net/tina-docs/Linux_SID_DevGuide_image-20221219110111514.png)
+![image-20221219110111514](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_SID_DevGuide_image-20221219110111514.png)
 
 #### 3.3.2 Efuse Key 读取流程
 
 在读取Efuse 中Key 的时候，需要判断是否存在、以及访问权限，过程有点复杂，用以下流程图进行简单说明。
 
-![image-20221219110133623](http://photos.100ask.net/tina-docs/Linux_SID_DevGuide_image-20221219110133623.png)
+![image-20221219110133623](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_SID_DevGuide_image-20221219110133623.png)

@@ -26,7 +26,7 @@ sensor 的话大部分 ioctrl 命令在vfe 层调用isp 的库实现，少数如
 
 • linux-3.10 版本将mipi/csi/isp 模块化（由vfe.c 直接调用=>v4l2_subdev_ops）, 支持device tree
 
-![image-20221122095738625](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221122095738625.png)
+![image-20221122095738625](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221122095738625.png)
 
 <center>图3-1: VFE</center>
 
@@ -50,7 +50,7 @@ sensor 的话大部分 ioctrl 命令在vfe 层调用isp 的库实现，少数如
 
 • vin-video 文件夹内主要是video 设备操作文件；
 
-![image-20221122113602939](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221122113602939.png)
+![image-20221122113602939](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221122113602939.png)
 
 <center>图3-2: VIN</center>
 
@@ -72,7 +72,7 @@ sensor 的话大部分 ioctrl 命令在vfe 层调用isp 的库实现，少数如
 
 • 采用v4l2-controls 新特性
 
-![image-20221122113645959](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221122113645959.png)
+![image-20221122113645959](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221122113645959.png)
 
 <center>图3-3: camera Input</center>
 
@@ -132,7 +132,7 @@ MCLK 可以在6 M 到27 M之间。其中MCLK 和使用的寄存器配置强相�
 
 并口sensor 必须填写，MIPI sensor 无需填写，可在sensor 规格书找到，如下
 
-![image-20221122115215017](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221122115215017.png)
+![image-20221122115215017](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221122115215017.png)
 
 <center>图3-4: timing</center>
 
@@ -154,7 +154,7 @@ MCLK 可以在6 M 到27 M之间。其中MCLK 和使用的寄存器配置强相�
 
 一般填写sensor ID，用于sensor 检测。sensor ID 可在sensor 规格书的找到，如下
 
-![image-20221122115536252](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221122115536252.png)
+![image-20221122115536252](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221122115536252.png)
 
 <center>图3-5: sensorid</center>
 
@@ -164,7 +164,7 @@ MCLK 可以在6 M 到27 M之间。其中MCLK 和使用的寄存器配置强相�
 
 sensor I2C 通讯地址，可在sensor 规格书找到，如下
 
-![image-20221122115814628](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221122115814628.png)
+![image-20221122115814628](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221122115814628.png)
 
 <center>图3-6: sccbid</center>
 
@@ -192,7 +192,7 @@ static int sensor_s_gain(struct v4l2_subdev *sd, unsigned int gain_val) /* 增�
 
 AE 是同时控制曝光时间和增益的，所以需要在上面的函数中分别同时sensor 曝光和增益的寄存器。
 
-![image-20221122174724278](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221122174724278.png)
+![image-20221122174724278](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221122174724278.png)
 
 <center>图3-7: expgain</center>
 
@@ -212,7 +212,7 @@ static int sensor_power(struct v4l2_subdev *sd, int on)
 
 控制sensor 上电、下电及进出待机状态，操作步骤须与规格书描述相同，注意power down 和reset pin 的电平变化。
 
-![image-20221122174813656](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221122174813656.png)
+![image-20221122174813656](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221122174813656.png)
 
 <center>图3-8: powerup</center>
 
@@ -327,7 +327,7 @@ static int sensor_detect(struct v4l2_subdev *sd)
     	return -ENODEV;
 ```
 
-![image-20221122175111168](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221122175111168.png)
+![image-20221122175111168](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221122175111168.png)
 
 <center>图3-9: sensordetect</center>
 
@@ -449,7 +449,7 @@ static struct sensor_win_size sensor_win_sizes[] = {
 
 据线映射关系需要查看原理图设计进行配对，可参考imx274_slvds.c 完成开发。
 
-![image-20221122180028623](http://photos.100ask.net/tina-docs/Linux_Camera_DevGuide_image-20221122180028623.png)
+![image-20221122180028623](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Camera_DevGuide_image-20221122180028623.png)
 
 <center>图3-10: SYNC_CODE</center>
 

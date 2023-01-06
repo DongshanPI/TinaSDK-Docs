@@ -4,7 +4,7 @@
 
 Linux 中SPINOR 体系结构如下图所示：
 
-![image-20221216110030034](http://photos.100ask.net/tina-docs/Linux_Nor_DevGuide_image-20221216110030034.png)
+![image-20221216110030034](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Nor_DevGuide_image-20221216110030034.png)
 
 SPI NOR Framework：这层主要是处理不同厂家的NOR 物理特色差异，初始化SPINOR的工作状态，如工作线宽（1 线、2 线、4 线、8 线）、有效地址位（16M 以上的NOR 需要使用4 地址模式），为上层MTD 提供读写擦接口。
 
@@ -134,7 +134,7 @@ Device Drivers ---->
 [*]Sunxi flash support ---->
 ```
 
-![image-20221216110954138](http://photos.100ask.net/tina-docs/Linux_Nor_DevGuide_image-20221216110954138.png)
+![image-20221216110954138](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Nor_DevGuide_image-20221216110954138.png)
 
 进入SPI Support
 
@@ -144,7 +144,7 @@ Device Drivers ---->
 [*]Sunxi SPI driver
 ```
 
-![image-20221216111017858](http://photos.100ask.net/tina-docs/Linux_Nor_DevGuide_image-20221216111017858.png)
+![image-20221216111017858](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Nor_DevGuide_image-20221216111017858.png)
 
 进入sunxi_flash_support
 
@@ -154,7 +154,7 @@ Device Drivers ---->
 [*]Support sunxi spinor devices
 ```
 
-![image-20221216111039312](http://photos.100ask.net/tina-docs/Linux_Nor_DevGuide_image-20221216111039312.png)
+![image-20221216111039312](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Nor_DevGuide_image-20221216111039312.png)
 
 #### 2.3.4 KERNEL 配置
 
@@ -173,7 +173,7 @@ Device Drivers ---->
 [*]SPI support ---->
 ```
 
-![image-20221216111201111](http://photos.100ask.net/tina-docs/Linux_Nor_DevGuide_image-20221216111201111.png)
+![image-20221216111201111](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Nor_DevGuide_image-20221216111201111.png)
 
 进入Menory Technology Device(MTD) support
 
@@ -187,7 +187,7 @@ Self-contained MTD device drivers ---->
 SPI-NOR device support ---->
 ```
 
-![image-20221216111231797](http://photos.100ask.net/tina-docs/Linux_Nor_DevGuide_image-20221216111231797.png)
+![image-20221216111231797](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Nor_DevGuide_image-20221216111231797.png)
 
 进入Self-contained MTD device drivers（5.4 内核不需要选择此项）
 
@@ -198,7 +198,7 @@ Self-contained MTD device drivers ---->
 <*>Support most SPI Flash chips (AT16DF, M25P.....)
 ```
 
-![image-20221216111301751](http://photos.100ask.net/tina-docs/Linux_Nor_DevGuide_image-20221216111301751.png)
+![image-20221216111301751](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Nor_DevGuide_image-20221216111301751.png)
 
 ##### 2.3.4.2 cmdline 方式选择
 
@@ -206,7 +206,7 @@ Self-contained MTD device drivers ---->
 Boot opttions ---->
 ```
 
-![image-20221216111354759](http://photos.100ask.net/tina-docs/Linux_Nor_DevGuide_image-20221216111354759.png)
+![image-20221216111354759](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Nor_DevGuide_image-20221216111354759.png)
 
 进入Boot options
 
@@ -215,7 +215,7 @@ Boot opttions ---->
 Kernel command line type ---->
 ```
 
-![image-20221216111427021](http://photos.100ask.net/tina-docs/Linux_Nor_DevGuide_image-20221216111427021.png)
+![image-20221216111427021](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Nor_DevGuide_image-20221216111427021.png)
 
 进入kernel command line type
 
@@ -225,7 +225,7 @@ Kernel command line type ---->
 (X)Use bootloade kernel arguments if available
 ```
 
-![image-20221216111454068](http://photos.100ask.net/tina-docs/Linux_Nor_DevGuide_image-20221216111454068.png)
+![image-20221216111454068](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Nor_DevGuide_image-20221216111454068.png)
 
 ##### 2.3.4.3 文件系统配置
 
@@ -236,7 +236,7 @@ File system ---->
 [*]Miscellaneous filesystems ---->
 ```
 
-![image-20221216111527624](http://photos.100ask.net/tina-docs/Linux_Nor_DevGuide_image-20221216111527624.png)
+![image-20221216111527624](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Nor_DevGuide_image-20221216111527624.png)
 
 • 进入Miscellaneous filesystems
 • Incluede support for ZLIB compressed file systems (NEW)
@@ -250,7 +250,7 @@ File system ---->
 [*]Incluede support for XZ compressed file systems (NEW)(压缩方式选择如下)
 ```
 
-![image-20221216111604498](http://photos.100ask.net/tina-docs/Linux_Nor_DevGuide_image-20221216111604498.png)
+![image-20221216111604498](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Nor_DevGuide_image-20221216111604498.png)
 
 以上的压缩方式（ZLIB/LZ4/LZO/XZ）具体选择哪一种需要根据longan/build/mkcmd.sh 中如下代码使用的压缩方式而定，如下代码使用的是gzip 压缩方式，则内核File systems 中配置需选择LZO 压缩方式，若使用的是xz, 则需选择XZ 压缩方式。
 

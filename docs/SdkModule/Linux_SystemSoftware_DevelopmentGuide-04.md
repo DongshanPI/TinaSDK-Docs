@@ -47,7 +47,7 @@ TinaSDK中，bootloader/uboot在内核运行之前运行，可以初始化硬件
 2. 打开sun8iw18p1_defconfig或sun8iw18p1_nor_defconfig后，在相应的宏定义前去掉或添加"#"即可将相应功能开启或关闭。
 
 
-![图8-1: defconfig配置图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_System_software_development_Guide-8-1.jpg)
+![图8-1: defconfig配置图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_System_software_development_Guide-8-1.jpg)
 
 如上图，只要将CONFIG_SUNXI_NAND前的#去掉即可支持NAND相关功能，其他宏定义的开启关闭也类似。
 
@@ -56,7 +56,7 @@ TinaSDK中，bootloader/uboot在内核运行之前运行，可以初始化硬件
 如下图是sun8iw18p1_defconfig/sun8iw18p1_nor_defconfig中的基本宏定义的介绍：
 
 
-![图8-2: defconfig基本宏定义介绍图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_System_software_development_Guide-8-2.jpg)
+![图8-2: defconfig基本宏定义介绍图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_System_software_development_Guide-8-2.jpg)
 
 #### 8.4.2 menuconfig方式
 
@@ -73,7 +73,7 @@ make ARCH=arm menuconfig或make ARCH=arm64 menuconfig
 置方法menuconfig配置菜单窗口中有说明。
 
 
-![图8-3: menuconfig配置菜单图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_System_software_development_Guide-8-3.jpg)
+![图8-3: menuconfig配置菜单图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_System_software_development_Guide-8-3.jpg)
 
 ### 8.5 uboot编译
 
@@ -124,14 +124,14 @@ sys_config.fes主要由主键和子键构成，主键是某项功能或模块的
 该功能或模块中各个参数的配置项，如下图所示，dram_para是主键，dram_clk、dram_type
 和dram_zp是子键。
 
-![图8-4: sysconfig.fex基本结构图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_System_software_development_Guide-8-4.jpg)
+![图8-4: sysconfig.fex基本结构图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_System_software_development_Guide-8-4.jpg)
 
 
 ##### 8.6.1.2 sys_config.fex配置实例
 
 [platform]：平台相关配置项。
 
-![图8-5: platform配置图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_System_software_development_Guide-8-5.jpg)
+![图8-5: platform配置图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_System_software_development_Guide-8-5.jpg)
 
 例如，debug_mode =1表示开启uboot的调试模式，开启后会在log中打印出对应的调试信
 息。next_work=2表示烧录完成后系统的下一步执行动作(0x1表示正常启动、0x2表示重启、
@@ -139,14 +139,14 @@ sys_config.fes主要由主键和子键构成，主键是某项功能或模块的
 
 [target]：目标平台相关功能配置项
 
-![图8-6: target配置图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_System_software_development_Guide-8-6.jpg)
+![图8-6: target配置图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_System_software_development_Guide-8-6.jpg)
 
 上图中的可以通过配置boot_clock配置cpu的频率大小。
 
 [uart_para]：串口配置项，uart_para配置项是uboot串口打印调试时用到的重要配置
 
 
-![图8-7: uart_para配置图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_System_software_development_Guide-8-7.jpg)
+![图8-7: uart_para配置图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_System_software_development_Guide-8-7.jpg)
 
 
 上图中的uart_debug_port=0表示使用的是uart0，uart_debug_tx/uart_debug_rx配置的gpio口（PA04/PA05）需要根据对应的GPIO DATASHEET进行配置。
@@ -179,7 +179,7 @@ sunxi_flash命令从存储介质的boot分区上加载内核到DRAM的0x40007800
 uboot启动时调用环境变量方式下如图所示：
 
 
-![图8-8: uboot启动调用环境变量方式图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_System_software_development_Guide-8-8.jpg)
+![图8-8: uboot启动调用环境变量方式图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_System_software_development_Guide-8-8.jpg)
 
 
 ##### 8.6.2.2 环境变量配置示例介绍.
@@ -192,7 +192,7 @@ TinaSDK中，环境变量配置文件保存在TinaSDK/target/allwinner/$(BOARD)/
 - Setargs_nand=setenv bootargs earlyprintk=${earlyprink}....... ，设置内核相关环境变量，该变量在启动至内核的log中会打印处理，即cmdline如下图：
 
 
-![图8-9: kernel cmdline图](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_System_software_development_Guide-8-9.jpg)
+![图8-9: kernel cmdline图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_System_software_development_Guide-8-9.jpg)
 
 
 - loglevel=8，设置内核log打印等级。
@@ -255,4 +255,4 @@ make kernel_menuconfig
 执行完后，shell控制台会跳出配置菜单。如下图所示，
 
 
-![图9-1: TinaLinux内核配置菜单](http://photos.100ask.net/tina-docs/OpenRemoved_Tina_Linux_System_software_development_Guide-9-1.jpg)
+![图9-1: TinaLinux内核配置菜单](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_System_software_development_Guide-9-1.jpg)
