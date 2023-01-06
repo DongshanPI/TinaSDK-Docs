@@ -1,89 +1,243 @@
-# 常见问题
-## 6 FAQ
+## 5 模块使用范例
 
-### 6.1 UART 调试打印开关
-
-#### 6.1.1 通过 debugfs 使用命令打开调试开关
-
-注：内核需打开 CONFIG_DYNAMIC_DEBUG 宏定义
+此 demo 程序是打开一个串口设备，然后侦听这个设备，如果有数据可读就读出来并打印。设备名称、侦听的循环次数都可以由参数指定。
 
 ```
-1.挂载debugfs。 
-mount -t debugfs none /sys/kernel/debug
-2.打开uart模块所有打印。
-echo "module sunxi_uart +p" > /mnt/dynamic_debug/control
-3.打开指定文件的所有打印。
-echo "file sunxi-uart.c +p" > /mnt/dynamic_debug/control
-4.打开指定文件指定行的打印。
-echo "file sunxi-uart.c line 615 +p" > /mnt/dynamic_debug/control
-5.打开指定函数名的打印。
-echo "func sw_uart_set_termios +p" > /mnt/dynamic_debug/control
-6.关闭打印。
-把上面相应命令中的+p 修改为-p 即可。
-更多信息可参考linux 内核文档：linux-3.10/Documentation/dynamic-debug-howto.txt。
+#include <stdio.h>      /*标准输入输出定义*/
+#include <stdlib.h>     /*标准函数库定义*/
+#include <unistd.h>     /*Unix 标准函数定义*/
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>       /*文件控制定义*/
+#include <termios.h>     /*PPSIX 终端控制定义*/
+#include <errno.h>       /*错误号定义*/
+#include <string.h>
+
+enum parameter_type {
+    PT_PROGRAM_NAME = 0,
+    PT_DEV_NAME,
+    PT_CYCLE,
+    PT_NUM
+};
+ 
+#define DBG(string, args...) \
+    do { \
+        printf("%s, %s()%u---", __FILE__, __FUNCTION__, __LINE__); \
+        printf(string, _00args); \
+        printf("\n"); \
+    } while (0)
+
+void usage(void)
+{
+    printf("You should input as: \n");
+    printf("\t select_test [/dev/name] [Cycle Cnt]\n");
+}
+
+int OpenDev(char *name)
+{
+    int fd = open(name, O_RDWR ); //| O_NOCTTY | O_NDELAY
+    if (-1 == fd)
+	    DBG("Can't Open(%s)!", name);
+
+    return fd;
+}
+
+/**
+ * @brief 设置串口通信速率
+ * @param fd 类型 int 打开串口的文件句柄
+ * @param speed 类型 int 串口速度
+ * @return void
+ */
+void set_speed(int fd, int speed)
+{
+    int i;
+    int status;
+    struct termios Opt = {0};
+    int speed_arr[] = { B38400, B19200, B9600, B4800, B2400, B1200, B300,
+    	B38400, B19200, B9600, B4800, B2400, B1200, B300, };
+    int name_arr[] = {38400, 19200, 9600, 4800, 2400, 1200, 300, 38400,
+    	19200, 9600, 4800, 2400, 1200, 300, };
+
+    tcgetattr(fd, &Opt);
+
+    for ( i= 0; i < sizeof(speed_arr) / sizeof(int); i++) {
+        if (speed == name_arr[i])
+        break;
+    }
+
+    tcflush(fd, TCIOFLUSH);
+    cfsetispeed(&Opt, speed_arr[i]);
+    cfsetospeed(&Opt, speed_arr[i]);
+
+    Opt.c_lflag &= ~(ICANON | ECHO | ECHOE | ISIG); /*Input*/
+    Opt.c_oflag &= ~OPOST; /*Output*/
+
+    status = tcsetattr(fd, TCSANOW, &Opt);
+    if (status != 0) {
+        DBG("tcsetattr fd");
+        return;
+    }
+    tcflush(fd, TCIOFLUSH);
+}
+
+/**
+ *@brief 设置串口数据位，停止位和效验位
+ *@param fd 类型 int 打开的串口文件句柄
+ *@param databits 类型 int 数据位 取值 为 7 或者8
+ *@param stopbits 类型 int 停止位 取值为 1 或者2
+ *@param parity 类型 int 效验类型 取值为N,E,O,,S
+ */
+int set_Parity(int fd,int databits,int stopbits,int parity)
+{
+    struct termios options;
+
+    if ( tcgetattr(fd, &options) != 0) {
+        perror("SetupSerial 1");
+        return -1;
+    }
+    options.c_cflag &= ~CSIZE;
+
+    switch (databits) /*设置数据位数*/
+    {
+        case 7:
+            options.c_cflag |= CS7;
+            break;
+        case 8:
+            options.c_cflag |= CS8;
+            break;
+        default:
+            fprintf(stderr,"Unsupported data size\n");
+            return -1;
+    }
+    
+    switch (parity)
+    {
+        case 'n':
+        case 'N':
+            options.c_cflag &= ~PARENB; /* Clear parity enable */
+            options.c_iflag &= ~INPCK; /* Enable parity checking */
+            break;
+        case 'o':
+        case 'O':
+            options.c_cflag |= (PARODD | PARENB); /* 设置为奇效验*/
+            options.c_iflag |= INPCK; /* Disnable parity checking */
+            break;
+        case 'e':
+        case 'E':
+            options.c_cflag |= PARENB; /* Enable parity */
+            options.c_cflag &= ~PARODD; /* 转换为偶效验*/
+            options.c_iflag |= INPCK; /* Disnable parity checking */
+            break;
+        case 'S':
+        case 's': /*as no parity*/
+            options.c_cflag &= ~PARENB;
+            options.c_cflag &= ~CSTOPB;break;
+        default:
+            fprintf(stderr,"Unsupported parity\n");
+            return -1;
+    }
+    
+    /* 设置停止位*/
+    switch (stopbits)
+    {
+        case 1:
+            options.c_cflag &= ~CSTOPB;
+            break;
+        case 2:
+            options.c_cflag |= CSTOPB;
+            break;
+        default:
+            fprintf(stderr,"Unsupported stop bits\n");
+            return -1;
+    }
+    
+    /* Set input parity option */
+    if (parity != 'n')
+    	options.c_iflag |= INPCK;
+    tcflush(fd,TCIFLUSH);
+    options.c_cc[VTIME] = 150; /* 设置超时15 seconds*/
+    options.c_cc[VMIN] = 0;    /* Update the options and do it NOW */
+    if (tcsetattr(fd,TCSANOW,&options) != 0)
+    {
+        perror("SetupSerial 3");
+        return -1;
+    }
+    return 0;
+}
+
+void str_print(char *buf, int len)
+{
+    int i;
+
+    for (i=0; i<len; i++) {
+        if (i%10 == 0)
+            printf("\n");
+
+        printf("0x%02x ", buf[i]);
+    }
+    printf("\n");
+}
+
+int main(int argc, char **argv)
+{
+    int i = 0;
+    int fd = 0;
+    int cnt = 0;
+    char buf[256];
+
+    int ret;
+    fd_set rd_fdset;
+    struct timeval dly_tm; // delay time in select()
+
+    if (argc != PT_NUM) {
+        usage();
+        return -1;
+    }
+
+    sscanf(argv[PT_CYCLE], "%d", &cnt);
+    if (cnt == 0)
+        cnt = 0xFFFF;
+
+    fd = OpenDev(argv[PT_DEV_NAME]);
+    if (fd < 0)
+        return -1;
+
+    set_speed(fd,19200);
+    if (set_Parity(fd,8,1,'N') == -1) {
+        printf("Set Parity Error\n");
+        exit (0);
+    }
+
+    printf("Select(%s), Cnt %d. \n", argv[PT_DEV_NAME], cnt);
+    while (i<cnt) {
+        FD_ZERO(&rd_fdset);
+        FD_SET(fd, &rd_fdset);
+
+        dly_tm.tv_sec = 5;
+        dly_tm.tv_usec = 0;
+        memset(buf, 0, 256);
+
+        ret = select(fd+1, &rd_fdset, NULL, NULL, &dly_tm);
+        // DBG("select() return %d, fd = %d", ret, fd);
+        if (ret == 0)
+            continue;
+
+        if (ret < 0) {
+            printf("select(%s) return %d. [%d]: %s \n", argv[PT_DEV_NAME], ret, errno,
+            strerror(errno));
+            continue;
+        }
+
+        i++;
+        ret = read(fd, buf, 256);
+
+        printf("Cnt%d: read(%s) return %d.\n", i, argv[PT_DEV_NAME], ret);
+        str_print(buf, ret);
+    }
+
+    close(fd);
+    return 0;
+}
+
 ```
 
-
-
-#### 6.1.2 代码中打开调试开关
-
-```
-1.定义CONFIG_SERIAL_DEBUG宏。
-linux-4.9 内核版本中默认没有定义CONFIG_SERIAL_DEBUG ， 需要自行在
-drivers/tty/serial/Kconfig 中添加CONFIG_SERIAL_DEBUG 定义，然后drivers/tty/serial/Makefile文件中添加代码ccflags-$(CONFIG_SERIAL_DEBUG) := -DDEBUG。 
-注：使用该宏，需要内核关闭CONFIG_DYNAMIC_DEBUG宏。
-```
-
-
-
-#### 6.1.3 sysfs 调试接口
-
-UART 驱动通过 sysfs 节点提供了几个在线调试的接口
-
-```
-1./sys/devices/platform/soc/uart0/dev_info
-
-cupid-p2:/ # cat /sys/devices/platform/soc/uart0/dev_info
-id = 0
-name = uart0
-irq = 247
-io_num = 2
-port->mapbase = 0x0000000005000000
-port->membase = 0xffffff800b005000
-port->iobase = 0x00000000
-pdata->regulator = 0x (null)
-pdata->regulator_id =
-
-从该节点可以看到uart端口的一些硬件资源信息。
-
-2./sys/devices/platform/soc/uart0/ctrl_info
-cupid-p2:/ # cat /sys/devices/platform/soc/uart0/ctrl_info
-ier : 0x05
-lcr : 0x13
-mcr : 0x03
-fcr : 0xb1
-dll : 0x0d
-dlh : 0x00
-last baud : 115384 (dl = 13)
-
-TxRx Statistics:
-tx : 61123
-rx : 351
-parity : 0
-frame : 0
-overrun: 0
-
-此节点可以打印出软件中保存的一些控制信息，如当前UART 端口的寄存器值、收发数据的统计等。
-
-3./sys/devices/platform/soc/uart0/status
-cupid-p2:/ # cat /sys/devices/platform/soc/uart0/status
-uartclk = 24000000
-The Uart controller register[Base: 0xffffff800b005000]:
-[RTX] 0x00 = 0x0000000d, [IER] 0x04 = 0x00000005, [FCR] 0x08 = 0x000000c1
-[LCR] 0x0c = 0x00000013, [MCR] 0x10 = 0x00000003, [LSR] 0x14 = 0x00000060
-[MSR] 0x18 = 0x00000000, [SCH] 0x1c = 0x00000000, [USR] 0x7c = 0x00000006
-[TFL] 0x80 = 0x00000000, [RFL] 0x84 = 0x00000000, [HALT] 0xa4 = 0x00000002
-
-此节点可以打印出当前UART 端口的一些运行状态信息，包括控制器的各寄存器值。
-
-```

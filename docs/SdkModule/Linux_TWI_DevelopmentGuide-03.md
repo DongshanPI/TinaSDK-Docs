@@ -1,212 +1,305 @@
-# Linux_TWI 模块使用范例
-## 4 模块使用范例
+## 3 模块接口说明
 
-### 4.1 利用 i2c-core 接口读写 TWI 设备
+### 3.1 i2c-core 接口
 
-在内核源码中有现成的 i2c 设备驱动实例：tina/lichee/kernel/linux-5.4/drivers/misc/eeprom/at24.c, 这是一个 EEPROM 的 I2C 设备驱动，为了验证 I2C 总线驱动，所以其中通过 sysfs 节点实现读写访问。下面对这个文件的一些关键点进行展示介绍：
+#### 3.1.1 i2c_transfer()
 
-```c
-#include <linux/kernel.h>
-#include <linux/init.h>
-#include <linux/module.h>
-#include <linux/of_device.h>
-#include <linux/slab.h>
-#include <linux/delay.h>
-#include <linux/mutex.h>
-#include <linux/mod_devicetable.h>
-#include <linux/bitops.h>
-#include <linux/jiffies.h>
-#include <linux/property.h>
-#include <linux/acpi.h>
-#include <linux/i2c.h>
-#include <linux/nvmem-provider.h>
-#include <linux/regmap.h>
-#include <linux/pm_runtime.h>
-#include <linux/gpio/consumer.h>
+- 函数原型：int i2c_transfer(struct i2c_adapter *adap, struct i2c_msg *msgs, int num)
 
-#define EEPROM_ATTR(_name) \ 
-{ 							\
-	.attr = { .name = #_name,.mode = 0444 }, \
-	.show = _name##_show, \ 
-}
+- 作用：完成 I2C 总线和 I2C 设备之间的一定数目的 I2C message 交互。
 
-struct i2c_client *this_client;
+- 参数：
 
-static const struct i2c_device_id at24_ids[] = {
-	{ "24c16", 0 },
-	{ /* END OF LIST */ }
-};
-MODULE_DEVICE_TABLE(i2c, at24_ids);
+  - adap：指向所属的 I2C 总线控制器；
 
-static int eeprom_i2c_rxdata(char *rxdata, int length)
-{
-    int ret;
-    struct i2c_msg msgs[] = {
-        {
-            .addr = this_client->addr,
-            .flags = 0,
-            .len = 1,
-            .buf = &rxdata[0],
-        },
-        {
-            .addr = this_client->addr,
-            .flags = I2C_M_RD,
-            .len = length,
-            .buf = &rxdata[1],
-        },
-	};
-    ret = i2c_transfer(this_client->adapter, msgs, 2);
-    if (ret < 0)
-    	pr_info("%s i2c read eeprom error: %d\n", __func__, ret);
-    	
-    return ret;
-}    
+  - msgs：i2c_msg 类型的指针；
 
-static int eeprom_i2c_txdata(char *txdata, int length)
-{
-    int ret;
-    struct i2c_msg msg[] = {
-        {
-            .addr = this_client->addr,
-            .flags = 0,
-            .len = length,
-            .buf = txdata,
-        },
-    };
-    ret = i2c_transfer(this_client->adapter, msg, 1);
-    if (ret < 0)
-	    pr_err("%s i2c write eeprom error: %d\n", __func__, ret);
-	    
-    return 0;
-}
+  - num：表示一次需要处理几个 I2C msg
 
-static ssize_t read_show(struct kobject *kobj, struct kobj_attribute *attr,
-char *buf)
-{
-    int i;
-    u8 rxdata[4];
-    rxdata[0] = 0x1;
-    eeprom_i2c_rxdata(rxdata, 3);
-    
-    for(i=0;i<4;i++)
-	    printk("rxdata[%d]: 0x%x\n", i, rxdata[i]);
-    
-    return sprintf(buf, "%s\n", "read end!");
-}
+- 返回：
 
-static ssize_t write_show(struct kobject *kobj, struct kobj_attribute *attr,
-char *buf)
-{
-    int i;
-    static u8 txdata[4] = {0x1, 0xAA, 0xBB, 0xCC};
-    for(i=0;i<4;i++)
-    	printk("txdata[%d]: 0x%x\n", i, txdata[i]);
-    	
-    eeprom_i2c_txdata(txdata,4);
-    
-    txdata[1]++;
-    txdata[2]++;
-    txdata[3]++;
-    
-    return sprintf(buf, "%s\n", "write end!");
-}
+  - \>0：已经处理的 msg 个数；
 
-static struct kobj_attribute read = EEPROM_ATTR(read);
-static struct kobj_attribute write = EEPROM_ATTR(write);
-
-static const struct attribute *test_attrs[] = {
-    &read.attr,
-    &write.attr,
-    NULL,
-};
-
-static int at24_probe(struct i2c_client *client, const struct i2c_device_id *id)
-{
-    int err;
-    this_client = client;
-    printk("1..at24_probe \n");
-    err = sysfs_create_files(&client->dev.kobj,test_attrs);
-    printk("2..at24_probe \n");
-    
-    if(err){
-    	printk("sysfs_create_files failed\n");
-	}
-	printk("3..at24_probe \n");
-
-	return 0;
-}
-static int at24_remove(struct i2c_client *client)
-{
-	return 0;
-}
-
-static struct i2c_driver at24_driver = {
-    .driver = {
-        .name = "at24",
-        .owner = THIS_MODULE,
-    },
-    .probe = at24_probe,
-    .remove = at24_remove,
-    .id_table = at24_ids,
-};
-
-static int __init at24_init(void)
-{
-    printk("%s %d\n", __func__, __LINE__);
-    return i2c_add_driver(&at24_driver);
-}
-module_init(at24_init);
-	
-static void __exit at24_exit(void)
-{
-	printk("%s()%d - \n", __func__, __LINE__);
-	i2c_del_driver(&at24_driver);
-}
-module_exit(at24_exit);
-```
+  - <0：失败；
 
 
 
+#### 3.1.2 i2c_master_recv()
+
+- 函数原型：int i2c_master_recv(const struct i2c_client *client, char *buf, int count)
+
+- 作用：通过封装 i2c_transfer() 完成一次 I2c 接收操作。
+
+- 参数：
+
+  - client：指向当前 I2C 设备的实例；
+  - buf：用于保存接收到的数据缓存；
+
+  - count：数据缓存 buf 的长度
+
+- 返回：
+  -  \>0：成功接收的字节数；
+  -  <0：失败；
 
 
-### 4.2 利用用户态接口读写 TWI 设备
 
-如果配置了 i2c devices interface，可以直接利用文件读写函数来操作 I2C 设备。下面这个程序直接读取 /dev/i2c-* 来读写 i2c 设备：
+#### 3.1.3 i2c_master_send()
 
-```
-#include <sys/ioctl.h>
-#include <fcntl.h>
-#include <linux/i2c-dev.h>
-#include <linux/i2c.h>
-#define CHIP "/dev/i2c-1"
-#define CHIP_ADDR 0x50
-int main()
-{
-    unsigned char rddata;
-    unsigned char rdaddr[2] = {0, 0}; /* 将要读取的数据在芯片中的偏移量 */
-    unsigned char wrbuf[3] = {0, 0, 0x3c}; /* 要写的数据，头两字节为偏移量 */
-    printf("hello, this is i2c tester\n");
-    int fd = open(CHIP, O_RDWR);
-    if (fd < 0)
-    {
-        printf("open "CHIP"failed\n");
-        goto exit;
-    }
-    if (ioctl(fd, I2C_SLAVE_FORCE, CHIP_ADDR) < 0)
-    { /* 设置芯片地址 */
-        printf("oictl:set slave address failed\n");
-        goto close;
-    }
-    printf("input a char you want to write to E2PROM\n");
-    wrbuf[2] = getchar();
-    printf("write return:%d, write data:%x\n", write(fd, wrbuf, 3), wrbuf[2]);
-    sleep(1);
-    printf("write address return: %d\n",write(fd, rdaddr, 2)); /* 读取之前首先设置读取的偏移量 */
-    printf("read data return:%d\n", read(fd, &rddata, 1));
-    printf("rddata: %c\n", rddata);
-    close(fd);
-    
-exit:
-    return 0;
-}
-```
+- 函数原型：int i2c_master_send(const struct i2c_client *client, const char *buf, int count)
+
+- 作用：通过封装 i2c_transfer() 完成一次 I2c 发送操作。
+
+- 参数：
+
+  - client：指向当前 I2C 从设备的实例；
+
+  - buf：要发送的数据；
+  - count：要发送的数据长度
+
+- 返回：
+
+  - \>0：成功发送的字节数；
+
+  - <0：失败；
+
+
+
+#### 3.1.4 i2c_smbus_read_byte()
+
+- 函数原型：s32 i2c_smbus_read_byte(const struct i2c_client *client)
+
+- 作用：从 I2C 总线读取一个字节。（内部是通过 i2c_transfer() 实现，以下几个接口同。）
+
+- 参数：
+  - client：指向当前的 I2C 从设备
+
+- 返回：
+  - \>0：读取到的数据；
+  - <0：失败；
+
+
+
+#### 3.1.5 i2c_smbus_write_byte()
+
+- 函数原型：s32 i2c_smbus_write_byte(const struct i2c_client *client, u8 value)
+
+- 作用：从 I2C 总线写入一个字节。
+
+- 参数：
+  - client：指向当前的 I2C 从设备；
+  - value：要写入的数值
+
+- 返回：
+  - 0：成功；
+  - <0：失败；
+
+
+
+#### 3.1.6 i2c_smbus_read_byte_data()
+
+- 函数原型：s32 i2c_smbus_read_byte_data(const struct i2c_client *client, u8 command)
+
+- 作用：从 I2C 设备指定偏移处读取一个字节。
+
+- 参数：
+  - client：指向当前的 I2C 从设备；
+  - command：I2C 协议数据的第 0 字节命令码（即偏移值）；
+
+- 返回：
+
+  - \>0：读取到的数据；
+
+  - <0：失败；
+
+
+
+#### 3.1.7 i2c_smbus_write_byte_data()
+
+- 函数原型：s32 i2c_smbus_write_byte_data(const struct i2c_client *client, u8 command,u8 value)
+
+- 作用：从 I2C 设备指定偏移处写入一个字节。
+
+- 参数：
+
+  - client：指向当前的 I2C 从设备；
+
+  - command：I2C 协议数据的第 0 字节命令码（即偏移值）；
+
+  - value：要写入的数值；
+
+- 返回：
+
+  - 0：成功；
+
+  - <0：失败；
+
+
+
+#### 3.1.8 i2c_smbus_read_word_data()
+
+- 函数原型：s32 i2c_smbus_read_word_data(const struct i2c_client *client, u8 command)
+
+- 作用：从 I2C 设备指定偏移处读取一个 word 数据（两个字节，适用于 I2C 设备寄存器是 16 位的情况）。
+
+- 参数：
+
+  - client：指向当前的 I2C 从设备；
+
+  - command：I2C 协议数据的第 0 字节命令码（即偏移值）；
+
+- 返回：
+
+  - \>0：读取到的数据；
+
+  - <0：失败；
+
+
+
+#### 3.1.9 i2c_smbus_write_word_data()
+
+- 函数原型：s32 i2c_smbus_write_word_data(const struct i2c_client *client, u8 command,u16 value)
+
+- 作用：从 I2C 设备指定偏移处写入一个 word 数据（两个字节）。
+
+- 参数：
+
+  - client：指向当前的 I2C 从设备；
+
+  - command：I2C 协议数据的第 0 字节命令码（即偏移值）；
+
+  - value：要写入的数值
+
+- 返回：
+
+  - 0：成功；
+
+  - <0：失败；
+
+
+
+#### 3.1.10 i2c_smbus_read_block_data()
+
+- 函数原型：s32 i2c_smbus_read_block_data(const struct i2c_client *client, u8 command,u8 *values)
+
+- 作用：从 I2C 设备指定偏移处读取一块数据。 
+
+- 参数：
+
+  - client：指向当前的 I2C 从设备；
+
+  - command：I2C 协议数据的第 0 字节命令码（即偏移值）；
+
+  - values：用于保存读取到的数据；
+
+- 返回：
+  - \>0：读取到的数据长度；
+  - <0：失败；
+
+
+
+#### 3.1.11 i2c_smbus_write_block_data()
+
+- 函数原型：s32 i2c_smbus_write_block_data(const struct i2c_client *client, u8 command,u8 length, const u8 *values)
+
+- 作用：从 I2C 设备指定偏移处写入一块数据（长度最大 32 字节）。
+
+- 参数：
+
+  - client：指向当前的 I2C 从设备；
+
+  - command：I2C 协议数据的第 0 字节命令码（即偏移值）；
+
+  - length：要写入的数据长度；
+
+  - values：要写入的数据；
+
+- 返回：
+  - 0：成功；
+  - <0：失败；
+
+
+
+### 3.2 i2c 用户态调用接口
+
+i2c 的操作在内核中是当做字符设备来操作的，可以通过利用文件读写接口（open，write，read，ioctrl）等操作内核目录中的/dev/i2c-* 文件来条用相关的接口，i2c 相关的操作定义在i2c-dev.c 里面，本节将介绍比较重要的几个接口：
+
+#### 3.2.1 i2cdev_open()
+
+- 函数原型：static int i2cdev_open(struct inode *inode, struct file *file)
+
+- 作用：程序（C 语言等）使用 open(file) 时调用的函数。打开一个 i2c 设备，可以像文件读写的方式往 i2c 设备中读写数据
+
+- 参数：
+
+  - inode：inode 节点；
+
+  - file：file 结构体；
+
+  - 返回：文件描述符
+
+
+
+#### 3.2.2 i2cdev_read()
+
+- 函数原型：static ssize_t i2cdev_read(struct file *file, char __user *buf, size_t count,loff_t *offset)
+
+- 作用：程序（C 语言等）调用 read() 时调用的函数。像往文件里面读数据一样从 i2c 设备中读数据。底层调用 i2c_xfer 传输数据
+
+- 参数：
+
+  - file：file 结构体；
+
+  - buf，写数据 buf； 
+
+  - offset, 文件偏移。
+
+- 返回：
+
+  - 非空：返回读取的字节数；
+
+  - <0：失败；
+
+
+
+#### 3.2.3 i2cdev_write()
+
+- 函数原型：static ssize_t i2cdev_write(struct file *file, const char __user *buf,size_t count, loff_t *offset)
+
+- 作用：程序（C 语言等）调用 write() 时调用的函数。像往文件里面写数据一样往 i2c 设备中写数据。底层调用 i2c_xfer 传输数据
+
+- 参数：
+
+  - file：file 结构体；
+
+  - buf：读数据 buf； 
+
+  - offset, 文件偏移。
+
+- 返回：
+
+  - 0：成功；
+
+  - <0：失败；
+
+
+
+#### 3.2.4 i2cdev_ioctl()
+
+- 函数原型：static long i2cdev_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
+
+- 作用：程序（C 语言等）调用 ioctl() 时调用的函数。像对文件管理 i/o 一样对 i2c 设备管理。该功能比较强大，可以修改 i2c 设备的地址，往 i2 设备里面读写数据，使用 smbus 等等，详细的可以查阅该函数。
+
+- 参数：
+
+  - file：file 结构体；
+
+  - cmd：指令；
+
+  - arg：其他参数。
+
+- 返回：
+
+  - 0：成功；
+
+  - <0：失败；
+
