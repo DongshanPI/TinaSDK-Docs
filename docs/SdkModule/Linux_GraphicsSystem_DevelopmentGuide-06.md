@@ -52,13 +52,13 @@ Gui --->
 如下图所示：
 
 
-![图8-1: Wayland选项](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image17.jpg)
+![图8-1: Wayland选项](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image17.jpg)
 
 
 glmark2是使用GPU的跑分测试程序，可以在R18上使用DRM作为Wayland后端的时候使用，除此之外还可以使用FBDEV进行显示并测试GPU性能。wayland，wayland-protocols在编译weston的时候用到，进入到weston的配置界面，可以配置weston支持的功能。如下图所示：
 
 
-![图8-2: Weston选项](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image18.jpg)
+![图8-2: Weston选项](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image18.jpg)
 
 
 主要关注以下几项配置：
@@ -97,7 +97,7 @@ Kernel modules --->
 选择DRM与GPU加速的如下图所示：
 
 
-![图8-3: Kernel modules配置](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image19.jpg)
+![图8-3: Kernel modules配置](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image19.jpg)
 
 
 注意FBDEV与DRM是互斥的，不能同时选择。
@@ -129,7 +129,7 @@ Gui --->
             [ ] Enable cairo xml support
 ```
 
-![图8-4: Cairo选项](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image20.jpg)
+![图8-4: Cairo选项](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image20.jpg)
 
 #### 8.2.2 kernel_menuconfig
 
@@ -162,13 +162,13 @@ Device Drivers --->
 如下图所示：
 
 
-![图8-5: Video support for sunxi选项](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image21.jpg)
+![图8-5: Video support for sunxi选项](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image21.jpg)
 
 
-![图8-6: Console display driver support选项](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image22.jpg)
+![图8-6: Console display driver support选项](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image22.jpg)
 
 
-![图8-7: Character devices选项](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image23.jpg)
+![图8-7: Character devices选项](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image23.jpg)
 
 
 ##### 8.2.2.2 DRM.
@@ -210,7 +210,7 @@ Device Drivers --->
 如下图所示：
 
 
-![图8-8: Graphics support选项](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image24.jpg)
+![图8-8: Graphics support选项](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image24.jpg)
 
 DRM配置好之后，以前可能编译过不使用DRM的固件，需要先把out删除掉，并且需要清理
 之前内核编译的文件，不然可能会遇到一些编译问题，在内核目录下执行：

@@ -12,7 +12,7 @@ make menuconfig --->
     	<*> logd
 ```
 
-![Tina_Linux_syslog_Development_Guide-image-20230102174959204](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_syslog_Development_Guide-image-20230102174959204.png)
+![Tina_Linux_syslog_Development_Guide-image-20230102174959204](https://photos.100ask.net/Tina-Sdk/Tina_Linux_syslog_Development_Guide-image-20230102174959204.png)
 
 <center>图5-1: logd 配置图</center>
 
@@ -24,7 +24,7 @@ make menuconfig --->
     	<*> ubox
 ```
 
-![Tina_Linux_syslog_Development_Guide-image-20230102175031723](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_syslog_Development_Guide-image-20230102175031723.png)
+![Tina_Linux_syslog_Development_Guide-image-20230102175031723](https://photos.100ask.net/Tina-Sdk/Tina_Linux_syslog_Development_Guide-image-20230102175031723.png)
 
 <center>图5-2: ubox 配置图</center>
 
@@ -89,7 +89,7 @@ make menuconfig --->
     	<*> syslog-ng
 ```
 
-![Tina_Linux_syslog_Development_Guide-image-20230102175320862](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_syslog_Development_Guide-image-20230102175320862.png)
+![Tina_Linux_syslog_Development_Guide-image-20230102175320862](https://photos.100ask.net/Tina-Sdk/Tina_Linux_syslog_Development_Guide-image-20230102175320862.png)
 
 <center>图5-3: syslog-ng 配置图</center>
 
@@ -107,7 +107,7 @@ make menuconfig --->
     	<*> logrotate
 ```
 
-![Tina_Linux_syslog_Development_Guide-image-20230102175409032](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_syslog_Development_Guide-image-20230102175409032.png)
+![Tina_Linux_syslog_Development_Guide-image-20230102175409032](https://photos.100ask.net/Tina-Sdk/Tina_Linux_syslog_Development_Guide-image-20230102175409032.png)
 
 <center>图5-4: logrotate 配置图</center>
 

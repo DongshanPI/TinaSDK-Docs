@@ -402,19 +402,19 @@ sdc2: sdmmc@04022000 {
 
 1.menuconfig 主界面
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxMMCDevelopmentGuide_001.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxMMCDevelopmentGuide_001.png)
 
 ​																图 2-1: menuconfig 主界面
 
 2. 进入 Device Drivers，并选中 MMC/SD/SDIO card support 为 “ * ”
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxMMCDevelopmentGuide_002.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxMMCDevelopmentGuide_002.png)
 
 ​															图 2-2: Device drivers 界面
 
 3. 选择 Allwinner sunxi SD/MMC Host Controller support 为 “ * ”，编译进内核（M 为编译进模块）
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxMMCDevelopmentGuide_003.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxMMCDevelopmentGuide_003.png)
 
 ​															图 2-3: sdmmc 支持界面
 

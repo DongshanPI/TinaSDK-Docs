@@ -6,7 +6,7 @@
 
 这里使用R329 来作为例子，其对应的设备节点为：
 
-![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228150541561](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228150541561.png)
+![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228150541561](https://photos.100ask.net/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228150541561.png)
 
 <center>图5-1: AXP 按键节点图</center>
 
@@ -55,7 +55,7 @@ Device Drivers
             └─>X-Powers AXP2101 power button driver
 ```
 
-![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228151211736](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228151211736.png)
+![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228151211736](https://photos.100ask.net/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228151211736.png)
 
 <center>图5-2: AXPKEY 配置图</center>
 

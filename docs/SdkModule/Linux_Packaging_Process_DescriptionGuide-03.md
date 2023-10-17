@@ -4,7 +4,7 @@
 
 在Tina 主目录下执行make -j16 编译完成后便可以执行pack 进行打包工作，整个打包过程大概如下图所示：
 
-![image-20230104103604851](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Packflow_DevGuide_image-20230104103604851.png)
+![image-20230104103604851](https://photos.100ask.net/Tina-Sdk/Linux_Packflow_DevGuide_image-20230104103604851.png)
 
 结合上面的打包流程图分析，打包方法在Tina SDK 根目录下运行：
 
@@ -210,7 +210,7 @@ dragon image.cfg sys_partition.fex
 上一章节讲述了打包脚本的几个阶段，本节我们换个视角看打包过程。打包过程是将编译好后的二进制镜像和各种配置文件，通过一些加工、转换和合成最终生成固件包。如下图所示，讲述了需要打包的各种文件在哪个位置，会经过如何处理，合成什么文件，最终生
 成了固件包。
 
-![image-20230104104015158](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Packflow_DevGuide_image-20230104104015158.png)
+![image-20230104104015158](https://photos.100ask.net/Tina-Sdk/Linux_Packflow_DevGuide_image-20230104104015158.png)
 
 其中蓝色的是源文件或者生成的中间文件；
 绿色的是打包用到的工具；
@@ -218,7 +218,7 @@ dragon image.cfg sys_partition.fex
 固件里面包含哪些文件，可以参考下一章节。
 这里展示另一张图，可以从Tina SDK 全局看打包的作用位置，以及数据的流动。
 
-![image-20230104104033322](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Packflow_DevGuide_image-20230104104033322.png)
+![image-20230104104033322](https://photos.100ask.net/Tina-Sdk/Linux_Packflow_DevGuide_image-20230104104033322.png)
 
 ## 4.4 固件组成成员分析
 
@@ -306,7 +306,7 @@ filename= name,maintype=ITEM_ROOTFSFAT16,subtype = user_define
 用户自己定义的名称，使用数字和英文字符(区分大小写)，最大长度必须为16 字节。只要按照上述规则书写，并放到文件的[FILELIST] 之后，等到打包的时候就会自动把文件添加到固件包中。
 下表描述image.cfg 文件中的各固件成员的作用。
 
-![image-20230104104210037](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Packflow_DevGuide_image-20230104104210037.png)
+![image-20230104104210037](https://photos.100ask.net/Tina-Sdk/Linux_Packflow_DevGuide_image-20230104104210037.png)
 
 ### 4.4.2 sys_partition.fex 配置文件分析
 

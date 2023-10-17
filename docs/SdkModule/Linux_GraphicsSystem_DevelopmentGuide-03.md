@@ -219,14 +219,14 @@ Gui --->
 
 运行QT的应用程序会出现如下问题，需要将libqeglfs.so库重新推到/usr/lib/qt5/plugins/platforms路径下。这里如果多个插件平台库都出现这个问题，可能是由于，Tina系统中将编译生成的库进行裁剪，使其更小，Qt在进行动态加载的时候，需要找到库头信息中的strtab制表符，因此在make menuconfig中选择轻度裁剪模式-strip。
 
-![图3-1: QT5问题锦集strip](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image7.jpg)
+![图3-1: QT5问题锦集strip](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image7.jpg)
 
 #### 3.5.2 eglfs
 
 出现下面错误，申请不上native window有可能是缺少libqeglfs-mali-integration.so这个库，需要将其adb push到小机端的/usr/lib/qt5/plugins/egldeviceintegrations路径下。
 
 
-![图3-2: QT5问题锦集eglfs](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image8.jpg)
+![图3-2: QT5问题锦集eglfs](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image8.jpg)
 
 
 #### 3.5.3 runtime
@@ -239,7 +239,7 @@ export XDG_RUNTIME_DIR=/dev/shm
 ```
 
 
-![图3-3: QT5问题锦集runtime](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image9.jpg)
+![图3-3: QT5问题锦集runtime](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image9.jpg)
 
 
 

@@ -1,7 +1,7 @@
 ## 2 模块介绍
 
 Linux 内核中,RTC 驱动的结构图如下所示, 可以分为三个层次:
-![image-20221216114050541](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_RTC_DevGuide_image-20221216114050541.png)
+![image-20221216114050541](https://photos.100ask.net/Tina-Sdk/Linux_RTC_DevGuide_image-20221216114050541.png)
 
 接口层，负责向用户空间提供操作的结点以及相关接口。
 • RTC Core, 为rtc 驱动提供了一套API, 完成设备和驱动的注册等。

@@ -32,7 +32,7 @@ Tina Configuration
 ```
 
 
-![图3-1: Tina menuconfig](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Optimization_development_Guide-3-1.jpg)
+![图3-1: Tina menuconfig](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Optimization_development_Guide-3-1.jpg)
 
 
 > 注：如果看不到该选项，使用？键搜索，会发现此项有一些依赖选项，使能依赖选项即可看到

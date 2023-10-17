@@ -7,7 +7,7 @@ Tina 从SOC 层面支持ARM Trustzone, 但要设计满足Linux 系统安全标�
 
 optee 系统，是由运行在TEE 环境下的optee os、TA、以及运行在REE 环境下的client、driver、NA 组成，一共五个部分。optee 总体架构如下图所示：
 
-![image-20230103102922052](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103102922052.png)
+![image-20230103102922052](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103102922052.png)
 
 ### 4.2 开启Secure OS
 
@@ -32,7 +32,7 @@ TEE 环境使用的内存有3 个部分，各部分大小与起始地址在Secur
 
 在文件tina/lichee/linux-4.9/arch/arm/boot/dts/sun8iw18p1.dtsi 也必须预留3M 的内存。
 
-![image-20230103103045891](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103103045891.png)
+![image-20230103103045891](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103103045891.png)
 
 #### 4.2.2 内核支持optee 驱动
 

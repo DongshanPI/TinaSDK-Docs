@@ -31,7 +31,7 @@
 
 测试时，检查编码后的文件是否正常，一般需要使用 VLC 等播放软件看下是否有花屏、马赛克、 卡顿等问题。
 
-![image-20221120185053786](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185053786.png)
+![image-20221120185053786](https://photos.100ask.net/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185053786.png)
 
 <center>图 9-1: VLC 播放码流</center>
 
@@ -41,7 +41,7 @@
 
 测试时，检查编码参数是否符合预期，一般需要使用 MediaInfo 软件。
 
-![image-20221120185136099](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185136099.png)
+![image-20221120185136099](https://photos.100ask.net/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185136099.png)
 
 <center>图 9-2: MediaInfo 分析码流</center>
 
@@ -100,7 +100,7 @@ mdhd_Duration : 57648
 
 YUView 工具配置 ffmpeg 动态库的方式：
 
-![image-20221120185203405](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185203405.png)
+![image-20221120185203405](https://photos.100ask.net/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185203405.png)
 
 <center>图 9-3: YUView 软件配置 ffmpeg 动态库</center>
 
@@ -122,7 +122,7 @@ YUView 工具配置 ffmpeg 动态库的方式：
 
 使用 PC 软件 VLC 播放彩转灰测试生成的视频文件，效果如下：
 
-![image-20221120185237306](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185237306.png)
+![image-20221120185237306](https://photos.100ask.net/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185237306.png)
 
 <center>图 9-4: 彩转灰效果</center>
 
@@ -142,7 +142,7 @@ YUView 工具配置 ffmpeg 动态库的方式：
 
    • 旋转 90 度、翻转的效果
 
-   ![image-20221120185305801](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185305801.png)
+   ![image-20221120185305801](https://photos.100ask.net/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185305801.png)
 
 <center>图 9-5: 旋转-1</center>
 
@@ -158,7 +158,7 @@ YUView 工具配置 ffmpeg 动态库的方式：
 
    • 旋转 270 度、翻转的效果
 
-   ![image-20221120185325320](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185325320.png)
+   ![image-20221120185325320](https://photos.100ask.net/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185325320.png)
 
    <center>图 9-6: 旋转-2</center>
 
@@ -172,11 +172,11 @@ H264：
 
 使用 Elescard StreamEye 4.6 工具（只支持 H264），按如下截图配置后，开启 P 帧帧内刷 新后，图像看到一个橙色的竖状矩形条，同时逐帧往后查看时矩形条会从左往右移动；关闭 P 帧 帧内刷新后，则无此矩形条。
 
-![image-20221120185345891](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185345891.png)
+![image-20221120185345891](https://photos.100ask.net/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185345891.png)
 
 <center>图 9-7: H264-开启 P 帧帧内刷新</center>
 
-![image-20221120185407387](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185407387.png)
+![image-20221120185407387](https://photos.100ask.net/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185407387.png)
 
 <center>图 9-8: H264-关闭 P 帧帧内刷新</center>
 
@@ -188,11 +188,11 @@ H265：
 
 使用 YUView 工具（需要配置 ffmpeg 动态库）可分析 H265 文件，勾选 Pred Mode 后，可显 示一个蓝色的竖状矩形条，同时逐帧往后查看时矩形条会从左往右移动；关闭 P 帧帧内刷新后， 则无此矩形条。
 
-![image-20221120185425260](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185425260.png)
+![image-20221120185425260](https://photos.100ask.net/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185425260.png)
 
 <center>图 9-9: H265-开启 P 帧帧内刷新</center>
 
-![image-20221120185502545](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185502545.png)
+![image-20221120185502545](https://photos.100ask.net/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185502545.png)
 
 <center>图 9-10: H265-关闭 P 帧帧内刷新</center>
 
@@ -202,7 +202,7 @@ H265：
 
 1.显示 OSD 的效果：
 
-![image-20221120185520358](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185520358.png)
+![image-20221120185520358](https://photos.100ask.net/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185520358.png)
 
 <center>图 9-11: 编码 OSD-1</center>
 
@@ -210,7 +210,7 @@ H265：
 
 2.改变 Region 位置后，显示 OSD 的效果：
 
-![image-20221120185539487](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185539487.png)
+![image-20221120185539487](https://photos.100ask.net/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185539487.png)
 
 <center>图 9-12: 编码 OSD-2</center>
 
@@ -218,7 +218,7 @@ H265：
 
 3.OSD 坐标和大小示意图
 
-![image-20221120185558887](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185558887.png)
+![image-20221120185558887](https://photos.100ask.net/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185558887.png)
 
 <center>图 9-13: OSD 坐标和大小示意图</center>
 
@@ -242,7 +242,7 @@ H265：
 2. 然后编译 sample_aec，这样底层模块在运行过程中会保存采集通道的数据和回采通道的数 据。 
 3. 再用软件 Audacity 进行分析，从波形上看延迟时间是否正常。
 
-![image-20221120185621911](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185621911.png)
+![image-20221120185621911](https://photos.100ask.net/Tina-Sdk/MPPSampleInstructionsUse_image-20221120185621911.png)
 
 <center>图 9-14: 通道波形对比图</center>
 

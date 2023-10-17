@@ -21,7 +21,7 @@ LRADC-Key 有如下特性：
 
 应的中断给CPU, 同时电压的变化值会通过LRADC 内部的data register 的值(0~0x3f) 来体现。
 
-![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228144650067](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228144650067.png)
+![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228144650067](https://photos.100ask.net/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228144650067.png)
 
 <center>图4-1: LRADC 按键原理图</center>
 
@@ -43,7 +43,7 @@ linux-4.9/arch/arm/boot/dts/sun8iw18p1.dtsi
               └─>softwinnner KEY BOARD support
   ```
 
-  ![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228144827271](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228144827271.png)
+  ![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228144827271](https://photos.100ask.net/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228144827271.png)
 
 <center>图4-2: linux4.4/4.9 LRADC 按键配置图</center>
 
@@ -173,7 +173,7 @@ GPADC 有多个通道，例如在R328S3 中有4 个通道。
 
 的框图如下图所示。
 
-![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228145351260](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228145351260.png)
+![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228145351260](https://photos.100ask.net/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228145351260.png)
 
 <center>图4-3: GPADC 按键硬件图</center>
 
@@ -194,7 +194,7 @@ Device Drivers
                 └─>SUNXI GPADC
 ```
 
-![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228145601077](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228145601077.png)
+![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228145601077](https://photos.100ask.net/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228145601077.png)
 
 <center>图4-4: linux4.4/4.9 GPADC 按键配置图</center>
 
@@ -411,7 +411,7 @@ Device Drivers
             └─>softwinnner KEY BOARD support
 ```
 
-![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228150327080](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228150327080.png)
+![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228150327080](https://photos.100ask.net/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228150327080.png)
 
 <center>图4-5: Linux-5.4 LRADC 按键配置图</center>
 
@@ -457,7 +457,7 @@ Device Drivers
             └─>sunxi gpadc driver support
 ```
 
-![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228150504719](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228150504719.png)
+![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228150504719](https://photos.100ask.net/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228150504719.png)
 
 <center>图4-6: Linux-5.4 GPADC 配置图</center>
 

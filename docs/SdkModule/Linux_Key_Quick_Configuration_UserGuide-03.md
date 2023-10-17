@@ -32,7 +32,7 @@ lichee/linux-4.9/arch/arm/boot/dts/sun8iw18p1.dtsi
 
 GOIO-Key 的硬件配置图参考下图所示：
 
-![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228142536350](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228142536350.png)
+![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228142536350](https://photos.100ask.net/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228142536350.png)
 
 <center>图3-1: GPIO-Key 配置图</center>
 
@@ -82,7 +82,7 @@ Device Drivers
             └─>Polled GPIO buttons
 ```
 
-![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228142913846](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228142913846.png)
+![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228142913846](https://photos.100ask.net/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228142913846.png)
 
 <center>图3-2: linux4.4/4.9 轮询按键配置图</center>
 
@@ -139,7 +139,7 @@ Device Drivers
             └─>GPIO Buttons
 ```
 
-![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228143516377](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228143516377.png)
+![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228143516377](https://photos.100ask.net/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228143516377.png)
 
 <center>图3-3: linux4.4/4.9 中断按键配置图</center>
 
@@ -254,7 +254,7 @@ Device Drivers
 3.2.3 矩阵键盘
 当需要使用大量按键的时候，如果单独给每一个按键配一个GPIO 的话，那GPIO 是远远不够的。这时，可以使用矩阵键盘的方式，使用N 个GPIO，就可以最大支持N*N 个按键。矩阵按键的硬件原理图如下所示：
 
-![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228144144489](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228144144489.png)
+![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228144144489](https://photos.100ask.net/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228144144489.png)
 
 <center>图3-4: 矩阵按键硬件原理图</center>
 
@@ -368,7 +368,7 @@ Device Drivers
             └─>GPIO driven matrix keypad support
 ```
 
-![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228144512150](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228144512150.png)
+![Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228144512150](https://photos.100ask.net/Tina-Sdk/Tina_Linux_Key_Quick_Configuration_User_Guide-image-20221228144512150.png)
 
 <center>图3-5: 矩阵键盘配置图</center>
 

@@ -4,11 +4,11 @@
 
 在tina/目录下执行”make menuconfig” 进行配置:
 
-![image-20230104120106024](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_MassProductionTest_image-20230104120106024.png)
+![image-20230104120106024](https://photos.100ask.net/Tina-Sdk/Linux_MassProductionTest_image-20230104120106024.png)
 
 选择TestTools->tinatest->System Config->global->outlog，这里选择DragonMAT：
 
-![image-20230104120117902](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_MassProductionTest_image-20230104120117902.png)
+![image-20230104120117902](https://photos.100ask.net/Tina-Sdk/Linux_MassProductionTest_image-20230104120117902.png)
 
 DragonMAT 有三个子项可供选择：
 
@@ -20,20 +20,20 @@ DragonMAT 有三个子项可供选择：
 
 这里选中wait_till_connected，exit_when_end，exit_call 根据需要选择。
 
-![image-20230104120131531](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_MassProductionTest_image-20230104120131531.png)
+![image-20230104120131531](https://photos.100ask.net/Tina-Sdk/Linux_MassProductionTest_image-20230104120131531.png)
 
 Exit 到TestTools->tinatest 界面，选择base，进行量产测试用例的选择：
 
-![image-20230104120141328](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_MassProductionTest_image-20230104120141328.png)
+![image-20230104120141328](https://photos.100ask.net/Tina-Sdk/Linux_MassProductionTest_image-20230104120141328.png)
 
 选择base 下的production，该选项下的所有测试用例都是量产测试用例，可根据测试需求进行选择。其名称格式为：+ “tester”。
 例如：cameratester 就是测试camera 的测试用例。
 
-![image-20230104120154071](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_MassProductionTest_image-20230104120154071.png)
+![image-20230104120154071](https://photos.100ask.net/Tina-Sdk/Linux_MassProductionTest_image-20230104120154071.png)
 
 打开每一个测试用例，能够对用例进行配置。每一个测试用例的具体配置请参考“2.2 用例配置”。在对tinatest 及其测试用例进行配置后，即可选择Save，点击OK 保存配置，进行固件的编译或者ipk 包的编译。
 
-![image-20230104120204971](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_MassProductionTest_image-20230104120204971.png)
+![image-20230104120204971](https://photos.100ask.net/Tina-Sdk/Linux_MassProductionTest_image-20230104120204971.png)
 
 ## 2.2 用例配置
 
@@ -43,7 +43,7 @@ Exit 到TestTools->tinatest 界面，选择base，进行量产测试用例的选
 
 在menuconfig 中选中测试用例后，进入该测试用例的配置菜单。例如：pmutester 的配置菜单。
 
-![image-20230104120214224](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_MassProductionTest_image-20230104120214224.png)
+![image-20230104120214224](https://photos.100ask.net/Tina-Sdk/Linux_MassProductionTest_image-20230104120214224.png)
 
 测试用例配置项分为普通配置项和高级配置项：
 普通配置项用于修改测试用例的测试参数，例如上图第二行的axp_name，则修改pmu 测试用例的芯片名为axp803。
@@ -70,7 +70,7 @@ Kernel modules
 
 首先选择Kernel modules 进入下一项配置，如下图所示：
 
-![image-20230104120232198](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_MassProductionTest_image-20230104120232198.png)
+![image-20230104120232198](https://photos.100ask.net/Tina-Sdk/Linux_MassProductionTest_image-20230104120232198.png)
 
 一些平台由于框架不同（如V853），选择video 的modules 会有不同，如下：
 
@@ -80,7 +80,7 @@ Kernel modules
 	└─>kmod-vin-v4l2
 ```
 
-![image-20230104120240043](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_MassProductionTest_image-20230104120240043.png)
+![image-20230104120240043](https://photos.100ask.net/Tina-Sdk/Linux_MassProductionTest_image-20230104120240043.png)
 
 **说明**
 **要选择当前要测试的板子上对应的camera 模块。**
@@ -117,7 +117,7 @@ Kernel modules
 	└─>kmod-touchscreen-gt82x
 ```
 
-![image-20230104120250639](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_MassProductionTest_image-20230104120250639.png)
+![image-20230104120250639](https://photos.100ask.net/Tina-Sdk/Linux_MassProductionTest_image-20230104120250639.png)
 
 **说明**
 **根据当前所用触摸屏选择对应的模块，例如当前选用的是gt82x 触摸屏。**
@@ -158,7 +158,7 @@ Device Drivers
 		└─>softwinner KEY BOARD support
 ```
 
-![image-20230104125135875](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_MassProductionTest_image-20230104125135875.png)
+![image-20230104125135875](https://photos.100ask.net/Tina-Sdk/Linux_MassProductionTest_image-20230104125135875.png)
 
 b. 私有配置
 number_of_keys: 根据实际板子的按键情况，配置按键数目，一般开发板上adc 按键都是5个，而测试keytester 默认配置是2 个。
@@ -329,7 +329,7 @@ a. 安装
 
 在tina/目录下执行make menuconfig 后，选择Utilities->led_test：
 
-![image-20230104125153054](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_MassProductionTest_image-20230104125153054.png)
+![image-20230104125153054](https://photos.100ask.net/Tina-Sdk/Linux_MassProductionTest_image-20230104125153054.png)
 
 b. 私有配置
 无需额外配置。
@@ -356,7 +356,7 @@ a. 安装
    2. tina/目录下执行make menuconfig，选中Kernel modules->Video Support->kmodsunxi-
       disp & kmod-sunxi-hdmi
 
-   ![image-20230104125213512](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_MassProductionTest_image-20230104125213512.png)
+   ![image-20230104125213512](https://photos.100ask.net/Tina-Sdk/Linux_MassProductionTest_image-20230104125213512.png)
 
 b. 私有配置
 

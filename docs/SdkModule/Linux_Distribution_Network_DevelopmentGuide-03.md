@@ -14,7 +14,7 @@
 6. 点击aw_bt_blink 配对热点进行连接，并发送想要板子连接的ssid 和passwd。
 7. 板子收到ssid 和passwd 后会进行路由的连接，连接上获取到ip 后就可以执行ping 测试了。
 
-![image-20230104105423666](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina-Linux_configNet_image-20230104105423666.png)
+![image-20230104105423666](https://photos.100ask.net/Tina-Sdk/Tina-Linux_configNet_image-20230104105423666.png)
 
 ## 3.3 softap 配网
 
@@ -25,4 +25,4 @@
 5. 手机利用ckysoftAPDemo 　发送想要板子连接的ssid 和passwd。
 6. 板子收到ssid 和passwd 后会进行路由的连接，连接上获取到ip 后就可以执行ping 测试了。
 
-![image-20230104105436185](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina-Linux_configNet_image-20230104105436185.png)
+![image-20230104105436185](https://photos.100ask.net/Tina-Sdk/Tina-Linux_configNet_image-20230104105436185.png)

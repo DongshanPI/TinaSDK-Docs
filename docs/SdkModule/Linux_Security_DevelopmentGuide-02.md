@@ -13,34 +13,34 @@
 （3）加解密算法E(D)。用于实现从明文到密文或从密文到明文的一种转换关系。
 （4）密钥K。密钥是加密和解密算法中的关键参数。
 
-![image-20230103095847960](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103095847960.png)
+![image-20230103095847960](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103095847960.png)
 
 #### 2.2.2 加密算法
 
 对称加密算法：加密、解密用的是同一个密钥。比如AES 算法。
 
-![image-20230103095914998](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103095914998.png)
+![image-20230103095914998](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103095914998.png)
 
 非对称加密算法：加密、解密用的是不同的密钥，一个密钥公开，即公钥，另一个密钥持有，即私钥。其中一把用于加密，另一把用于解密。比如RSA 算法。
 散列（hash）算法：一种摘要算法，把一笔任意长度的数据通过计算得到固定长度的输出，但不能通过这个输出得到原始计算的数据。
 
-![image-20230103095938483](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103095938483.png)
+![image-20230103095938483](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103095938483.png)
 
 #### 2.2.3 签名与证书
 
 数字签名：数字签名是非对称密钥加密技术与数字摘要技术的应用。数字签名保证信息是由签名者自己签名发送的，签名者不能否认或难以否认；可保证信息自签发后到收到为止未曾作过任何修改，签发的文件是真实文件。
 
-![image-20230103100010011](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103100010011.png)
+![image-20230103100010011](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103100010011.png)
 
 数字证书：是一个经证书授权中心数字签名的包含公开密钥拥有者信息以及公开密钥的文件，是一种权威性的电子文档。
 
-![image-20230103100026829](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103100026829.png)
+![image-20230103100026829](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103100026829.png)
 
 ### 2.3 TrustZone
 
 TrustZone 是ARM 提出的安全解决方案，旨在提供独立的安全操作系统及硬件虚拟化技术，提供可信的执行环境（Trust Execution Environment）。TrustZone 系统模型如下图所示。TrustZone 技术将软硬件资源隔离成两个环境，分别为安全世界（Secure World）和非安全世界（Normal World），所有需要保密的操作在安全世界执行，其余操作在非安全世界执行，安全世界与非安全世界通过monitor mode 来进行切换。具体可参考《trustzone securitywhitepaper.pdf》。
 
-![image-20230103100105265](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103100105265.png)
+![image-20230103100105265](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103100105265.png)
 
 #### 2.3.1 OP-TEE
 

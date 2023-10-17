@@ -36,15 +36,15 @@ Flutter为应用开发带来了革新：只要一套代码库，即可构建、�
 下面是应用complex_layout截图：
 
 
-![图10-1: complex_layout主页截图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image28.jpg)
+![图10-1: complex_layout主页截图](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image28.jpg)
 
 下面是应用gallery截图：
 
 
-![图10-2: gallery主页截图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image29.jpg)
+![图10-2: gallery主页截图](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image29.jpg)
 
 
-![图10-3: gallery_1主页截图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image30.jpg)
+![图10-3: gallery_1主页截图](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image30.jpg)
 
 
 ### 10.2 Flutter配置

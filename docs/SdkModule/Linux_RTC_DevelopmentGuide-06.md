@@ -4,7 +4,7 @@
 
 1. 按照下图RTC 时钟源的路径，确认一下RTC 所使用的时钟源
 
-![image-20221216124213488](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_RTC_DevGuide_image-20221216124213488.png)
+![image-20221216124213488](https://photos.100ask.net/Tina-Sdk/Linux_RTC_DevGuide_image-20221216124213488.png)
 
 2. 如果确认使用的时钟源为RC16M，则确认一下有没有启用校准功能，因为RC16M 有正负50% 的偏差。
 3. 如果使用外部晶体，则确认一下外部晶体的震荡频率是否正确。

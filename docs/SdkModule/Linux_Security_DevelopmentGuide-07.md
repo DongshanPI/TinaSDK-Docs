@@ -39,7 +39,7 @@ SELinux 共有三种运行模式：
 
 LSM（Linux Security Module）是内核为支持不同安全机制的实现所设计的一个通用访问控制框架。目前LSM 框架下访问决策模块包括SELinux、SAMCK、tomoyo、yama、apparmor。
 
-![image-20230103110205745](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103110205745.png)
+![image-20230103110205745](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103110205745.png)
 
 SELinux 的决策流程如上图所示。策略管理工具将策略文件载入到内核中的Security server中。当主体访问客体时，首先进行DAC 检测，通过后再进行MAC 检测。
 
@@ -250,13 +250,13 @@ neverallow fork_test self:process fork;
 
 新增完策略之后，编译，提示有一个冲突。如下图所示，原本在domain.te 文件中允许domain对自己有process 的fork 操作，但是在fork_test.te 中又不允许，所以有冲突，将这里的domain减去fork_test。
 
-![image-20230103115326454](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103115326454.png)
+![image-20230103115326454](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103115326454.png)
 
 ##### 7.4.1.3 测试
 
 如下图所示，/usr/bin/fork_test 与/usr/bin/fork_test_bak 内容完全一样，安全上下文有差异。
 
-![image-20230103115347951](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103115347951.png)
+![image-20230103115347951](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103115347951.png)
 
 fork_test 执行时提示错误，错误信息中的scontext 表示主体的上下文，tcontext 表示客体的安全上下文，tclass 表示操作的类型，fork 表示具体的操作，permissive=0 表示上述的操作不被允许。（如果fork_test.te 中包含了permissive fork_test; 那么这里也会出现提示语句，但是permissive=1，表示允许fork）。
 fork_test_bak 文件的类型是system_file，shell 执行该文件时，新进程的安全上下文就是shell，shell 可以对自己进行fork 操作，所以执行成功。
@@ -341,7 +341,7 @@ allow sunxi_info shell:fd use;
 
 ##### 7.4.2.3 测试
 
-![image-20230103115539968](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103115539968.png)
+![image-20230103115539968](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103115539968.png)
 
 测试结果，/usr/bin/sunxi_info 与/usr/bin/sunxi_info_bak 文件内容一样，安全上下文不同，只有/usr/bin/sunxi_info 才能正确执行。/usr/bin/sunxi_info_bak 执行的时候，提示shell 对sunxi_info_device 设备没有chr_file 的read 与write 权限。
 最后一条指令"ls /dev/sunxi_soc_info"执行也失败，提示shell 对sunxi_info_device 设备没有chr_file 的getattr 权限（获取属性权限）。

@@ -1,6 +1,6 @@
 ## 5 FAQ
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxMMCDevelopmentGuide_004.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxMMCDevelopmentGuide_004.png)
 
 1、问：sd 卡和 wifi 经常出现 retry：start 等打印的原因和原理；
 
@@ -166,7 +166,7 @@ cat manfid
 
 (3) 获取测试结果：cat /$base/sunxi_host_perf
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxMMCDevelopmentGuide_006.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxMMCDevelopmentGuide_006.png)
 
 ​																				图 5-1: sunxi_host_perf
 
@@ -220,7 +220,7 @@ fiter_speed：速度低于这个值就打印出来，单位是 B/S
 
 参考
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxMMCDevelopmentGuide_005.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxMMCDevelopmentGuide_005.png)
 
 ​																	图 5-2: sysconfig 性能测试配置
 

@@ -25,6 +25,6 @@ pause
 
 ### 4.2 调用流程
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxMIPICSIDevelopmentGuide_005.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxMIPICSIDevelopmentGuide_005.png)
 
 ​														  		图 4-1: CSI 调用流程	

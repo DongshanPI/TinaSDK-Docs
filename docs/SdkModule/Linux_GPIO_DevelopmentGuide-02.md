@@ -40,7 +40,7 @@ Pinctrl 框架是 linux 系统为统一各 SoC 厂商 pin 管理，避免各 SoC
 
 Sunxi Pinctrl 驱动模块的框架如下图所示，整个驱动模块可以分成 4 个部分：pinctrl api、pinctrl common frame、sunxi pinctrl driver，以及 board configuration。（图中最上面一层 device driver 表示 Pinctrl 驱动的使用者）
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxGPIODevelopmentGuide_001.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxGPIODevelopmentGuide_001.png)
 
 ​                                                               图 2-1: pinctrl 驱动整体框架图
 
@@ -58,7 +58,7 @@ Board configuration：设备 pin 配置信息，一般采用设备树进行配�
 
 Pinctrl framework 主要处理 pinstate、pinmux 和 pinconfig 三个功能，pinstate 和 pinmux、pinconfig 映射关系如下图所示。
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxGPIODevelopmentGuide_002.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxGPIODevelopmentGuide_002.png)
 
 <center>图 2-2: pinctrl 驱动 framework 图</center>
 

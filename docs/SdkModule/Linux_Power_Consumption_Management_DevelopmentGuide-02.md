@@ -8,7 +8,7 @@ tina 功耗管理系统主要由休眠唤醒（standby、autosleep、runtime pm�
 
 一般我们可将其分为两类，即静态功耗管理和动态功耗管理。
 
-![Tina_Linux_Power_Management_Development_Guide-image-20230104145122259](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Power_Management_Development_Guide-image-20230104145122259.png)
+![Tina_Linux_Power_Management_Development_Guide-image-20230104145122259](https://photos.100ask.net/Tina-Sdk/Tina_Linux_Power_Management_Development_Guide-image-20230104145122259.png)
 
 <center>图2-1: 功耗管理系统分类</center>
 

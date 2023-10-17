@@ -8,7 +8,7 @@
 
 首先，选择 Device Drivers 选项进入下一级配置，如下图所示：
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxGPIODevelopmentGuide_003.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxGPIODevelopmentGuide_003.png)
 
 ​                                                        图 3-1: 内核 menuconfig 根菜单
 
@@ -16,7 +16,7 @@
 
 选择 Pin controllers, 进入下级配置，如下图所示：
 
- ![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxGPIODevelopmentGuide_004.png)
+ ![](https://photos.100ask.net/Tina-Sdk/LinuxGPIODevelopmentGuide_004.png)
 
 ​                                                      图 3-2: 内核 menuconfig device drivers 菜单
 
@@ -24,7 +24,7 @@
 
 选择 Allwinner SoC PINCTRL DRIVER, 进入下级配置，如下图所示：
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxGPIODevelopmentGuide_005.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxGPIODevelopmentGuide_005.png)
 
 ​                                                    图 3-3: 内核 menuconfig pinctrl drivers 菜单
 
@@ -32,7 +32,7 @@
 
 Sunxi pinctrl driver 默认编译进内核，如下图（以 sun50iw9p1 平台为例，其他平台类似）所示：
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxGPIODevelopmentGuide_006.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxGPIODevelopmentGuide_006.png)
 
 ​                                                  图 3-4: 内核 menuconfig allwinner pinctrl drivers 菜单
 

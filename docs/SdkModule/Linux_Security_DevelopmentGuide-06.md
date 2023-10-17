@@ -21,7 +21,7 @@
 
 使用DragonSN 烧写keybox 流程如下图所示。
 
-![image-20230103103739138](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103103739138.png)
+![image-20230103103739138](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103103739138.png)
 
 ##### 6.1.1.2 keybox_na 烧写keybox
 
@@ -49,7 +49,7 @@ usage: keybox_na [-rw] [-k key_name] <-f key_file>
 
 keybox 读取流程如下图所示。启动过程中uboot 会按照一定的条件（见6.1.1.4 小节）将flash上加密的key 读取到secure os 进行解密，并一直保存在secure os 的内存中，供TA 调用。
 
-![image-20230103103902688](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103103902688.png)
+![image-20230103103902688](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103103902688.png)
 
 ##### 6.1.1.4 keybox 列表
 
@@ -67,14 +67,14 @@ keybox_list=rsa_key, ecc_key, testkey
 
 前面已经介绍了烧写rotpk 时的配置，下图给出烧录efuse 中其他key 的配置。
 
-![image-20230103104012598](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103104012598.png)
+![image-20230103104012598](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103104012598.png)
 
 烧录efuse 时配置“烧写模式” 为“安全key”。
 其中“显示名称” 只是显示在DragonSN 工具上的名字，不会影响设备端。其中的“Key 名称” 只能是特定的字符串。对于R328 来说包括chipid、oem、rotpk、ssk、oem_secure 五种，其他方案有一些差异，通常chipid、rotpk 等都是可行的。
 烧录efuse 时，“key type” 需要选成efuse。
 烧写keybox key 时，DragonSN 的关键配置如下图所示。
 
-![image-20230103104027342](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103104027342.png)
+![image-20230103104027342](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103104027342.png)
 
 烧录keybox 时配置“烧写模式” 为“安全key”。其中“显示名称” 只是显示在DragonSN 工具上的名字，不会影响设备端。
 其中的“Key 名称” 对于不同的IC 有不同的配置。对于R328、MR813、MR813B、R329、R818、R818B、R528、V853，可以自己定义。对于其他方案，必须是widevine、ec_key、rsa_key、ec_cert1、ec_cert2、ec_cert3、rsa_cert1、rsa_cert2、rsa_cert3 这些特定的
@@ -102,7 +102,7 @@ OP-TEE Secure Storage 是根据GP TEE Internal API 规范实现的安全存储�
 
 OP-TEE REE FS Secure Storage 的软件架构如下图所示。
 
-![image-20230103104202781](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103104202781.png)
+![image-20230103104202781](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103104202781.png)
 
 ##### 6.2.1.2 REE FS Secure Storage 文件操作流程
 
@@ -133,11 +133,11 @@ TSK 是一个per-Trusted Application key，用来对FEK 进行加解密。TSK �
 
 ##### 6.2.1.4 REE FS Secure Storage Meta Data 加密流程
 
-![image-20230103104355519](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103104355519.png)
+![image-20230103104355519](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103104355519.png)
 
 ##### 6.2.1.5 REE FS Secure Storage Block data 加密流程
 
-![image-20230103104412370](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103104412370.png)
+![image-20230103104412370](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103104412370.png)
 
 #### 6.2.2 OP-TEE RPMB Secure Storage
 
@@ -145,7 +145,7 @@ TSK 是一个per-Trusted Application key，用来对FEK 进行加解密。TSK �
 
 RPMB Secure Storage 软件框架如下图所示。
 
-![image-20230103104442759](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103104442759.png)
+![image-20230103104442759](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103104442759.png)
 
 OP-TEE OS 中并不包含eMMC 驱动，因此会借助Linux 端的tee-supplicant 通过ioctl 来对RPMB 分区进行访问。
 
@@ -469,7 +469,7 @@ Failed to optee_fs_open: test.file, ret = 0xffff0008
 
 为防止未授权用户通过对设备进行物理攻击（如直接读取Flash）来获取敏感信息，造成用户数据泄露，Tina 引入dm-crypt 机制，对用户文件系统的数据提供加密保护。
 
-![image-20230103105451159](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103105451159.png)
+![image-20230103105451159](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103105451159.png)
 
 dm-crypt 是使用linux 内核加密API 框架和设备映射（device mapper）子系统的磁盘加密技术。Device mapper 在内核中作为一个块设备驱动被注册的，它包含三个重要的对象概念：mapped device、映射表、target device。Mapped device 是一个逻辑抽象，可以理解成为
 内核向外提供的逻辑设备，它通过映射表描述的映射关系和target device 建立映射。这里的映射关系可以是verity（完整性校验），也可以是crypt（加密）。上图示例中，将/dev/mmcblk0p1 通过device mapper 映射称/dev/dm-0 设备，对/dev/dm-0进行文件系统格式化后可将/dev/dm-0 挂载至/data 目录。

@@ -9,7 +9,7 @@
 
 ### 2.2 Tina Wi-Fi 软件结构
 
-![Tina_Linux_Wi-Fi_Development_Guide-image-20230103102646913](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Wi-Fi_Development_Guide-image-20230103102646913.png)
+![Tina_Linux_Wi-Fi_Development_Guide-image-20230103102646913](https://photos.100ask.net/Tina-Sdk/Tina_Linux_Wi-Fi_Development_Guide-image-20230103102646913.png)
 
 <center>图2-1: Tina 软件结构图</center>
 

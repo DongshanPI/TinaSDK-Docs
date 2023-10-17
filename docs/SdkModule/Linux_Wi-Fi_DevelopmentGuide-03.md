@@ -1,6 +1,6 @@
 ## 3 Wi-Fi 模组移植
 
-![Tina_Linux_Wi-Fi_Development_Guide-image-20230103102835768](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Wi-Fi_Development_Guide-image-20230103102835768.png)
+![Tina_Linux_Wi-Fi_Development_Guide-image-20230103102835768](https://photos.100ask.net/Tina-Sdk/Tina_Linux_Wi-Fi_Development_Guide-image-20230103102835768.png)
 
 <center>图3-1: 主控与Wi-Fi 硬件连接简图</center>
 

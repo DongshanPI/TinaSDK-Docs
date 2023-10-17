@@ -192,7 +192,7 @@ Lcd LVDS Mode
 1：JEIDA mode
 ```
 
-![image-20221129173201413](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221129173201413.png)
+![image-20221129173201413](https://photos.100ask.net/Tina-Sdk/Linux_LCD_DevGuide_image-20221129173201413.png)
 
 <center>图5-1: lvds mode</center>
 
@@ -390,11 +390,11 @@ LCD 的fsync 功能的有效电平的极性。
 1. 询问LCD 屏厂。
 2. 从屏手册或者Driver IC 手册中查找（向屏厂索要这些文档），如下图所示。
 
-![image-20221129174730302](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221129174730302.png)
+![image-20221129174730302](https://photos.100ask.net/Tina-Sdk/Linux_LCD_DevGuide_image-20221129174730302.png)
 
 <center>图5-2: lcd_info1</center>
 
-![image-20221129174744511](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221129174744511.png)
+![image-20221129174744511](https://photos.100ask.net/Tina-Sdk/Linux_LCD_DevGuide_image-20221129174744511.png)
 
 <center>图5-3: lcd_info2</center>
 
@@ -427,7 +427,7 @@ Horizontal Total time
 
 指一行总的dclk 的cycle 个数。见下图：
 
-![image-20221129175141962](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221129175141962.png)
+![image-20221129175141962](https://photos.100ask.net/Tina-Sdk/Linux_LCD_DevGuide_image-20221129175141962.png)
 
 <center>图5-4: lcdht</center>
 
@@ -452,7 +452,7 @@ Vertical Total time
 
 指一场的总行数。见下图：
 
-![image-20221129182148157](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221129182148157.png)
+![image-20221129182148157](https://photos.100ask.net/Tina-Sdk/Linux_LCD_DevGuide_image-20221129182148157.png)
 
 <center>图5-5: lcdvt</center>
 
@@ -622,11 +622,11 @@ FRM 是解决由于PIN 减少导致的色深问题。
 
 的效果。如下图所示，上图是色深为RGB66 的LCD 屏显示，下图是打开dither 后的显示，打开dither 后色彩渐变的地方过度平滑。
 
-![image-20221130172026584](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221130172026584.png)
+![image-20221130172026584](https://photos.100ask.net/Tina-Sdk/Linux_LCD_DevGuide_image-20221130172026584.png)
 
 <center>图5-6: lcd_frm 打开</center>
 
-![image-20221130172041420](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221130172041420.png)
+![image-20221130172041420](https://photos.100ask.net/Tina-Sdk/Linux_LCD_DevGuide_image-20221130172041420.png)
 
 <center>图5-7: lcd_frm 关闭</center>
 
@@ -687,7 +687,7 @@ __u32 lcd_cmap_tbl[2][3][4] = {
 
 如上的定义，像素的输出格式如下图所示。
 
-![image-20221130172721739](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221130172721739.png)
+![image-20221130172721739](https://photos.100ask.net/Tina-Sdk/Linux_LCD_DevGuide_image-20221130172721739.png)
 
 <center>图5-8: cmap</center>
 
@@ -892,7 +892,7 @@ pinctrl-1 = <&rgb24_pins_b>, <&xxx_pins_b>;//休眠时候的定义，io_disable
 
 首先打开如下内核配置：
 
-![image-20221130174114112](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221130174114112.png)
+![image-20221130174114112](https://photos.100ask.net/Tina-Sdk/Linux_LCD_DevGuide_image-20221130174114112.png)
 
 <center>图5-9: ESD 内核配置</center>
 
@@ -901,7 +901,7 @@ pinctrl-1 = <&rgb24_pins_b>, <&xxx_pins_b>;//休眠时候的定义，io_disable
 如下示例，在屏he0801a068 上添加esd 相关的回调函数。
 （linux-4.9/drivers/video/fbdev/sunxi/disp2/disp/lcd/he0801a068.c）。
 
-![image-20221130174231109](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221130174231109.png)
+![image-20221130174231109](https://photos.100ask.net/Tina-Sdk/Linux_LCD_DevGuide_image-20221130174231109.png)
 
 <center>图5-10: ESD 屏驱动添加函数</center>
 
@@ -921,7 +921,7 @@ sel：显示索引。
 
 败则认为屏是异常的。比如下面dsi 屏的做法：
 
-![image-20221130174303084](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221130174303084.png)
+![image-20221130174303084](https://photos.100ask.net/Tina-Sdk/Linux_LCD_DevGuide_image-20221130174303084.png)
 
 <center>图5-11: ESD 屏驱动函数实现</center>
 
@@ -931,7 +931,7 @@ sel：显示索引。
 sunxi_lcd_dsi_dcs_read(sel, 0x0A, result, &num)
 ```
 
-![image-20221130174341400](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221130174341400.png)
+![image-20221130174341400](https://photos.100ask.net/Tina-Sdk/Linux_LCD_DevGuide_image-20221130174341400.png)
 
 <center>图5-12: ESD MIPI 状态寄存器</center>
 
@@ -957,7 +957,7 @@ dsi 的读函数异常。
 
 下图是复位函数示例：
 
-![image-20221130174745808](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221130174745808.png)
+![image-20221130174745808](https://photos.100ask.net/Tina-Sdk/Linux_LCD_DevGuide_image-20221130174745808.png)
 
 <center>图5-13: ESD 复位函数1</center>
 
@@ -981,7 +981,7 @@ p_info：需要设置的esd 行为结构体。
 
 仅仅执行reset_panel 里面的操作。
 
-![image-20221130174832573](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221130174832573.png)
+![image-20221130174832573](https://photos.100ask.net/Tina-Sdk/Linux_LCD_DevGuide_image-20221130174832573.png)
 
 <center>图5-14: ESD 设置信息函数</center>
 
@@ -1022,6 +1022,6 @@ Reset 后面的数字表示屏复位的次数（也就是esd 导致屏挂掉之�
 
   住。
 
-![image-20221130175036108](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_LCD_DevGuide_image-20221130175036108.png)
+![image-20221130175036108](https://photos.100ask.net/Tina-Sdk/Linux_LCD_DevGuide_image-20221130175036108.png)
 
 <center>图5-15: Lp 模式时钟分频值</center>

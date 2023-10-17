@@ -4,7 +4,7 @@
 
 #### 5.1.1 调试节点
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxMIPICSIDevelopmentGuide_006.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxMIPICSIDevelopmentGuide_006.png)
 
 ​														        	     图 5-1: vi 节点	
 
@@ -26,7 +26,7 @@ output 表示 CSI 出尺寸，如果使用了缩放或者裁剪，那么输入�
 
 方式一：修改对应 sensor 驱动中的 sensor_probe 函数，可以添加或修改 info->time_hs 的值即可。
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxMIPICSIDevelopmentGuide_007.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxMIPICSIDevelopmentGuide_007.png)
 
 ​																  	图 5-2: info->time_hs
 
@@ -36,7 +36,7 @@ output 表示 CSI 出尺寸，如果使用了缩放或者裁剪，那么输入�
 
 进入节点路径后，可以看到当前目录下存在 settle_time 节点：
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxMIPICSIDevelopmentGuide_008.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxMIPICSIDevelopmentGuide_008.png)
 
 ​																	图 5-3: settle time 节点
 
@@ -44,7 +44,7 @@ output 表示 CSI 出尺寸，如果使用了缩放或者裁剪，那么输入�
 
 可以通过 cat、echo 命令，对 settle_time 节点进行读写操作：
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxMIPICSIDevelopmentGuide_009.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxMIPICSIDevelopmentGuide_009.png)
 
 ​																	图 5-4: settle time 节点读写
 
@@ -84,7 +84,7 @@ HS（High-Speed）模式：用于高速传输数据，以 MIPI DPHY V1.1 版本�
 
 如下图打印：
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxMIPICSIDevelopmentGuide_0010.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxMIPICSIDevelopmentGuide_0010.png)
 
 ​																		图 5-5: i2c 不通
 

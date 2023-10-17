@@ -24,7 +24,7 @@ BSP 会返回这两个信息的组合值，由应用去判断和做出相应的�
 对软件来说，Efuse 中提供了一个可编程的永久存储空间，特点是每一位只能写一次（从0到1）。
 Efuse 接口方式，Efuse 容量大于512bit 采用SRAM 方式。带有SRAM 的硬件结构示意图如下：
 
-![image-20221219105300040](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_SID_DevGuide_image-20221219105300040.png)
+![image-20221219105300040](https://photos.100ask.net/Tina-Sdk/Linux_SID_DevGuide_image-20221219105300040.png)
 
 #### 2.1.4 一些状态位
 
@@ -38,7 +38,7 @@ SID 是一个比较独立的模块，在Linux 内核中没有依赖其他子系�
 
 SID 为其他模块提供API 的调用方式。关系如下图：
 
-![image-20221219105416344](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_SID_DevGuide_image-20221219105416344.png)
+![image-20221219105416344](https://photos.100ask.net/Tina-Sdk/Linux_SID_DevGuide_image-20221219105416344.png)
 
 1）TV、Thermal、GMAC 的校准参数保存在SID 中；
 2）Nand、SMP、VE 需要读取SoC Version；
@@ -109,7 +109,7 @@ System Type
 
 配置界面图示：
 
-![image-20221219105647967](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_SID_DevGuide_image-20221219105647967.png)
+![image-20221219105647967](https://photos.100ask.net/Tina-Sdk/Linux_SID_DevGuide_image-20221219105647967.png)
 
 SID 驱动本身没有注册为单独的模块，需要通过注册sysinfo 字符驱动（实现代码见drivers/char/sunxi-sysinfo/）来提供sysfs 节点。
 
@@ -123,4 +123,4 @@ Device Drivers
 
 配置界面图示：
 
-![image-20221219105712117](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_SID_DevGuide_image-20221219105712117.png)
+![image-20221219105712117](https://photos.100ask.net/Tina-Sdk/Linux_SID_DevGuide_image-20221219105712117.png)

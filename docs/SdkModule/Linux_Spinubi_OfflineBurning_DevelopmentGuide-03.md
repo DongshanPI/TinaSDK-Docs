@@ -152,7 +152,7 @@ __be32 hdr_crc;
 } __packed;
 ```
 
-![image-20221219104521069](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_SPINAND-UBI_Offline_ProgDevGuide_image-20221227.png)
+![image-20221219104521069](https://photos.100ask.net/Tina-Sdk/Linux_SPINAND-UBI_Offline_ProgDevGuide_image-20221227.png)
 
 ubi_vid_hdr 的填充方法请参考u-boot-2018/cmd/ubi_simu.c 的fill_vid_hdr 函数。
 

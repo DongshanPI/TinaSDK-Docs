@@ -4,7 +4,7 @@
 
 NAND MTD/UBI 驱动主要包括 5 大组件，如下图：
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxSPINANDDevelopmentGuide_001.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxSPINANDDevelopmentGuide_001.png)
 
 ​																	图 3-1: UBI 架构
 
@@ -362,7 +362,7 @@ UBI 使用 **@copy_flag** 字段表示这个逻辑擦除块是一个副本。UBI
 
 **LEB** **与** **PEB**
 
-![image-20221227120254224](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxSPINANDDevelopmentGuide_002.png)
+![image-20221227120254224](https://photos.100ask.net/Tina-Sdk/LinuxSPINANDDevelopmentGuide_002.png)
 
 ​																		图 3-2: PEB-LEB
 

@@ -112,7 +112,7 @@ ta_ram_size = <0x00100000>;
 
 createkeys 脚本会根据dragon_toc*.cfg生成一组用于签名的密钥，生成的密钥保存在out/{BOARD}/keys/目录下。执行pack -s 时，会使用这些密钥分别对相应的镜像进行签名并生成证书。
 
-![image-20230103101032932](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103101032932.png)
+![image-20230103101032932](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103101032932.png)
 
 以R328 为例，其dragon_toc*.cfg文件内容如上图所示。createkeys 依据[key_rsa] 下的keyvalue生成密钥对。打包过程中会将sboot.bin 封装成toc0.fex，将optee/uboot/dts 等封装成toc1.fex。
 请将生成的密钥保存到自己的私密目录，其中Trustkey.bin，Trustkey.pem 与rotpk.bin 三个文件（有的方案为RootKey_Level_0.bin, RootKey_Level_0.pem 与rotpk.bin）为根密钥相关文件，要重点保护。
@@ -180,7 +180,7 @@ Tina 提供了一种安全固件防回退机制，具体实现是：在设备启
 DragonSN 烧写efuse 流程如下图所示。
 uboot 获取到DragonSN 下发的key 数据，将其传送到ATF（aarch64）或者Secure OS（arm32），ATF 或者Secure OS 调用efuse 驱动将key 数据写入到efuse 中。
 
-![image-20230103101453785](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103101453785.png)
+![image-20230103101453785](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103101453785.png)
 
 ##### 3.4.1.2 DragonSN 烧写rotpk.bin 步骤
 
@@ -188,7 +188,7 @@ DragonSN 烧rotpk.bin 具体步骤如下：
 • 设置burn_key 属性为1。只有burn_key 的值为1，设备才会接收DragonSN 通过usb传过来的信息，进行烧录动作。该属性位于uboot-board.dts或者sys_config.fex文件中[target] 项下。如果未显式配置，按照burn_key=0 来处理。
 • 打包安全固件，烧写到flash 中。
 
-![image-20230103101524737](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103101524737.png)
+![image-20230103101524737](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103101524737.png)
 
 • 在PC 端对DragonSN 工具进行配置。打开DragonSNConfig.exe，如上图所示，点击“添加”，在“类型” 一栏下拉菜单中选择rotpk，点击“保存”、“确定”。点击“全局配置”, 设置“烧写模式” 为“安全key”。配置完成后，关闭配置工具。
 • 运行DragonSN.exe 工具，配置rotpk.bin 所在的路径。然后将设备通过usb 与PC 连接，重启设备。当DragonSN 提示框显示设备已连接后，开始烧录。为了保证不会烧录错误的rotpk.bin，在烧录过程中，会将PC 端下发的rotpk.bin 与当前flash 上安全固件中根证书公钥的SHA256 值进行对比，匹配后才烧录该rotpk.bin。
@@ -220,7 +220,7 @@ secure enable bit 进行读写。当前仅R328 有开发支持。
 
 相关源码位于tina/package/security/optee-rotpk 目录下。
 
-![image-20230103101720738](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103101720738.png)
+![image-20230103101720738](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103101720738.png)
 
 其中librotpk.c 会被编译成库文件，该库提供如下三个API。
 
@@ -356,7 +356,7 @@ partition rootfs verify pass
 Tina dm-verity 是为了在启动过程中验证特定分区（通常是rootfs 分区）的完整性而设计的一套解决方案。dm-verity 从启动开始，在整个设备运行过程中，提供对特定分区数据的验证。
 dm-verity 在开机过程中，依靠内核提供的device mapper 机制，验证特定分区hash tree 数据。验证通过后，在设备节点上添加dm-verity 设备。以后任何对该特定分区上数据的操作，都会映射到dm-verity 设备节点上，首先对待操作数据所在的block 计算一次hash，将此hash值与该block 在初始hash tree 中对应的hash 进行对比，一旦对比失败，dm-verity 就会返回失败给此次操作的调用者。
 
-![image-20230103102201476](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103102201476.png)
+![image-20230103102201476](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103102201476.png)
 
 Tina dm-verity 主要用在安全平台，是Secure Boot 最后一个环节，目的是校验根文件系统分区的完整性，确保根文件系统的数据没有被篡改。
 dm-verity 验证根文件系统分区的流程如上图所示。

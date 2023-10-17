@@ -46,7 +46,7 @@ Tina Configuration
 TA/CA 的开发需要参考GlobalPlatform 提供的标准接口说明文档。编译TA/CA 的关键点在设置编译环境变量，如CROSS_COMPILE_HOST, CROSS_COMPILE_TA以及TA_DEV_KIT_DIR 等。
 TA/CA 开发环境使用可参考Tina 上的optee-helloworld 包tina/package/security/opteehelloworld/src 的实现。相关编译选项设置可参考下图：
 
-![image-20230103103333395](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103103333395.png)
+![image-20230103103333395](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103103333395.png)
 
 说明
 OPTEE 中通过UUID 唯一标识系统中的TA，因此开发TA 时需要在ta/include/user_ta_header_defines.h 文件中设置TA_UUID。UUID 可使用uuidgen 工具生成。

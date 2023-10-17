@@ -40,7 +40,7 @@ UART 驱动、及应用层的开发/维护人员。
 
 Linux 内核中,UART 驱动的结构图 1 所示, 可以分为三个层次: 
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxUARTDevelopmentGuide_001.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxUARTDevelopmentGuide_001.png)
 
 ​																图 2-1: Linux UART 体系结构图
 
@@ -89,7 +89,7 @@ linux4.9
 
 在 longan 顶层目录，执行./build.sh menuconfig(需要先执行./build.sh config) 进入配置主界面，并按以下步骤操作：首先，选择 Device Drivers 选项进入下一级配置，如下图所示：
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxUARTDevelopmentGuide_002.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxUARTDevelopmentGuide_002.png)
 
 ​										   					图 3-1: 内核 menuconfig 根菜单
 
@@ -97,7 +97,7 @@ linux4.9
 
 选择 Character devices, 进入下级配置，如下图所示：
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxUARTDevelopmentGuide_003.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxUARTDevelopmentGuide_003.png)
 
 ​																	图 3-2: 内核 menuconfig device drivers 菜单
 
@@ -105,7 +105,7 @@ linux4.9
 
 选择 Serial drivers, 进入下级配置，如下图所示：
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxUARTDevelopmentGuide_004.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxUARTDevelopmentGuide_004.png)
 
 ​															图 3-3: 内核 menuconfig Character drivers 菜单
 
@@ -113,7 +113,7 @@ linux4.9
 
 选择 SUNXI UART Controller 和 Console on SUNXI UART port 选项，如下图：
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxUARTDevelopmentGuide_005.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxUARTDevelopmentGuide_005.png)
 
 ​																	图 3-4: 内核 menuconfig sunxi uart 配置菜单
 
@@ -251,7 +251,7 @@ soc@03000000 {
 
 1. 在内核配置菜单打开 CONFIG_SERIAL_SUNXI_DMA 配置，如下图所示:
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxUARTDevelopmentGuide_006.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxUARTDevelopmentGuide_006.png)
 
 ​																图 3-5: 内核 menuconfig sunxi uart 配置菜单
 
@@ -319,7 +319,7 @@ ttyS1 <===> uart1
 
 在不同的 Sunxi 硬件平台中，UART 控制器的时钟源选择、配置略有不同，总体上的时钟关系如下：
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxUARTDevelopmentGuide_007.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxUARTDevelopmentGuide_007.png)
 
 ​														            图 3-6: 时钟说明
 
@@ -357,7 +357,7 @@ UART 时钟的分频比是 16 的整数倍，分频难免会有误差，所以�
 
 各个 uart 波特率对应频点关系如下：
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxUARTDevelopmentGuide_008.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxUARTDevelopmentGuide_008.png)
 
 ​																	图 3-7: 波特率关系
 

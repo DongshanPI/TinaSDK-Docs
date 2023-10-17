@@ -4,7 +4,7 @@
 
 Linux 内核中,UART 驱动的结构图 1 所示, 可以分为三个层次: 
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxUARTDevelopmentGuide_001.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxUARTDevelopmentGuide_001.png)
 
 ​																图 2-1: Linux UART 体系结构图
 

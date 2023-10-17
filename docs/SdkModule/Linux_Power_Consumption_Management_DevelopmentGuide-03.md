@@ -10,7 +10,7 @@
 
 如下图，粉色为irq_chip【GPIO 模块也看做是一个irq_chip】，蓝色为内部唤醒源，紫色为外部唤醒源。
 
-![Tina_Linux_Power_Management_Development_Guide-image-20230104145744645](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Power_Management_Development_Guide-image-20230104145744645.png)
+![Tina_Linux_Power_Management_Development_Guide-image-20230104145744645](https://photos.100ask.net/Tina-Sdk/Tina_Linux_Power_Management_Development_Guide-image-20230104145744645.png)
 
 <center>图3-1: 中断结构</center>
 
@@ -119,7 +119,7 @@ echo +5 > /sys/class/rtc/rtc0/wakealarm
 
 如下图所示，进入Power management options 配置项：
 
-![Tina_Linux_Power_Management_Development_Guide-image-20230104150031595](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Power_Management_Development_Guide-image-20230104150031595.png)
+![Tina_Linux_Power_Management_Development_Guide-image-20230104150031595](https://photos.100ask.net/Tina-Sdk/Tina_Linux_Power_Management_Development_Guide-image-20230104150031595.png)
 
 <center>图3-2: 休眠唤醒配置</center>
 
@@ -160,7 +160,7 @@ echo +5 > /sys/class/rtc/rtc0/wakealarm
 
 在整个休眠流程中，调用回调函数的顺序，如下图所示：
 
-![Tina_Linux_Power_Management_Development_Guide-image-20230104150123220](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Tina_Linux_Power_Management_Development_Guide-image-20230104150123220.png)
+![Tina_Linux_Power_Management_Development_Guide-image-20230104150123220](https://photos.100ask.net/Tina-Sdk/Tina_Linux_Power_Management_Development_Guide-image-20230104150123220.png)
 
 <center>图3-3: 休眠唤醒回调顺序</center>
 

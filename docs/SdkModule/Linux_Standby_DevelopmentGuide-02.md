@@ -265,10 +265,10 @@ kernel/power/
 
 休眠唤醒指系统进入低功耗和退出低功耗模式，一般称之为 Standby。休眠过程由应用发起，经由内核的电源管理框架来进行休眠唤醒管理工作，如果存在 CPUS（一颗集成在 IC 内部的对电源进行管理的 openrisc 核，是 SoC 内置的超低功耗硬件管理模块），最终会传递到到 CPUS。因此休眠唤醒类出现问题的可能为应用层、内核层、CPUS 层，如果不存在 CPUS，则 CPU 进入WFI。休眠唤醒流程图如下，虚线部分为部分内核实现。
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxStandbyDevelopmentGuide_001.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxStandbyDevelopmentGuide_001.png)
 
 ​																	图 2-1: standby 驱动总体结构			
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxStandbyDevelopmentGuide_002.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxStandbyDevelopmentGuide_002.png)
 
 ​																	图 2-2: linux standby 流程

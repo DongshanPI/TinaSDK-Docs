@@ -249,7 +249,7 @@ twi0_pins_b: twi0@1 {
 
 *•* 1. 选择 Device Drivers 选项进入下一级配置，如下图所示。
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxTWIDevelopmentGuide_001.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxTWIDevelopmentGuide_001.png)
 
 ​                                                                图 2-1: Device Driver
 
@@ -257,7 +257,7 @@ twi0_pins_b: twi0@1 {
 
 *•* 2. 选择 I2C support 选项，进入下一级配置，如下图所示。
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxTWIDevelopmentGuide_002.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxTWIDevelopmentGuide_002.png)
 
 ​                                                                 图 2-2: I2C support
 
@@ -265,7 +265,7 @@ twi0_pins_b: twi0@1 {
 
 *•* 3. 配置用户 I2C 接口，选择 I2C device interface，如下图所示。
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxTWIDevelopmentGuide_003.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxTWIDevelopmentGuide_003.png)
 
 ​                                                              图 2-3: I2C device interface
 
@@ -273,7 +273,7 @@ twi0_pins_b: twi0@1 {
 
 *•* 4. 选择 I2C HardWare Bus support 选项，进入下一级配置，如下图所示。 
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxTWIDevelopmentGuide_004.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxTWIDevelopmentGuide_004.png)
 
 ​                                                              图 2-4: I2C HardWare Bus support
 
@@ -281,7 +281,7 @@ twi0_pins_b: twi0@1 {
 
 *•* 5. 选择 SUNXI I2C controller 选项，可选择直接编译进内核，也可编译成模块。如下图所示。
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxTWIDevelopmentGuide_005.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxTWIDevelopmentGuide_005.png)
 
 ​                                                              图 2-5: SUNXI I2C controller
 
@@ -305,7 +305,7 @@ kernel/linux-4.9/drivers/i2c/
 
 ### 2.5 驱动框架介绍
 
-![](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/LinuxTWIDevelopmentGuide_006.png)
+![](https://photos.100ask.net/Tina-Sdk/LinuxTWIDevelopmentGuide_006.png)
 
 ​                                                             图 2-6: TWI 模块结构框图
 

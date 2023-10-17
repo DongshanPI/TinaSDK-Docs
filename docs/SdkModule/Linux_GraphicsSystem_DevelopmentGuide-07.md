@@ -41,17 +41,17 @@ LVGL是一个免费的开源图形库，提供了创建嵌入式GUI所需的一�
 下面是应用lv_examples截图：
 
 
-![图9-1: lv_demo_widgets主页截图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image25.jpg)
+![图9-1: lv_demo_widgets主页截图](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image25.jpg)
 
 
-![图9-2: lv_demo_music主页截图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image26.jpg)
+![图9-2: lv_demo_music主页截图](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image26.jpg)
 
 
 下面是应用lv_monitor截图：
 
 
 
-![图9-3: lv_monitor主页截图](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image27.jpg)
+![图9-3: lv_monitor主页截图](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Graphics_system_development_Guide-image27.jpg)
 
 
 ### 9.2 LVGL配置.

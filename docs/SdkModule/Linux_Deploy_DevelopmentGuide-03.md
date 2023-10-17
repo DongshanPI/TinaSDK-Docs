@@ -47,7 +47,7 @@ Device tree牵扯的东西还是比较多的，对device tree的理解，可以�
 
 设备树是一个包含节点和属性的简单树状结构。属性就是键－值对，而节点可以同时包含属性和子节点。例如，以下就是一个.dts格式的简单树：
 
-![OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-1](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-1-1672044422508.jpg)
+![OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-1](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-1-1672044422508.jpg)
 
 这棵树显然是没什么用的，因为它并没有描述任何东西，但它确实体现了节点的一些属性：
 
@@ -74,7 +74,7 @@ Device tree牵扯的东西还是比较多的，对device tree的理解，可以�
 
 1. node-name：节点的名称，小于 31 字符长度的字符串，可以包括图中所示字符。节点名称的首字符必须是英文字母，可大写或者小写。通常，节点的命名应该根据它所体现的是什么样的设备。
 
-![OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-2](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-2.jpg)
+![OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-2](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-2.jpg)
 
 2. @unit-address：如果该节点描述的设备有一个地址，则应该加上设备地址（unit-address）。通常，设备地址就是用来访问该设备的主地址，并且该地址也在节点的reg属性中列出。
 3. 同级节点命名必须是唯一的，但只要地址不同，多个节点也可以使用一样的通用名称（例如serial@101f1000和serial@101f2000）。
@@ -83,7 +83,7 @@ Device tree牵扯的东西还是比较多的，对device tree的理解，可以�
 实例
 
 
-![OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-2](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-2-1672044483159.jpg)
+![OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-2](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-2-1672044483159.jpg)
 
 在实例中，一个根节点/下有 3 个子节点；节点名称为cpu的节点，通过地址 0 和 1 来区别；节点名称为ethernet的节点，通过地址fe001000和fe002000来区别。
 
@@ -121,7 +121,7 @@ Device tree中，节点可以用属性来描述该节点的特征，属性由两
 
 由长度小于 31 的字符串组成。属性名称支持的字符如下图：
 
-![OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-4](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-4.jpg)
+![OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-4](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-4.jpg)
 
 非标准的属性名称，需要指定一个唯一的前缀，用来识别是哪个公司或者机构定义了该属性。
 
@@ -226,7 +226,7 @@ Status
 例如：
 ```
 
-![OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-5](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-5.jpg)
+![OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-5](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-5.jpg)
 
 
 ```
@@ -505,7 +505,7 @@ sun5i-a13-olinuxino.dtb
 Device tree block内存布局大致如下(地址从上往下递增)。我们可以看到，dtb文件结构主要由 4 个部分组成，一个小的文件头、一个memory reserve map、一个device tree structure、一个device-tree strings。这几个部分构成一个整体，一起加载到内存中。
 
 
-![OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-5](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-5-1672044545204.jpg)
+![OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-5](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-5-1672044545204.jpg)
 
 ##### 4.3.3.1 文件头-boot_param_header.
 
@@ -548,7 +548,7 @@ __be32 dt_struct_size; /* size of the DT structure block */
 这一部分主要存储了各个结点的信息。每一个结点都都可以嵌套子结点，其中的结点以OF_DT_BEGIN_NODE 做起始标志，接下来就是结点名。如果结点带有属性，那么就紧接就是结点的属性，其以OF_DT_PROP为起始标志。嵌套的子结点紧跟着父子结点之后，也是以OF_DT_BEGIN_NODE起始。OF_DT_END_NODE标志着一结点的终止。
 
 
-![OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-7](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-7.jpg)
+![OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-7](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-7.jpg)
 
 上面提到一个结点的属性，每一个属性有如下的结构：
 
@@ -569,7 +569,7 @@ char data[0];
 ##### 4.3.3.4 dtb实例
 
 
-![OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-7](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-7-1672044755577.jpg)
+![OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-7](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_Configuration_Development_Guide-4-7-1672044755577.jpg)
 
 可以看出dtb结构由 4 个部分组成。
 

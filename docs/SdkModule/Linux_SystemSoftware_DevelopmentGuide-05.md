@@ -60,7 +60,7 @@ Makefile 编译规则文件，
 
 该Makefile的功能是**软件源码的准备，编译和安装的过程，提供给Tina Linux识别和管理软件包的接口**，软件的编译逻辑是由软件自身的Makefile决定，理论上和该Makefile(该Makefile只执行make命令和相关参数)无实质关系。
 
-![图10-2-1](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_System_software_development_Guide-10-2-1.jpg)
+![图10-2-1](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_System_software_development_Guide-10-2-1.jpg)
 
 详注：
 
@@ -177,7 +177,7 @@ procd_close_instance
 新添加的软件默认配置为不使能，此时需要手动配置使能软件包。通过在tina的根目录执行
 make menuconfig进入软件包的配置界面：
 
-![图10-1:应用配置主界面](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_System_software_development_Guide-10-1.jpg)
+![图10-1:应用配置主界面](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_System_software_development_Guide-10-1.jpg)
 
 软件包的所在路径与软件包的Makefile中的定义有关，以fstools为例，在Makefile中定义
 为：
@@ -194,7 +194,7 @@ endef
 
 此时，只需要在menuconfig界面中进入Basy system即可找到fstools的软件包。
 
-![图10-2:软件包所在界面](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/OpenRemoved_Tina_Linux_System_software_development_Guide-10-2.jpg)
+![图10-2:软件包所在界面](https://photos.100ask.net/Tina-Sdk/OpenRemoved_Tina_Linux_System_software_development_Guide-10-2.jpg)
 
 前缀符号含义：
 

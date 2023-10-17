@@ -14,4 +14,4 @@ SID 驱动、Efuse 驱动、Sysinfo 驱动的维护、应用开发人员等。
 
 ## 1.4 术语、定义、缩略语
 
-![image-20221219105007286](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_SID_DevGuide_image-20221219105007286.png)
+![image-20221219105007286](https://photos.100ask.net/Tina-Sdk/Linux_SID_DevGuide_image-20221219105007286.png)

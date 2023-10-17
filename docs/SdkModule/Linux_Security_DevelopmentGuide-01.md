@@ -12,7 +12,7 @@
 
 软件平台: Tina V3.5 及其后续版本。
 
-![image-20230103095336137](https://cdn.staticaly.com/gh/DongshanPI/Docs-Photos@master/Tina-Sdk/Linux_Security_DevGuide_image-20230103095336137.png)
+![image-20230103095336137](https://photos.100ask.net/Tina-Sdk/Linux_Security_DevGuide_image-20230103095336137.png)
 
 ### 1.3 相关人员
 
